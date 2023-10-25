@@ -1,19 +1,7 @@
 body {
-    background-color: rgb(30, 30, 30);
-
-    h1 {
-        color: white;
-      }
-      
-    p {
-        color: white;
-    }
+    background-color: rgb(30, 30, 30)
 }
 
-body.h1 {
-    color: white
-}
-
-body.p {
+h1, p {
     color: white
 }
