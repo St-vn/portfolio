@@ -1,3 +1,13 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+    background-color: rgb(30, 30, 30);
+  }
+
 body {
     background-color: rgb(30, 30, 30);
     color: white;
@@ -33,4 +43,8 @@ nav a {
     text-transform: uppercase;
     text-decoration: none;
     color: white;
+}
+
+footer {
+    margin-top: 10px;
 }
