@@ -1,57 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name ="author" content="Steven">
-    <meta name="description" content="This is Steven's Portfolio.">
-    
-    <meta property="og:title" content="St_vn's Portfolio">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/805224269385564211/1166603768301895681/IMG_6168.png?ex=654b176c&is=6538a26c&hm=4479dd877cd55246bbe72c7235b09772a96fc625fb2b0b84b384f4b63adee262&"/>
-    <meta property="og:description" content="This is Steven's Portfolio."/>
+<head>
+  <meta charset="UTF-8">
+  <title>Your Name | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Your Name - Projects and Experience">
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-    <link rel="stylesheet" href="stylesheet.css"/>
-    <link rel="icon" href="https://cdn.discordapp.com/attachments/709557924825006190/1166591278612496454/917267050131501106.png?ex=654b0bcb&is=653896cb&hm=317a4c6352a1277640d6a5446706f09f552fa53e812b00d342bc0aee03d7e1aa&" type="image/x-icon" />
-    
-    <script src="main.js" defer></script>
-    <title>St_vn's Portfolio</title>
-  </head>
+<body>
 
-  <body style="text-align: center;">
-    <header>
-      <img src="https://cdn.discordapp.com/attachments/709557924825006190/1166591278612496454/917267050131501106.png?ex=654b0bcb&is=653896cb&hm=317a4c6352a1277640d6a5446706f09f552fa53e812b00d342bc0aee03d7e1aa&" style="width: 50px; height: 50px"></img>
-      <h1 style="text-align: center;">St_vn's Portfolio</h1>
-    </header>
+  <header>
+    <div class="container">
+      <h1>Steven</h1>
+      <p class="subtitle">Engineering Portfolio</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <!-- <a href="#contact">Contact</a> -->
+      </nav>
+    </div>
+  </header>
 
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+  <main class="container">
 
-      <!-- A Search form is another common non-linear way to navigate through a website. -->
-      <!--
-      <form>
-        <input type="search" name="q" placeholder="Search"/>
-        <input type="submit" value="Search!"/>
-      </form>-->
-    </nav>
-
-    <main>
-      <article>
-        <img src="https://cdn.discordapp.com/attachments/709557924825006190/1166591278612496454/917267050131501106.png?ex=654b0bcb&is=653896cb&hm=317a4c6352a1277640d6a5446706f09f552fa53e812b00d342bc0aee03d7e1aa&" style="width: 150px; height: 150px"></img>
-        <h2>St_vn's Portfolio</h2>
-        <h3>Full Stack Game Developer and Web Developer</h3>
-      </article>
-    </main>
-
-    <footer>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About</h2>
       <p>
-        Steven fr fr
+        I am software engineering freelancer and aspiring aerospace engineer.
       </p>
-    </footer>
-  </body>
+    </section>
+
+
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <!-- Experience Item -->
+
+      <div class="card">
+        <h3>Polytechnique Montreal's "Déplace de l'air" Contest</h3>
+        <span class="meta">2026</span>
+        <p>
+          Lead a team of 3 for research, design and testing of wind turbines for the contest.
+        </p>
+        <ul>
+          <li> Applied aerodynamics; lift vs drag based blades tradeoff, NACA airfoils </li>
+          <li> Applied electromagnetism; usage of magnets and coils for AC voltage generation(Faraday's Law) </li>
+          <li> Applied circuits; Kirchoff's Voltage Law, AC circuit, coil connection, terminal block, voltage generation </li>
+          <li> Applied mechanics; torque, rotational inertia, RPM, mechanical power </li>
+          <li> Building an alternator; radial vs axial flux design, core lamination </li>
+          <li> Working with constraints; wind tunnel speed, available material, tools, etc. </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>CFD software in game development</h3>
+        <span class="meta">2026</span>
+        <p>
+          Programmed computational fluid dynamics for understanding of incompressible fluid mechanics.
+        </p>
+        <ul>
+          <li> Simulation of individual particle trajectory using steering algorithm </li>
+          <li> Application of Bernouilli's principle in game development(fluid velocity and pressure inverse relationship) </li>
+          <li> Future usage for procedural wind visuals and visualizing object aerodynamics </li>
+        </ul>
+      </div>
+
+      <!-- Project Item -->
+      <div class="card">
+        <h3>Lead Software Engineer</h3>
+        <span class="meta">2025 - Present</span>
+        <p>
+          Currently developing software for Magicbox Logistics LLC to optimize lead generation and sales.
+        </p>
+        <ul>
+          <li>Implementation of scraping libraries</li>
+          <li>Usage of API for product data access</li>
+          <li>Application of statistical modeling to estimate sales volume and trend velocity</li>
+        </ul>
+        <a href="https://github.com/yourusername/project" target="_blank">View Repository</a>
+      </div>
+
+      <div class="card">
+        <h3>Game Development Freelancer</h3>
+        <span class="meta">2020 – Present</span>
+        <p>
+          Developed industry-grade systems in Unity and Roblox.
+        </p>
+        <ul>
+          <li> Applied mathematics and physics in game development; Projectiles, Wall Running, Colliders, etc. </li>
+          <li> Networking applications for latency compensation, client-side prediction + server-side reconciliation, anti-cheats, etc. </li>
+          <li> Front-end work, dealing with cutscenes, visual effects and anime game styled attacks </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <!-- <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: your.email@example.com</p>
+      <p>
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+        <a href="resume.pdf" target="_blank">Download Résumé</a>
+      </p>
+    </section> -->
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <a href="https://github.com/st-vn" target="_blank">GitHub</a>
+      <a href="resume.pdf" target="_blank">Download Résumé</a>
+      <p>© 2026 Chhun Steven, Chhay</p>
+    </div>
+  </footer>
+
+</body>
+
 </html>
