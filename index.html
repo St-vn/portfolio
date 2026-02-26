@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Your Name | Portfolio</title>
+  <title>Steven C. | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Your Name - Projects and Experience">
+  <meta name="description" content="Engineering Portfolio - About me and Experience">
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 
@@ -16,8 +16,8 @@
       <h1>Steven</h1>
       <p class="subtitle">Engineering Portfolio</p>
       <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
+        <a href="#about" style="color: #FFFFFF">About</a>
+        <a href="#experience" style="color: #FFFFFF">Experience</a>
         <!-- <a href="#contact">Contact</a> -->
       </nav>
     </div>
@@ -29,11 +29,9 @@
     <section id="about">
       <h2>About</h2>
       <p>
-        I am software engineering freelancer and aspiring aerospace engineer.
+        I am software engineering freelancer and aspiring aerospace engineer. Currently studying Pure and Applied Science(Science de la Nature) 200.B1 at Collège Lionel-Groulx.
       </p>
     </section>
-
-
 
     <!-- Experience Section -->
     <section id="experience">
@@ -55,19 +53,36 @@
           <li> Building an alternator; radial vs axial flux design, core lamination </li>
           <li> Working with constraints; wind tunnel speed, available material, tools, etc. </li>
         </ul>
+
+        <img src="assets/images/dda_icon.png" width="250" alt="Deplace d'air" class="media">
+
+        <p>Prototype model using magnets weaker than N42 magnets used in competition</p>
+        <video controls class="media" width="50%">
+            <source src="assets/videos/h-rotor-test.mov" type="video/mp4">
+        </video>
       </div>
 
       <div class="card">
-        <h3>CFD software in game development</h3>
+        <h3>CFD simulation in game development</h3>
         <span class="meta">2026</span>
         <p>
-          Programmed computational fluid dynamics for understanding of incompressible fluid mechanics.
+          Implementation of real-time fluid simulation in game development
         </p>
         <ul>
-          <li> Simulation of individual particle trajectory using steering algorithm </li>
-          <li> Application of Bernouilli's principle in game development(fluid velocity and pressure inverse relationship) </li>
+          <li> Simulation of individual particle trajectory using BOIDs steering algorithm </li>
+          <li> Application of Bernouilli's principle within a game engine(fluid velocity and pressure inverse relationship) </li>
           <li> Future usage for procedural wind visuals and visualizing object aerodynamics </li>
         </ul>
+
+        <video controls class="media" width="60%">
+            <source src="assets/videos/cfd_bugatti.mp4" type="video/mp4">
+        </video>
+        <video controls class="media" width="60%">
+            <source src="assets/videos/cfd_naca.mp4" type="video/mp4">
+        </video>
+        <video controls class="media" width="60%">
+            <source src="assets/videos/cfd_wedge.mp4" type="video/mp4">
+        </video>
       </div>
 
       <!-- Project Item -->
@@ -81,21 +96,72 @@
           <li>Implementation of scraping libraries</li>
           <li>Usage of API for product data access</li>
           <li>Application of statistical modeling to estimate sales volume and trend velocity</li>
+          <li>Workflow automation using AI assistants </li>
         </ul>
-        <a href="https://github.com/yourusername/project" target="_blank">View Repository</a>
+        <!-- <a href="https://github.com/yourusername/project" target="_blank">View Repository</a> -->
       </div>
 
       <div class="card">
-        <h3>Game Development Freelancer</h3>
+        <h3>Full-Stack Game Developer</h3>
+        <span class="meta">2024</span>
+        <p>
+          Contributed to a Minecraft BedWars styled game under <a href="https://www.boss-studio.org/">Boss Studios LLC</a>
+        </p>
+        <ul>
+          <li>Implementation of block placement system</li>
+          <li>PvP Combat, Projectile, Inventory systems</li>
+        </ul>
+
+         <img src="assets/images/boss studios logo.png" width="150" alt="Deplace d'air" class="media">
+
+        <!-- <p>Early Development Building Clip</p>
+        <video controls class="media" width="65%">
+            <source src="assets/videos/the boss minecraft building.mp4" type="video/mp4">
+        </video> -->
+      </div>
+
+      <div class="card">
+        <h3>Frontend Game Developer</h3>
+        <span class="meta">2024</span>
+        <p>
+          Contributed to <a href="https://www.roblox.com/games/17017769292/Anime-Defenders">"Anime Defenders”</a> under Oakley Productions LLC, a front page tower defense game on Roblox. The project generated +3.4B total visits and with over 100K concurrent users at its peak.
+        </p>
+        <ul>
+          <li>Implementation of VFX for 10+ different units</li>
+          <li>Bezier curve for custom projectiles</li>
+          <li>Handling animations for unit attacks</li>
+        </ul>
+
+        <img src="assets/images/anime defenders thumbnail.webp" width="85%" alt="Deplace d'air" class="media">
+      </div>
+
+      <div class="card">
+        <h3>Full-Stack Game Development Freelancer</h3>
         <span class="meta">2020 – Present</span>
         <p>
           Developed industry-grade systems in Unity and Roblox.
         </p>
         <ul>
-          <li> Applied mathematics and physics in game development; Projectiles, Wall Running, Colliders, etc. </li>
+          <li> Applied mathematics and physics in game development; projectiles, wall running, colliders, building systems, etc. </li>
           <li> Networking applications for latency compensation, client-side prediction + server-side reconciliation, anti-cheats, etc. </li>
+          <li> AI pathfinding logic with A* and Dijkstra's algorithms </li>
           <li> Front-end work, dealing with cutscenes, visual effects and anime game styled attacks </li>
         </ul>
+
+        <video controls class="media" width="100%">
+            <source src="assets/videos/fbg_lancer_ult.mov" type="video/mp4">
+        </video>
+
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/S-thgACxqIw" frameborder="0" allowfullscreen>
+        </iframe>
+
+        <iframe
+            width="100%"
+            height="400"
+            src="https://www.youtube.com/embed/VpumLjLvBlA"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
       </div>
 
     </section>
@@ -114,8 +180,8 @@
 
   <footer>
     <div class="container">
-      <a href="https://github.com/st-vn" target="_blank">GitHub</a>
-      <a href="resume.pdf" target="_blank">Download Résumé</a>
+      <p><a href="https://github.com/St-vn" target="">GitHub</a></p>
+      <p><a href="assets/documents/cv_steven_chhay.pdf" target="">Download CV</a></p>
       <p>© 2026 Chhun Steven, Chhay</p>
     </div>
   </footer>
