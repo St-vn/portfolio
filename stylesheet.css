@@ -1,105 +1,249 @@
-/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Reset ──────────────────────────────────────────────── */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ── Tokens ─────────────────────────────────────────────── */
+:root {
+    --accent: #5982ff;
+    --accent-dim: rgba(0, 42, 255, 0.08);
+    --accent-border: rgba(43, 65, 230, 0.74);
+    --accent-hover: rgba(49, 67, 234, 0.623);
+    --bg: #1a1a1a;
+    --surface: rgba(255, 255, 255, 0.04);
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #f0f0f0;
+    --text-muted: #888;
+    --mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+}
+
+/* ── Base ───────────────────────────────────────────────── */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
-    background-color: #202020;
-    color: #ffffff;
+    line-height: 1.7;
+    background-color: var(--bg);
+    color: var(--text);
 }
 
-a:link {
-  color: #00BFFF; /* A light blue color using HEX code */
+a {
+    color: var(--accent);
+    text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* ── Layout ─────────────────────────────────────────────── */
 .container {
     max-width: 900px;
     margin: auto;
     padding: 2rem;
 }
 
+/* ── Header ─────────────────────────────────────────────── */
 header {
-    border-bottom: 2px solid #dddddd15;
-    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    padding: 2.5rem 0;
 }
 
 header h1 {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--text);
 }
 
 .subtitle {
-    color: #666;
-    margin-bottom: 1rem;
+    font-family: var(--mono);
+    font-size: 0.88rem;
+    color: var(--accent);
+    margin: 0.4rem 0 1.2rem;
+    opacity: 0.85;
+    letter-spacing: 0.04em;
 }
 
 nav a {
     margin-right: 1.5rem;
     text-decoration: none;
-    color: #eeeeee;
+    color: var(--text-muted);
+    font-size: 0.9rem;
     font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: var(--accent);
+    text-decoration: none;
 }
 
+/* ── Sections ───────────────────────────────────────────── */
 section {
-    margin-top: 3rem;
+    margin-top: 3.5rem;
 }
 
 h2 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    border-bottom: 2px solid #dddddd15;
-    display: inline-block;
-    padding-bottom: 0.3rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
 }
 
+/* ── Skills ─────────────────────────────────────────────── */
+.skill-group {
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.skill-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    min-width: 8rem;
+}
+
+.tag {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    color: var(--accent);
+    border-radius: 4px;
+    padding: 0.18rem 0.6rem;
+    display: inline-block;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+/* ── Subsection labels ──────────────────────────────────── */
+.subsection-label {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.6;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 0.1rem;
+}
+
+/* ── Cards ──────────────────────────────────────────────── */
 .card {
-    margin-top: 1.5rem;
-    padding: 1.5rem;
-    border: 2px solid #dddddd15;
-    border-radius: 6px;
-    background-color: #2a2a2acc;
+    margin-top: 0.9rem;
+    padding: 1.6rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    /* scroll reveal base state */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: border-color 0.25s ease, transform 0.25s ease, opacity 0.5s ease;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    border-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* prevent hover from fighting visible's transform on initial reveal */
+.card.visible:hover {
+    transform: translateY(-2px);
 }
 
 .card h3 {
-    margin-bottom: 0.3rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--text);
+}
+
+.card p {
+    margin-top: 0.5rem;
+    color: #c0c0c0;
+    font-size: 0.94rem;
 }
 
 .meta {
-    font-size: 0.9rem;
-    color: #777;
+    font-family: var(--mono);
+    font-size: 0.76rem;
+    color: var(--text-muted);
     display: block;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.04em;
 }
 
 ul {
     margin-left: 1.2rem;
-    margin-top: 0.5rem;
+    margin-top: 0.6rem;
+    color: #c0c0c0;
+    font-size: 0.93rem;
 }
 
-.card a {
-    display: inline-block;
-    margin-top: 0.8rem;
-    text-decoration: none;
-    font-weight: 500;
+li {
+    margin-bottom: 0.25rem;
 }
 
-.card a:hover {
-    text-decoration: underline;
+/* ── Media ──────────────────────────────────────────────── */
+.media {
+    display: block;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
 }
 
+iframe {
+    display: block;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: none;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
 footer {
-    border-top: 2px solid #dddddd15;
-    margin-top: 4rem;
+    border-top: 1px solid var(--border);
+    margin-top: 5rem;
     padding: 2rem 0;
     text-align: center;
-    color: #666;
-    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+footer p {
+    margin-bottom: 0.4rem;
+}
+
+footer a {
+    color: var(--accent);
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

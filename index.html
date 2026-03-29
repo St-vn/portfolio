@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Steven C. | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Engineering Portfolio - About me and Experience">
+  <meta name="description" content="Software Engineer & Aerospace Engineering Student — Steven Chhay">
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 
@@ -14,177 +14,202 @@
   <header>
     <div class="container">
       <h1>Steven</h1>
-      <p class="subtitle">Engineering Portfolio</p>
+      <p class="subtitle">Portfolio</p>
       <nav>
-        <a href="#about" style="color: #FFFFFF">About</a>
-        <a href="#experience" style="color: #FFFFFF">Experience</a>
-        <!-- <a href="#contact">Contact</a> -->
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about">
       <h2>About</h2>
       <p>
-        I am software engineering freelancer and aspiring aerospace engineer. Currently studying Pure and Applied Science(Science de la Nature) 200.B1 at Collège Lionel-Groulx.
+        I build software at the intersection of engineering and applied physics. I have five years of
+        professional experience in game development and full-stack software, and I'm currently studying
+        at Collège Lionel-Groulx. My
+        technical interests span aerodynamics, avionics systems, embedded systems, game development, fluid simulation, and more.
+        I approach engineering problems using first principles.
       </p>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <div class="skill-group">
+        <span class="skill-label">Languages</span>
+        <span class="tag">C#</span>
+        <span class="tag">Python</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Lua</span>
+      </div>
+
+      <div class="skill-group">
+        <span class="skill-label">Engines &amp; Tools</span>
+        <span class="tag">Unity</span>
+        <span class="tag">Visual Studio Code/Community</span>
+        <span class="tag">Roblox Studio</span>
+        <span class="tag">Blender</span>
+      </div>
+
+      <div class="skill-group">
+        <span class="skill-label">Areas</span>
+        <span class="tag">Applied Physics</span>
+        <span class="tag">Applied Mathematics</span>
+        <span class="tag">Networking</span>
+        <span class="tag">Software</span>
+        <span class="tag">AI Pathfinding</span>
+        <span class="tag">Full-stack Game Development</span>
+        <span class="tag">Workflow Automation</span>
+      </div>
+    </section>
+
+    <!-- Experience -->
     <section id="experience">
       <h2>Experience</h2>
 
-      <!-- Experience Item -->
+      <!-- ── Engineering Projects ───────────────────────── -->
+      <div class="subsection-label">Engineering Projects</div>
 
       <div class="card">
-        <h3>Polytechnique Montreal's "Déplace de l'air" Contest</h3>
+        <h3>Polytechnique Montréal — "Déplace d'air" Wind Turbine Competition</h3>
         <span class="meta">2026</span>
         <p>
-          Lead a team of 3 for research, design and testing of wind turbines for the contest.
+          Led a team of three in the design, prototyping, and testing of a lift-based H-rotor wind
+          turbine for Polytechnique Montréal's aerodynamics competition.
         </p>
         <ul>
-          <li> Applied aerodynamics; lift vs drag based blades tradeoff, NACA airfoils </li>
-          <li> Applied electromagnetism; usage of magnets and coils for AC voltage generation(Faraday's Law) </li>
-          <li> Applied circuits; Kirchoff's Voltage Law, AC circuit, coil connection, terminal block, voltage generation </li>
-          <li> Applied mechanics; torque, rotational inertia, RPM, mechanical power </li>
-          <li> Building an alternator; radial vs axial flux design, core lamination </li>
-          <li> Working with constraints; wind tunnel speed, available material, tools, etc. </li>
+          <li>Blade aerodynamics research — lift vs. drag tradeoffs, NACA airfoil profiles</li>
+          <li>Axial flux alternator design — coil winding, core lamination, Faraday's Law</li>
+          <li>AC circuit design — Kirchhoff's Voltage Law, coil connection topology, terminal blocks</li>
+          <li>Applied mechanics — torque, rotational inertia, RPM, mechanical power output</li>
+          <li>Engineering under real constraints — wind tunnel speed limits, material and tooling restrictions</li>
         </ul>
 
-        <img src="assets/images/dda_icon.png" width="250" alt="Deplace d'air" class="media">
+        <img src="https://st-vn.github.io/portfolio/assets/images/dda_icon.png" width="250" alt="Déplace d'air wind turbine" class="media">
 
-        <p>Prototype model using magnets weaker than N42 magnets used in competition</p>
+        <p>Prototype model using magnets weaker than the N42 magnets used in competition</p>
         <video controls class="media" width="50%">
-            <source src="assets/videos/h-rotor-test.mov" type="video/mp4">
+          <source src="https://st-vn.github.io/portfolio/assets/videos/h-rotor-test.mov" type="video/mp4">
         </video>
       </div>
 
       <div class="card">
-        <h3>CFD simulation in game development</h3>
+        <h3>CFD Simulation</h3>
         <span class="meta">2026</span>
         <p>
-          Implementation of real-time fluid simulation in game development
+          Built a real-time computational fluid dynamics simulation inside a game engine to deepen my
+          understanding of fluid mechanics and aerodynamics.
         </p>
         <ul>
-          <li> Simulation of individual particle trajectory using BOIDs steering algorithm </li>
-          <li> Application of Bernouilli's principle within a game engine(fluid velocity and pressure inverse relationship) </li>
-          <li> Future usage for procedural wind visuals and visualizing object aerodynamics </li>
+          <li>Particle trajectory simulation using a boids-inspired steering algorithm with separation and cohesion forces</li>
+          <li>Bernoulli's principle applied in real-time — inverse velocity/pressure relationship observable in simulation</li>
+          <!-- <li>Gram-Schmidt orthogonalization for tangent frame construction on arbitrary surfaces</li> -->
+          <li>Demonstrated on NACA airfoil and bluff body geometries</li>
         </ul>
 
         <video controls class="media" width="60%">
-            <source src="assets/videos/cfd_bugatti.mp4" type="video/mp4">
+          <source src="https://st-vn.github.io/portfolio/assets/videos/cfd_bugatti.mp4" type="video/mp4">
         </video>
         <video controls class="media" width="60%">
-            <source src="assets/videos/cfd_naca.mp4" type="video/mp4">
+          <source src="https://st-vn.github.io/portfolio/assets/videos/cfd_naca.mp4" type="video/mp4">
         </video>
         <video controls class="media" width="60%">
-            <source src="assets/videos/cfd_wedge.mp4" type="video/mp4">
+          <source src="https://st-vn.github.io/portfolio/assets/videos/cfd_wedge.mp4" type="video/mp4">
         </video>
       </div>
 
-      <!-- Project Item -->
+      <!-- ── Software & Game Development ──────────────────── -->
+      <div class="subsection-label">Software &amp; Game Development</div>
+
       <div class="card">
-        <h3>Lead Software Engineer</h3>
-        <span class="meta">2025 - Present</span>
+        <h3>Lead Software Engineer — Magicbox Logistics LLC</h3>
+        <span class="meta">2025–Present</span>
         <p>
-          Currently developing software for Magicbox Logistics LLC to optimize lead generation and sales.
+          Building a data pipeline for automated product evaluation and outreach. The system integrates
+          third-party APIs, applies statistical modeling, and uses AI-assisted automation to support
+          business decision-making at scale.
         </p>
         <ul>
-          <li>Implementation of scraping libraries</li>
-          <li>Usage of API for product data access</li>
-          <li>Application of statistical modeling to estimate sales volume and trend velocity</li>
-          <li>Workflow automation using AI assistants </li>
+          <li>API integration and data ingestion pipeline</li>
+          <li>Statistical modeling for sales estimation and trend analysis</li>
+          <li>AI-assisted workflow automation</li>
+          <li>End-to-end system design from data fetch to structured output</li>
         </ul>
-        <!-- <a href="https://github.com/yourusername/project" target="_blank">View Repository</a> -->
       </div>
 
       <div class="card">
-        <h3>Full-Stack Game Developer</h3>
+        <h3>Full-Stack Game Developer — Boss Studios LLC</h3>
         <span class="meta">2024</span>
         <p>
-          Contributed to a Minecraft BedWars styled game under <a href="https://www.boss-studio.org/">Boss Studios LLC</a>
+          Contributed to a Minecraft BedWars-style game under <a href="https://www.boss-studio.org/" target="_blank">Boss Studios LLC</a>.
         </p>
         <ul>
           <li>Implementation of block placement system</li>
-          <li>PvP Combat, Projectile, Inventory systems</li>
+          <li>PvP combat, projectile, and inventory systems</li>
         </ul>
 
-         <img src="assets/images/boss studios logo.png" width="150" alt="Deplace d'air" class="media">
-
-        <!-- <p>Early Development Building Clip</p>
-        <video controls class="media" width="65%">
-            <source src="assets/videos/the boss minecraft building.mp4" type="video/mp4">
-        </video> -->
+        <img src="https://st-vn.github.io/portfolio/assets/images/boss studios logo.png" width="150" alt="Boss Studios logo" class="media">
       </div>
 
       <div class="card">
-        <h3>Frontend Game Developer</h3>
+        <h3>Frontend Developer — Oakley Productions LLC</h3>
         <span class="meta">2024</span>
         <p>
-          Contributed to <a href="https://www.roblox.com/games/17017769292/Anime-Defenders">"Anime Defenders”</a> under Oakley Productions LLC, a front page tower defense game on Roblox. The project generated +3.4B total visits and with over 100K concurrent users at its peak.
+          Contributed to <a href="https://www.roblox.com/games/17017769292/Anime-Defenders" target="_blank">Anime Defenders</a>,
+          a front-page tower defense game on Roblox. The project reached 3.4 billion total visits and
+          over 100,000 concurrent users at peak.
         </p>
         <ul>
           <li>Implementation of VFX for 10+ different units</li>
-          <li>Bezier curve for custom projectiles</li>
-          <li>Handling animations for unit attacks</li>
+          <li>Bézier curve for custom projectile paths</li>
+          <li>Animation handling for unit attacks</li>
         </ul>
 
-        <img src="assets/images/anime defenders thumbnail.webp" width="85%" alt="Deplace d'air" class="media">
+        <img src="https://st-vn.github.io/portfolio/assets/images/anime defenders thumbnail.webp" width="85%" alt="Anime Defenders thumbnail" class="media">
       </div>
 
       <div class="card">
         <h3>Full-Stack Game Development Freelancer</h3>
-        <span class="meta">2020 – Present</span>
+        <span class="meta">2020–Present</span>
         <p>
-          Developed industry-grade systems in Unity and Roblox.
+          Five years of professional game development across Unity and Roblox — building industry-grade
+          systems with applied mathematics, physics simulation, and networking architecture.
         </p>
         <ul>
-          <li> Applied mathematics and physics in game development; projectiles, wall running, colliders, building systems, etc. </li>
-          <li> Networking applications for latency compensation, client-side prediction + server-side reconciliation, anti-cheats, etc. </li>
-          <li> AI pathfinding logic with A* and Dijkstra's algorithms </li>
-          <li> Front-end work, dealing with cutscenes, visual effects and anime game styled attacks </li>
+          <li>Applied math and physics — projectile motion, FABRIK inversed kinematics, collision systems, wall running, building mechanics</li>
+          <li>Networking — client-side prediction, server-side reconciliation, latency compensation, anti-cheat systems</li>
+          <li>AI pathfinding — A* and Dijkstra's algorithm implementations</li>
+          <li>Frontend — cutscenes, particle VFX, anime-style attack sequences, UI/HUD systems</li>
         </ul>
 
         <video controls class="media" width="100%">
-            <source src="assets/videos/fbg_lancer_ult.mov" type="video/mp4">
+          <source src="https://st-vn.github.io/portfolio/assets/videos/fbg_lancer_ult.mov" type="video/mp4">
         </video>
 
-        <iframe width="100%" height="400" src="https://www.youtube.com/embed/S-thgACxqIw" frameborder="0" allowfullscreen>
-        </iframe>
-
-        <iframe
-            width="100%"
-            height="400"
-            src="https://www.youtube.com/embed/VpumLjLvBlA"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/S-thgACxqIw" allowfullscreen></iframe>
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/VpumLjLvBlA" allowfullscreen></iframe>
       </div>
 
     </section>
-
-    <!-- Contact Section -->
-    <!-- <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: your.email@example.com</p>
-      <p>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-        <a href="resume.pdf" target="_blank">Download Résumé</a>
-      </p>
-    </section> -->
 
   </main>
 
   <footer>
     <div class="container">
-      <p><a href="https://github.com/St-vn" target="">GitHub</a></p>
-      <p><a href="assets/documents/cv_steven_chhay.pdf" target="">Download CV</a></p>
-      <p>© 2026 Chhun Steven, Chhay</p>
+      <p><a href="https://github.com/St-vn" target="_blank">GitHub</a></p>
+      <p><a href="mailto:cchhunsteven@gmail.com">cchhunsteven@gmail.com</a></p>
+      <p><a href="assets/documents/cv_steven_chhay.pdf" target="_blank">Download CV</a></p>
+      <p>© 2026 Chhun Steven Chhay</p>
     </div>
   </footer>
+
+  <script src="main.js"></script>
 
 </body>
 
