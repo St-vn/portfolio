@@ -30,9 +30,9 @@
       <h2>About</h2>
       <p>
         I build software at the intersection of engineering and applied physics. I have five years of
-        professional experience in game development and full-stack software, and I'm currently studying
-        at Collège Lionel-Groulx. My
-        technical interests span aerodynamics, avionics systems, embedded systems, game development, fluid simulation, and more.
+        professional experience in game development and full-stack software. My
+        technical interests span aerodynamics, avionics systems, embedded systems, game development, fluid simulation,
+        and more.
         I approach engineering problems using first principles.
       </p>
     </section>
@@ -50,9 +50,19 @@
       </div>
 
       <div class="skill-group">
-        <span class="skill-label">Engines &amp; Tools</span>
+        <span class="skill-label">Tools</span>
+        <span class="tag">Claude Code</span>
+        <span class="tag">Cursor</span>
+        <span class="tag">GitHub Copilot</span>
+        <span class="tag">Antigravity</span>
         <span class="tag">Unity</span>
-        <span class="tag">Visual Studio Code/Community</span>
+        <span class="tag">Visual Studio Code</span>
+        <span class="tag">Visual Studio Community</span>
+        <span class="tag">React</span>
+        <span class="tag">Vite</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Vercel</span>
+        <span class="tag">Railway</span>
         <span class="tag">Roblox Studio</span>
         <span class="tag">Blender</span>
       </div>
@@ -64,7 +74,7 @@
         <span class="tag">Networking</span>
         <span class="tag">Software</span>
         <span class="tag">AI Pathfinding</span>
-        <span class="tag">Full-stack Game Development</span>
+        <span class="tag">Game Development</span>
         <span class="tag">Workflow Automation</span>
       </div>
     </section>
@@ -73,127 +83,254 @@
     <section id="experience">
       <h2>Experience</h2>
 
-      <!-- ── Engineering Projects ───────────────────────── -->
-      <div class="subsection-label">Engineering Projects</div>
-
-      <div class="card">
-        <h3>Polytechnique Montréal — "Déplace d'air" Wind Turbine Competition</h3>
-        <span class="meta">2026</span>
-        <p>
-          Led a team of three in the design, prototyping, and testing of a lift-based H-rotor wind
-          turbine for Polytechnique Montréal's aerodynamics competition.
-        </p>
-        <ul>
-          <li>Blade aerodynamics research — lift vs. drag tradeoffs, NACA airfoil profiles</li>
-          <li>Axial flux alternator design — coil winding, core lamination, Faraday's Law</li>
-          <li>AC circuit design — Kirchhoff's Voltage Law, coil connection topology, terminal blocks</li>
-          <li>Applied mechanics — torque, rotational inertia, RPM, mechanical power output</li>
-          <li>Engineering under real constraints — wind tunnel speed limits, material and tooling restrictions</li>
-        </ul>
-
-        <img src="https://st-vn.github.io/portfolio/assets/images/dda_icon.png" width="250" alt="Déplace d'air wind turbine" class="media">
-
-        <p>Prototype model using magnets weaker than the N42 magnets used in competition</p>
-        <video controls class="media" width="50%">
-          <source src="https://st-vn.github.io/portfolio/assets/videos/h-rotor-test.mov" type="video/mp4">
-        </video>
+      <!-- ── Filter Bar ─────────────────────────────────── -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <span class="filter-label">Type</span>
+          <button class="tag filter-pill active" data-filter="type" data-value="all">All</button>
+          <button class="tag filter-pill" data-filter="type" data-value="engineering">Engineering</button>
+          <button class="tag filter-pill" data-filter="type" data-value="software">Software</button>
+          <button class="tag filter-pill" data-filter="type" data-value="gamedev">Game Dev</button>
+          <button class="tag filter-pill" data-filter="type" data-value="physics">Physics</button>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Category</span>
+          <button class="tag filter-pill active" data-filter="category" data-value="all">All</button>
+          <button class="tag filter-pill" data-filter="category" data-value="project">Project</button>
+          <button class="tag filter-pill" data-filter="category" data-value="contract">Contract</button>
+          <button class="tag filter-pill" data-filter="category" data-value="competition">Competition</button>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Status</span>
+          <button class="tag filter-pill active" data-filter="status" data-value="all">All</button>
+          <button class="tag filter-pill" data-filter="status" data-value="completed">Completed</button>
+          <button class="tag filter-pill" data-filter="status" data-value="ongoing">Ongoing</button>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Sort</span>
+          <button class="tag filter-pill active" data-filter="sort" data-value="newest">Newest First</button>
+          <button class="tag filter-pill" data-filter="sort" data-value="oldest">Oldest First</button>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>CFD Simulation</h3>
-        <span class="meta">2026</span>
-        <p>
-          Built a real-time computational fluid dynamics simulation inside a game engine to deepen my
-          understanding of fluid mechanics and aerodynamics.
-        </p>
-        <ul>
-          <li>Particle trajectory simulation using a boids-inspired steering algorithm with separation and cohesion forces</li>
-          <li>Bernoulli's principle applied in real-time — inverse velocity/pressure relationship observable in simulation</li>
-          <!-- <li>Gram-Schmidt orthogonalization for tangent frame construction on arbitrary surfaces</li> -->
-          <li>Demonstrated on NACA airfoil and bluff body geometries</li>
-        </ul>
+      <div class="card-slot">
+        <div class="card" data-type="software engineering" data-category="competition project" data-status="ongoing"
+          data-year="2026">
+          <h3>AI Hackfest</h3>
+          <span class="meta">2026</span>
+          <p>
+            Ongoing hackathon, solo submission.
+          </p>
+          <!-- <br>
+          <p><b>Waiting for verdict</b><p>
+          <br> -->
+          <!-- <ul>
+            <li>Deployment : Vercel, Railway</li>
+            <li>Frameworks : React + Vite, FastAPI</li>
+            <li>Languages : JavaScript, Python</li>
+          </ul>
+          <br>
+          <ol>
+            <li>Upload your resume(PDF, DOCX, TXT, etc.)</li>
+            <li>Gemini analyzes your resume and creates a profile with recommended positions</li>
+            <li>Select your job preferences(location, remote, full-time, part-time, etc.)</li>
+            <li>SerpAPI queries job boards</li>
+            <li>Gemini scores jobs based on your profile</li>
+            <li>Draft an outreach email, cover letter, or personalized resume</li>
+          </ol> -->
 
-        <video controls class="media" width="60%">
-          <source src="https://st-vn.github.io/portfolio/assets/videos/cfd_bugatti.mp4" type="video/mp4">
-        </video>
-        <video controls class="media" width="60%">
-          <source src="https://st-vn.github.io/portfolio/assets/videos/cfd_naca.mp4" type="video/mp4">
-        </video>
-        <video controls class="media" width="60%">
-          <source src="https://st-vn.github.io/portfolio/assets/videos/cfd_wedge.mp4" type="video/mp4">
-        </video>
+          <img
+            src="https://events.mlh.io/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbDg5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f6d19345230b1613fddfc7f14ec01bd95fd6b20f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRGpFeU1EQjROakF3SVFZN0JsUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--e95a9989726607e7d6ee02cb34a6a4d9a8bf29c1/website-corrected.jpg"
+            width="300" alt="Testsprite Logo" class="media">
+
+          <!-- <p>Demo</p>
+          <video controls class="media" width="50%">
+            <source src="assets/videos/testsprite_hackathon_s2_demo.mp4" type="video/mp4">
+          </video>
+          <a href="https://testsprite-hackathon.vercel.app" target="_blank">Try it!</a>
+          <a href="https://github.com/St-vn/testsprite-hackathon" target="_blank">GitHub Repo</a> -->
+        </div>
       </div>
 
-      <!-- ── Software & Game Development ──────────────────── -->
-      <div class="subsection-label">Software &amp; Game Development</div>
+      <div class="card-slot">
+        <div class="card" data-type="software engineering" data-category="competition project" data-status="completed"
+          data-year="2026">
+          <h3>Testsprite Hackathon Season 2</h3>
+          <span class="meta">2026</span>
+          <p>
+            Led a team of three and built a web application for finding jobs, tested with TestSprite. Contributed by
+            planning and developing.
+          </p>
+          <br>
+          <p><b>Waiting for verdict</b>
+          <p>
+            <br>
+          <ul>
+            <li>Deployment : Vercel, Railway</li>
+            <li>Frameworks : React + Vite, FastAPI</li>
+            <li>Languages : JavaScript, Python</li>
+          </ul>
+          <br>
+          <ol>
+            <li>Upload your resume(PDF, DOCX, TXT, etc.)</li>
+            <li>Gemini analyzes your resume and creates a profile with recommended positions</li>
+            <li>Select your job preferences(location, remote, full-time, part-time, etc.)</li>
+            <li>SerpAPI queries job boards</li>
+            <li>Gemini scores jobs based on your profile</li>
+            <li>Draft an outreach email, cover letter, or personalized resume</li>
+          </ol>
 
-      <div class="card">
-        <h3>Lead Software Engineer — Magicbox Logistics LLC</h3>
-        <span class="meta">2025–Present</span>
-        <p>
-          Building a data pipeline for automated product evaluation and outreach. The system integrates
-          third-party APIs, applies statistical modeling, and uses AI-assisted automation to support
-          business decision-making at scale.
-        </p>
-        <ul>
-          <li>API integration and data ingestion pipeline</li>
-          <li>Statistical modeling for sales estimation and trend analysis</li>
-          <li>AI-assisted workflow automation</li>
-          <li>End-to-end system design from data fetch to structured output</li>
-        </ul>
+          <img src="assets/images/TestSprite_Logo-1999604977.jpg" width="250" alt="Testsprite Logo" class="media">
+
+          <p>Demo</p>
+          <video controls class="media" width="50%">
+            <source src="assets/videos/testsprite_hackathon_s2_demo.mp4" type="video/mp4">
+          </video>
+          <a href="https://testsprite-hackathon.vercel.app" target="_blank">Try it!</a>
+          <a href="https://github.com/St-vn/testsprite-hackathon" target="_blank">GitHub Repo</a>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Full-Stack Game Developer — Boss Studios LLC</h3>
-        <span class="meta">2024</span>
-        <p>
-          Contributed to a Minecraft BedWars-style game under <a href="https://www.boss-studio.org/" target="_blank">Boss Studios LLC</a>.
-        </p>
-        <ul>
-          <li>Implementation of block placement system</li>
-          <li>PvP combat, projectile, and inventory systems</li>
-        </ul>
+      <div class="card-slot">
+        <div class="card" data-type="engineering physics" data-category="competition" data-status="completed"
+          data-year="2026">
+          <h3>Polytechnique Montréal — "Déplace d'air" Wind Turbine Competition</h3>
+          <span class="meta">2026</span>
+          <p>
+            Led a team of three in the design, prototyping, and testing of a lift-based H-rotor wind
+            turbine for Polytechnique Montréal's aerodynamics competition.
+          </p>
+          <ul>
+            <li>Blade aerodynamics research — lift vs. drag tradeoffs, NACA airfoil profiles</li>
+            <li>Axial flux alternator design — coil winding, core lamination, Faraday's Law</li>
+            <li>AC circuit design — Kirchhoff's Voltage Law, coil connection topology, terminal blocks</li>
+            <li>Applied mechanics — torque, rotational inertia, RPM, mechanical power output</li>
+            <li>Engineering under real constraints — wind tunnel speed limits, material and tooling restrictions</li>
+          </ul>
 
-        <img src="https://st-vn.github.io/portfolio/assets/images/boss studios logo.png" width="150" alt="Boss Studios logo" class="media">
+          <img src="https://st-vn.github.io/portfolio/assets/images/dda_icon.png" width="250"
+            alt="Déplace d'air wind turbine" class="media">
+
+          <p>Prototype model using magnets weaker than the N42 magnets used in competition</p>
+          <video controls class="media" width="50%">
+            <source src="https://st-vn.github.io/portfolio/assets/videos/h-rotor-test.mov" type="video/mp4">
+          </video>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Frontend Developer — Oakley Productions LLC</h3>
-        <span class="meta">2024</span>
-        <p>
-          Contributed to <a href="https://www.roblox.com/games/17017769292/Anime-Defenders" target="_blank">Anime Defenders</a>,
-          a front-page tower defense game on Roblox. The project reached 3.4 billion total visits and
-          over 100,000 concurrent users at peak.
-        </p>
-        <ul>
-          <li>Implementation of VFX for 10+ different units</li>
-          <li>Bézier curve for custom projectile paths</li>
-          <li>Animation handling for unit attacks</li>
-        </ul>
+      <div class="card-slot">
+        <div class="card" data-type="engineering software gamedev physics" data-category="project"
+          data-status="completed" data-year="2026">
+          <h3>CFD Simulation</h3>
+          <span class="meta">2026</span>
+          <p>
+            Built a real-time computational fluid dynamics simulation inside a game engine to deepen my
+            understanding of fluid mechanics and aerodynamics.
+          </p>
+          <ul>
+            <li>Particle trajectory simulation using a boids-inspired steering algorithm with separation and cohesion
+              forces</li>
+            <li>Bernoulli's principle applied in real-time — inverse velocity/pressure relationship observable in
+              simulation</li>
+            <!-- <li>Gram-Schmidt orthogonalization for tangent frame construction on arbitrary surfaces</li> -->
+            <li>Demonstrated on NACA airfoil and bluff body geometries</li>
+          </ul>
 
-        <img src="https://st-vn.github.io/portfolio/assets/images/anime defenders thumbnail.webp" width="85%" alt="Anime Defenders thumbnail" class="media">
+          <video controls class="media" width="60%">
+            <source src="https://st-vn.github.io/portfolio/assets/videos/cfd_bugatti.mp4" type="video/mp4">
+          </video>
+          <video controls class="media" width="60%">
+            <source src="https://st-vn.github.io/portfolio/assets/videos/cfd_naca.mp4" type="video/mp4">
+          </video>
+          <video controls class="media" width="60%">
+            <source src="https://st-vn.github.io/portfolio/assets/videos/cfd_wedge.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Full-Stack Game Development Freelancer</h3>
-        <span class="meta">2020–Present</span>
-        <p>
-          Five years of professional game development across Unity and Roblox — building industry-grade
-          systems with applied mathematics, physics simulation, and networking architecture.
-        </p>
-        <ul>
-          <li>Applied math and physics — projectile motion, FABRIK inversed kinematics, collision systems, wall running, building mechanics</li>
-          <li>Networking — client-side prediction, server-side reconciliation, latency compensation, anti-cheat systems</li>
-          <li>AI pathfinding — A* and Dijkstra's algorithm implementations</li>
-          <li>Frontend — cutscenes, particle VFX, anime-style attack sequences, UI/HUD systems</li>
-        </ul>
+      <div class="card-slot">
+        <div class="card" data-type="software" data-category="contract" data-status="ongoing" data-year="2025">
+          <h3>Lead Software Engineer — Magicbox Logistics LLC</h3>
+          <span class="meta">2025–Present</span>
+          <p>
+            Building a data pipeline for automated product evaluation and outreach. The system integrates
+            third-party APIs, applies statistical modeling, and uses AI-assisted automation to support
+            business decision-making at scale.
+          </p>
+          <ul>
+            <li>API integration and data ingestion pipeline</li>
+            <li>Statistical modeling for sales estimation and trend analysis</li>
+            <li>AI-assisted workflow automation</li>
+            <li>End-to-end system design from data fetch to structured output</li>
+          </ul>
+        </div>
+      </div>
 
-        <video controls class="media" width="100%">
-          <source src="https://st-vn.github.io/portfolio/assets/videos/fbg_lancer_ult.mov" type="video/mp4">
-        </video>
+      <div class="card-slot">
+        <div class="card" data-type="gamedev software" data-category="contract" data-status="completed"
+          data-year="2024">
+          <h3>Full-Stack Game Developer — Boss Studios LLC</h3>
+          <span class="meta">2024</span>
+          <p>
+            Contributed to a Minecraft BedWars-style game under <a href="https://www.boss-studio.org/"
+              target="_blank">Boss Studios LLC</a>.
+          </p>
+          <ul>
+            <li>Implementation of block placement system</li>
+            <li>PvP combat, projectile, and inventory systems</li>
+          </ul>
 
-        <iframe width="100%" height="400" src="https://www.youtube.com/embed/S-thgACxqIw" allowfullscreen></iframe>
-        <iframe width="100%" height="400" src="https://www.youtube.com/embed/VpumLjLvBlA" allowfullscreen></iframe>
+          <img src="https://st-vn.github.io/portfolio/assets/images/boss studios logo.png" width="150"
+            alt="Boss Studios logo" class="media">
+        </div>
+      </div>
+
+      <div class="card-slot">
+        <div class="card" data-type="gamedev software" data-category="contract" data-status="completed"
+          data-year="2024">
+          <h3>Frontend Developer — Oakley Productions LLC</h3>
+          <span class="meta">2024</span>
+          <p>
+            Contributed to <a href="https://www.roblox.com/games/17017769292/Anime-Defenders" target="_blank">Anime
+              Defenders</a>,
+            a front-page tower defense game on Roblox. The project reached 3.4 billion total visits and
+            over 100,000 concurrent users at peak.
+          </p>
+          <ul>
+            <li>Implementation of VFX for 10+ different units</li>
+            <li>Bézier curve for custom projectile paths</li>
+            <li>Animation handling for unit attacks</li>
+          </ul>
+
+          <img src="https://st-vn.github.io/portfolio/assets/images/anime defenders thumbnail.webp" width="85%"
+            alt="Anime Defenders thumbnail" class="media">
+        </div>
+      </div>
+
+      <div class="card-slot">
+        <div class="card" data-type="gamedev software" data-category="contract" data-status="ongoing" data-year="2020">
+          <h3>Full-Stack Game Development Freelancer</h3>
+          <span class="meta">2020–Present</span>
+          <p>
+            Five years of professional game development across Unity and Roblox — building industry-grade
+            systems with applied mathematics, physics simulation, and networking architecture.
+          </p>
+          <ul>
+            <li>Applied math and physics — projectile motion, FABRIK inversed kinematics, collision systems, wall
+              running, building mechanics</li>
+            <li>Networking — client-side prediction, server-side reconciliation, latency compensation, anti-cheat
+              systems</li>
+            <li>AI pathfinding — A* and Dijkstra's algorithm implementations</li>
+            <li>Frontend — cutscenes, particle VFX, anime-style attack sequences, UI/HUD systems</li>
+          </ul>
+
+          <video controls class="media" width="100%">
+            <source src="https://st-vn.github.io/portfolio/assets/videos/fbg_lancer_ult.mov" type="video/mp4">
+          </video>
+
+          <iframe width="100%" height="400" src="https://www.youtube.com/embed/S-thgACxqIw" allowfullscreen></iframe>
+          <iframe width="100%" height="400" src="https://www.youtube.com/embed/VpumLjLvBlA" allowfullscreen></iframe>
+        </div>
       </div>
 
     </section>

@@ -134,22 +134,69 @@ h2 {
     transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-/* ── Subsection labels ──────────────────────────────────── */
-.subsection-label {
+/* ── Filter bar ─────────────────────────────────────────── */
+.filter-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+}
+
+.filter-label {
     font-family: var(--mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.14em;
+    font-size: 0.7rem;
+    color: var(--text-muted);
     text-transform: uppercase;
-    color: var(--accent);
-    opacity: 0.6;
-    margin-top: 2.5rem;
-    margin-bottom: 0.5rem;
-    padding-left: 0.1rem;
+    letter-spacing: 0.1em;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    min-width: 4.5rem;
+}
+
+.filter-pill {
+    cursor: pointer;
+    user-select: none;
+    background: none;
+    border: 1px solid var(--accent-border);
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-pill.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+/* ── Card slots (collapse animation wrapper) ────────────── */
+.card-slot {
+    display: grid;
+    grid-template-rows: 1fr;
+    opacity: 1;
+    margin-top: 0.9rem;
+    transition: grid-template-rows 0.35s ease, opacity 0.3s ease, margin-top 0.35s ease;
+}
+
+.card-slot.hidden {
+    grid-template-rows: 0fr;
+    opacity: 0;
+    margin-top: 0;
+    pointer-events: none;
+}
+
+.card-slot>.card {
+    overflow: hidden;
+    min-height: 0;
 }
 
 /* ── Cards ──────────────────────────────────────────────── */
 .card {
-    margin-top: 0.9rem;
     padding: 1.6rem;
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -200,6 +247,13 @@ h2 {
 }
 
 ul {
+    margin-left: 1.2rem;
+    margin-top: 0.6rem;
+    color: #c0c0c0;
+    font-size: 0.93rem;
+}
+
+ol {
     margin-left: 1.2rem;
     margin-top: 0.6rem;
     color: #c0c0c0;
