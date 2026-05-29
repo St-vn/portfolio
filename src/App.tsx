@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { BootSequence } from './components/BootSequence';
 import { DesktopIcon } from './components/DesktopIcon';
 import { WindowFrame } from './components/WindowFrame';
@@ -376,8 +376,10 @@ export const App: React.FC = () => {
     setSelectedIconId(null);
   };
 
+  const handleBootComplete = useCallback(() => setBooting(false), []);
+
   if (booting) {
-    return <BootSequence onComplete={() => setBooting(false)} />;
+    return <BootSequence onComplete={handleBootComplete} />;
   }
 
   // Mobile viewport: Phoning-inspired collage + tactile grid + full-screen overlays
