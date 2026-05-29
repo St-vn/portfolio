@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+    <!-- Oscilloscope Grid Background -->
+    <rect width="48" height="48" rx="4" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <path d="M0 12h48M0 24h48M0 36h48M12 0v48M24 0v48M36 0v48" stroke="#334155" stroke-width="1" stroke-dasharray="2 2"/>
+    <!-- Glowing Sine Wave -->
+    <path d="M0 24 Q 6 4, 12 24 T 24 24 T 36 24 T 48 24" fill="none" stroke="#00ff66" stroke-width="2.5" stroke-linecap="round" filter="drop-shadow(0 0 2px #00ff66)"/>
+  </svg>

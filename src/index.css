@@ -1,0 +1,1107 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=VT323&display=swap');
+
+:root {
+  /* Color system */
+  --bg-workspace: #121417;
+  /* Deep obsidian slate */
+  --bg-window: #252930;
+  /* Liquid titanium gray */
+  --bg-inset: #1a1c20;
+  /* Recessed canvas background */
+  --border-light: #525966;
+  /* Outer highlight bevel */
+  --border-mid-light: #3d434f;
+  /* Inner highlight bevel */
+  --border-mid-dark: #16181c;
+  /* Inner shadow bevel */
+  --border-dark: #08090a;
+  /* Outer shadow bevel */
+
+  --accent-green: #00ff66;
+  /* Telemetry Green */
+  --accent-amber: #ff9900;
+  /* Telemetry Orange/Amber */
+  --text-primary: #e2e8f0;
+  /* System light gray */
+  --text-secondary: #94a3b8;
+  /* Telemetry dim gray */
+  --taskbar-bg: #1e2229;
+
+  /* Fonts */
+  --font-system: 'VT323', monospace;
+  --font-editorial: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  background-color: var(--bg-workspace);
+  color: var(--text-primary);
+  font-family: var(--font-editorial);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Y2K Bevel Borders */
+.bevel-out {
+  border: 2px solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+}
+
+.bevel-in {
+  border: 2px solid;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+  background-color: var(--bg-inset);
+}
+
+.button-retro {
+  background-color: var(--bg-window);
+  color: var(--text-primary);
+  padding: 4px 12px;
+  cursor: pointer;
+  font-family: var(--font-editorial);
+  font-size: 13px;
+  font-weight: 500;
+  border: 2px solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.button-retro:active {
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+  transform: translate(1px, 1px);
+}
+
+.button-retro.active {
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+  background-color: var(--bg-inset);
+}
+
+/* Desktop Grid Canvas */
+.desktop-canvas {
+  width: 100vw;
+  height: calc(100vh - 40px);
+  position: relative;
+  overflow: hidden;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.desktop-canvas::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(rgba(0, 255, 102, 0.015) 1px, transparent 1px);
+  background-size: 6px 6px;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* Monospace Scanline Banner & Inset Panel */
+.monitor-scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.monitor-scanline::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar for Retro Inset Panels */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-inset);
+  border: 1px solid var(--border-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-window);
+  border: 2px solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+}
+
+::-webkit-scrollbar-thumb:active {
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+}
+
+/* Marquee utility */
+marquee {
+  font-family: var(--font-system);
+  font-size: 18px;
+  color: var(--accent-amber);
+  background: var(--bg-inset);
+  padding: 4px;
+  border: 1px solid var(--border-dark);
+}
+
+/* Animations */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: var(--accent-green);
+  animation: blink 1s step-start infinite;
+  vertical-align: middle;
+}
+
+/* Global Y2K Background Sticker Collage base styles */
+.sticker {
+  position: absolute;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.6));
+  user-select: none;
+}
+
+/* Tech icon stickers — subtle shadow only, preserve brand colors */
+.sticker-tech {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+  opacity: 0.85;
+}
+
+.sticker-polaroid {
+  background: #ffffff;
+  padding: 6px 6px 16px 6px;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.sticker-polaroid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sticker-blue-tag {
+  background-color: #1e40af;
+  color: #ffffff;
+  font-family: var(--font-system);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid #3b82f6;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sticker-heart {
+  font-size: 40px;
+  color: #ef4444;
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* NewJeans Phoning Mobile Design Framework */
+@media (max-width: 768px) {
+  .mobile-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: linear-gradient(180deg, #1b263b 0%, #0d1b2a 100%);
+    position: relative;
+  }
+
+  .mobile-collage {
+    height: 42%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-image:
+      radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(30, 41, 59, 0.5), rgba(15, 23, 42, 0.8));
+    background-size: 16px 16px, 100% 100%;
+    border-bottom: 3px solid var(--border-dark);
+  }
+
+  .mobile-grid-container {
+    height: 58%;
+    width: 100%;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #2a2f3a 0%, #181b22 100%);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .mobile-shortcut-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 80px);
+    gap: 6px;
+    padding: 4px 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mobile-shortcut-tile {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: var(--font-system);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 4px;
+    text-align: center;
+    cursor: pointer;
+    border: 3px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    /* bevel-out */
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.9);
+    transition: none;
+    width: 80px;
+    height: 80px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .mobile-shortcut-tile:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+    /* bevel-in inverse */
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.9);
+  }
+
+  .mobile-shortcut-tile-icon {
+    font-size: 35px;
+    margin-bottom: 2px;
+    filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.2));
+  }
+
+  .mobile-shortcut-tile-label {
+    font-family: var(--font-system);
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.1;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+
+
+  /* Full Screen Overlays for Mobile Window Panels */
+  .mobile-window-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-window);
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .mobile-window-header {
+    height: 48px;
+    background-color: #1e293b;
+    border-bottom: 2px solid var(--border-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .mobile-window-title {
+    font-family: var(--font-system);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .mobile-window-close {
+    background-color: #ef4444;
+    color: #ffffff;
+    font-family: var(--font-system);
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid;
+    border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .mobile-window-close:active {
+    border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+    transform: translate(1px, 1px);
+  }
+
+  .mobile-window-content {
+    flex: 1;
+    overflow-y: auto;
+    background-color: var(--bg-inset);
+    margin: 6px;
+    border: 2px solid;
+    border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+    /* bevel-in */
+  }
+
+  .mobile-window-footer {
+    height: 26px;
+    background-color: var(--taskbar-bg);
+    border-top: 2px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-family: var(--font-system);
+  }
+
+  /* Mobile layout positions for StickerCollage */
+  .sticker-collage-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sticker-ribbon {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    background: var(--accent-amber);
+    color: #000;
+    font-family: var(--font-system);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 30px;
+    transform: rotate(-15deg);
+    z-index: 1;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .sticker-p1 {
+    top: 15%;
+    left: 6%;
+    width: 100px;
+    height: 125px;
+    transform: rotate(-8deg);
+    z-index: 6;
+  }
+
+  .sticker-p2 {
+    top: 20%;
+    right: 8%;
+    width: 105px;
+    height: 130px;
+    transform: rotate(10deg);
+    z-index: 7;
+  }
+
+  .sticker-keytag {
+    top: 8%;
+    left: 36%;
+    transform: rotate(4deg);
+    z-index: 4;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 12px;
+  }
+
+  .sticker-dda {
+    bottom: 15%;
+    left: 38%;
+    transform: rotate(-12deg);
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+  }
+
+  .sticker-testsprite {
+    bottom: 10%;
+    right: 42%;
+    transform: rotate(15deg);
+    z-index: 5;
+    width: 38px;
+    height: 38px;
+  }
+
+  .sticker-badge-1 {
+    top: 50%;
+    left: 30%;
+    z-index: 1;
+    font-size: 24px;
+  }
+
+  .sticker-badge-2 {
+    top: 65%;
+    right: 28%;
+    z-index: 1;
+    font-size: 24px;
+  }
+
+  .sticker-badge-3 {
+    top: 12%;
+    right: 40%;
+    z-index: 1;
+    font-size: 18px;
+  }
+
+  .sticker-badge-4 {
+    bottom: 25%;
+    left: 15%;
+    z-index: 1;
+    font-size: 20px;
+  }
+
+  .sticker-badge-5 {
+    bottom: 8%;
+    right: 15%;
+    z-index: 1;
+    font-size: 22px;
+  }
+
+  .sticker-main-title {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-system);
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 3px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 1px 1px 0px #000;
+    z-index: 10;
+    letter-spacing: 1px;
+  }
+
+  /* Override sizes of tech stickers on mobile to scale them down */
+  .sticker-tech {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .sticker-tech-concordia {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .sticker-tech-devpost {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .sticker-tech-mlh {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .sticker-tech-clg {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .sticker-tech-vibefm {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+/* Desktop layout positions for StickerCollage */
+@media (min-width: 769px) {
+  .sticker-collage-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    /* Layer 1 (safely behind Layer 2 shortcuts and Layer 3 windows) */
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .sticker-ribbon {
+    position: absolute;
+    top: 40px;
+    right: -30px;
+    background: var(--accent-amber);
+    color: #000;
+    font-family: var(--font-system);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 4px 40px;
+    transform: rotate(15deg);
+    z-index: 1;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .sticker-p1 {
+    position: absolute;
+    top: 12%;
+    left: 28%;
+    width: 160px;
+    height: 200px;
+    transform: rotate(-6deg);
+    z-index: 6;
+  }
+
+  .sticker-p2 {
+    position: absolute;
+    top: 18%;
+    right: 12%;
+    width: 170px;
+    height: 212px;
+    transform: rotate(8deg);
+    z-index: 7;
+  }
+
+  .sticker-keytag {
+    position: absolute;
+    top: 8%;
+    left: 55%;
+    transform: rotate(5deg);
+    z-index: 4;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 16px;
+  }
+
+  .sticker-dda {
+    position: absolute;
+    bottom: 22%;
+    left: 36%;
+    transform: rotate(-10deg);
+    z-index: 5;
+    width: 70px;
+    height: 70px;
+  }
+
+  .sticker-testsprite {
+    position: absolute;
+    bottom: 26%;
+    right: 32%;
+    transform: rotate(12deg);
+    z-index: 5;
+    width: 65px;
+    height: 65px;
+  }
+
+  .sticker-badge-1 {
+    position: absolute;
+    bottom: 35%;
+    left: 24%;
+    z-index: 1;
+    font-size: 32px;
+  }
+
+  .sticker-badge-2 {
+    position: absolute;
+    top: 45%;
+    right: 30%;
+    z-index: 1;
+    font-size: 36px;
+  }
+
+  .sticker-badge-3 {
+    position: absolute;
+    top: 8%;
+    right: 40%;
+    z-index: 1;
+    font-size: 28px;
+  }
+
+  .sticker-badge-4 {
+    position: absolute;
+    bottom: 10%;
+    left: 45%;
+    z-index: 1;
+    font-size: 34px;
+  }
+
+  .sticker-badge-5 {
+    position: absolute;
+    bottom: 12%;
+    right: 20%;
+    z-index: 1;
+    font-size: 36px;
+  }
+
+  .sticker-main-title {
+    position: absolute;
+    bottom: 30px;
+    right: 5%;
+    font-family: var(--font-system);
+    font-size: 72px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 4px 4px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 1px 1px 0px #000;
+    z-index: 10;
+    letter-spacing: 2px;
+  }
+}
+
+/* Existing tech stickers — positions (Global positioning, scaled on mobile) */
+.sticker-tech-react {
+  position: absolute;
+  top: 5%;
+  right: 22%;
+  width: 48px;
+  height: 48px;
+  transform: rotate(-8deg);
+  z-index: 3;
+}
+
+.sticker-tech-typescript {
+  position: absolute;
+  top: 14%;
+  right: 6%;
+  width: 44px;
+  height: 44px;
+  transform: rotate(10deg);
+  z-index: 3;
+}
+
+.sticker-tech-python {
+  position: absolute;
+  top: 25%;
+  right: 28%;
+  width: 46px;
+  height: 46px;
+  transform: rotate(-5deg);
+  z-index: 3;
+}
+
+.sticker-tech-git {
+  position: absolute;
+  top: 36%;
+  right: 6%;
+  width: 42px;
+  height: 42px;
+  transform: rotate(14deg);
+  z-index: 3;
+}
+
+/* Extended tech stickers — all new icons */
+/* Row across the top-right cluster */
+.sticker-tech-js {
+  position: absolute;
+  top: 20%;
+  right: 38%;
+  width: 42px;
+  height: 42px;
+  transform: rotate(6deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-nextjs {
+  position: absolute;
+  top: 3%;
+  right: 48%;
+  width: 38px;
+  height: 38px;
+  transform: rotate(-12deg);
+  z-index: 3;
+  /* opacity: 0.8; */
+}
+
+.sticker-tech-vite {
+  position: absolute;
+  top: 18%;
+  right: 30%;
+  width: 50px;
+  height: 50px;
+  transform: rotate(8deg);
+  z-index: 3;
+  /* opacity: 0.85; */
+}
+
+.sticker-tech-tailwind {
+  position: absolute;
+  top: 4%;
+  right: 60%;
+  width: 40px;
+  height: 40px;
+  transform: rotate(-6deg);
+  z-index: 3;
+  /* opacity: 0.75; */
+}
+
+/* Middle-right cluster */
+.sticker-tech-fastapi {
+  position: absolute;
+  top: 34%;
+  right: 32%;
+  width: 44px;
+  height: 44px;
+  transform: rotate(-10deg);
+  z-index: 3;
+  /* opacity: 0.85; */
+}
+
+.sticker-tech-redis {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  width: 40px;
+  height: 40px;
+  transform: rotate(7deg);
+  z-index: 3;
+  /* opacity: 0.85; */
+}
+
+.sticker-tech-supabase {
+  position: absolute;
+  top: 58%;
+  right: 28%;
+  width: 42px;
+  height: 42px;
+  transform: rotate(-4deg);
+  z-index: 3;
+  /* opacity: 0.85; */
+}
+
+.sticker-tech-railway {
+  position: absolute;
+  top: 64%;
+  right: 16%;
+  width: 38px;
+  height: 38px;
+  transform: rotate(11deg);
+  z-index: 3;
+  /* opacity: 0.8; */
+}
+
+.sticker-tech-vercel {
+  position: absolute;
+  top: 48%;
+  right: 38%;
+  width: 36px;
+  height: 36px;
+  transform: rotate(-15deg);
+  z-index: 3;
+  /* opacity: 0.75; */
+}
+
+/* Right-side vertical strip */
+.sticker-tech-github {
+  position: absolute;
+  top: 22%;
+  right: 3%;
+  width: 46px;
+  height: 46px;
+  transform: rotate(-9deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-playwright {
+  position: absolute;
+  top: 34%;
+  right: 40%;
+  width: 44px;
+  height: 44px;
+  transform: rotate(5deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-csharp {
+  position: absolute;
+  top: 72%;
+  right: 38%;
+  width: 40px;
+  height: 40px;
+  transform: rotate(-7deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-vsc {
+  position: absolute;
+  top: 78%;
+  right: 10%;
+  width: 44px;
+  height: 44px;
+  transform: rotate(9deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+/* Game/creative tools — bottom strip */
+.sticker-tech-lua {
+  position: absolute;
+  bottom: 18%;
+  right: 24%;
+  width: 38px;
+  height: 38px;
+  transform: rotate(-13deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-unity {
+  position: absolute;
+  bottom: 10%;
+  right: 42%;
+  width: 42px;
+  height: 42px;
+  transform: rotate(6deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-blender {
+  position: absolute;
+  bottom: 22%;
+  right: 48%;
+  width: 46px;
+  height: 46px;
+  transform: rotate(-8deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-fusion360 {
+  position: absolute;
+  bottom: 8%;
+  right: 56%;
+  width: 36px;
+  height: 36px;
+  transform: rotate(12deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-roblox {
+  position: absolute;
+  bottom: 30%;
+  right: 8%;
+  width: 40px;
+  height: 40px;
+  transform: rotate(-5deg);
+  z-index: 3;
+  opacity: 0.8;
+}
+
+.sticker-tech-robloxstudio {
+  position: absolute;
+  bottom: 14%;
+  right: 30%;
+  width: 36px;
+  height: 36px;
+  transform: rotate(10deg);
+  z-index: 3;
+  opacity: 0.75;
+}
+
+/* AI tools cluster — center-right */
+.sticker-tech-chatgpt {
+  position: absolute;
+  top: 26%;
+  right: 50%;
+  width: 40px;
+  height: 40px;
+  transform: rotate(4deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-gemini {
+  position: absolute;
+  top: 40%;
+  right: 52%;
+  width: 38px;
+  height: 38px;
+  transform: rotate(-11deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-claude {
+  position: absolute;
+  top: 54%;
+  right: 55%;
+  width: 42px;
+  height: 42px;
+  transform: rotate(7deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+/* Education & community */
+.sticker-tech-concordia {
+  position: absolute;
+  top: 66%;
+  right: 65%;
+  width: 160px;
+  height: 160px;
+  transform: rotate(-6deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-devpost {
+  position: absolute;
+  bottom: -5%;
+  right: 25%;
+  width: 160px;
+  height: 160px;
+  transform: rotate(8deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-mlh {
+  position: absolute;
+  top: 55%;
+  right: 45%;
+  width: 140px;
+  height: 140px;
+  transform: rotate(-12deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-clg {
+  position: absolute;
+  top: 50%;
+  right: 63%;
+  width: 80px;
+  height: 80px;
+  transform: rotate(10deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-expogo {
+  position: absolute;
+  top: 8%;
+  right: 14%;
+  width: 44px;
+  height: 44px;
+  transform: rotate(8deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+.sticker-tech-vibefm {
+  position: absolute;
+  top: -10%;
+  right: 35%;
+  width: 390px;
+  height: 390px;
+  transform: rotate(-5deg);
+  z-index: 3;
+  opacity: 1;
+}
+
+/* Y2K Media Carousel Styles */
+.y2k-carousel-card-anchor {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-inset);
+  border: 1px solid var(--border-dark);
+  padding: 4px;
+  margin-top: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.y2k-media-inner-viewport {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: aspect-ratio 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: aspect-ratio;
+  box-sizing: border-box;
+}
+
+/* Fullscreen styles for Y2K Media Player */
+.y2k-player:fullscreen {
+  background-color: #000000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 24px !important;
+  box-sizing: border-box !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.y2k-player:fullscreen .y2k-media-inner-viewport {
+  width: min(90vw, calc(80vh * var(--aspect-ratio, 1.777))) !important;
+  height: min(80vh, calc(90vw / var(--aspect-ratio, 1.777))) !important;
+  max-width: 90vw !important;
+  max-height: 80vh !important;
+  margin: auto !important;
+}
+
+/* Align player title bar and control rail with the media viewport width in fullscreen */
+.y2k-player:fullscreen > div:first-child {
+  width: min(90vw, calc(80vh * var(--aspect-ratio, 1.777))) !important;
+  margin-bottom: 6px !important;
+}
+
+.y2k-player:fullscreen > div:last-child {
+  width: min(90vw, calc(80vh * var(--aspect-ratio, 1.777))) !important;
+  margin-top: 6px !important;
+}

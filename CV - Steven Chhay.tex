@@ -1,0 +1,262 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Chhun Steven Chhay} \\ \vspace{1pt}
+    \small Montreal, QC $|$ 514-953-8977 $|$ \href{mailto:cchhunsteven@gmail.com}{\underline{cchhunsteven@gmail.com}} $|$ 
+    \href{https://github.com/St-vn}{\underline{github.com/St-vn}} $|$
+    \href{https://st-vn.github.io/portfolio/}{\underline{st-vn.github.io/portfolio/}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Concordia University}{Montreal, QC}
+      {Bachelor of Engineering in Computer Engineering}{2026 -- 2030}
+    \resumeSubheading
+      {Coll\`{e}ge Lionel-Groulx}{Sainte-Th\'{e}r\`{e}se, QC}
+      {Diploma of College Studies in Pure and Applied Science}{2023 -- 2026}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Full-Stack and Lead Developer}{2025 -- Present}
+      {Magicbox Logistics LLC}{Remote}
+      \resumeItemListStart
+        \resumeItem{Communicate with manager to create technical plans and system design documents}
+        \resumeItem{Apply statistical modeling to estimate product sales, trend velocity, and volume}
+        \resumeItem{Design and implement robust databases to store and track trending products}
+        \resumeItem{Utilize workflow automation tools to optimize system efficiency and operations}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full-Stack Developer}{2024}
+      {Boss Studios LLC}{Remote}
+      \resumeItemListStart
+        \resumeItem{Developed a Minecraft BedWars-styled game with full gameplay mechanics}
+        \resumeItem{Programmed PvP combat, building systems, projectiles, melee attacks, and inventory systems}
+        \resumeItem{Implemented lobby systems and multiplayer infrastructure}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Frontend Developer}{2024}
+      {Oakley Productions LLC}{Remote}
+      \resumeItemListStart
+        \resumeItem{Contributed to ``Anime Defenders'', a tower defense game on Roblox with +3.4B total visits and 100K peak concurrent users}
+        \resumeItem{Developed gameplay scripting for over 10 units/characters and 30 abilities total}
+        \resumeItem{Engineered scalable visual effects using frameworks for particles, projectile motion, and B\'{e}zier curves}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full-Stack Game Developer}{2020 -- Present}
+      {Freelancer/Contractor}{Remote}
+      \resumeItemListStart
+        \resumeItem{Applied mathematics (matrices, vectors, inverse kinematics, intersection math, etc.) to game mechanics}
+        \resumeItem{Applied physics (kinematics, projectile motion, springs, light reflection, momentum, etc.) for realistic simulations}
+        \resumeItem{Developed networking systems, custom animations, visual effects, UI/HUD, AI pathfinding, and data storage solutions}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{HackTheMountain Hackathon} $|$ \emph{Python, TypeScript, Expo, React Native, OpenRouter}}{2026}
+          \resumeItemListStart
+            \resumeItem{Designed, developed, and pitched the mobile application solo at Polytechnique Montreal}
+            \resumeItem{Integrated the Shazam REST API via RapidAPI for real-time audio identification}
+            \resumeItem{Used Expo native sub-libraries for audio recording and haptic vibrations}
+            \resumeItem{Conducted rigorous analysis of track audio using FreqBlog (BPM, energy, danceability, mood, etc.)}
+            \resumeItem{Utilized Gemini Flash via OpenRouter to synthesize qualitative data and create original user profiles}
+            \resumeItem{Searched charting tracks and their metadata via Kworb and iTunes Search API}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{levlrai} $|$ \emph{TypeScript, Next.js, Supabase, Stripe, Redis, Vite, Tailwind}}{2026}
+          \resumeItemListStart
+            \resumeItem{Architected an AI-powered study platform that parses course documents (Mammoth + PDF Parse) with clean LaTeX rendering (KaTeX)}
+            \resumeItem{Engineered a secure data layer built on PostgreSQL and Google OAuth via Supabase, paired with Upstash Redis for caching, token management, and rate limiting}
+            \resumeItem{Integrated Stripe API for end-to-end subscription-based payments}
+            \resumeItem{Maintained high code reliability through CI testing using Playwright and Vitest for component verification}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{CEGEP Integrative Project} $|$ \emph{Fusion360, CAD (Coll\`{e}ge Lionel-Groulx)}}{2026}
+          \resumeItemListStart
+            \resumeItem{Designed an H-Rotor vertical wind turbine using CAD software}
+            \resumeItem{Used a brushed DC motor to generate DC voltage from turbine rotation}
+            \resumeItem{Applied electromagnetism principles including Kirchhoff's Voltage Law (KVL), Faraday's Law, induced current, and cogging torque}
+            \resumeItem{Applied mechanical engineering principles: aerodynamics, airfoil design, gear size ratio, and Betz's limit}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{D\'{e}place de l'air Contest} $|$ \emph{Aerodynamics, Physics (Polytechnique Montreal)}}{2026}
+          \resumeItemListStart
+            \resumeItem{Led a team of 3 for the wind turbine competition}
+            \resumeItem{Conducted research on blade aerodynamics, alternator designs, and other turbine physics}
+            \resumeItem{Collaborated with teammates on brainstorming, prototyping, and experimentation}
+            \resumeItem{Managed project planning constraints, trade-offs, meetings, and system testing}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{CFD Simulation} $|$ \emph{Physics Simulation, Game Engine, C\#}}{2026}
+          \resumeItemListStart
+            \resumeItem{Programmed ``Computational Fluid Dynamics'' (CFD) within game engine constraints}
+            \resumeItem{Implemented a steering algorithm inspired by boids and pressure forces to simulate particle trajectories}
+            \resumeItem{Applied Bernoulli's principle to model real-time velocity and pressure relationships}
+          \resumeItemListEnd
+
+        \resumeProjectHeading
+          {\textbf{Game Development \& Programming Mentor} $|$ \emph{Unity, C\#, Roblox Studio, Lua, Python}}{2023 -- Present}
+          \resumeItemListStart
+            \resumeItem{Guided and tutored multiple peers in computer programming courses}
+            \resumeItem{Mentored a senior student for their Unity integrative project in 200.C1 (2025)}
+            \resumeItem{Taught game development concepts including FABRIK Inverse Kinematics, A* Pathfinding, projectile motion, collider logic, and debouncing}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EXTRACURRICULARS-----------
+\section{Extracurriculars}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Open House Volunteer}{Coll\`{e}ge Lionel-Groulx}{Sainte-Th\'{e}r\`{e}se, QC}
+      {2025}
+      
+      \resumeItemListStart
+        \resumeItem{Volunteered as a Pure and Applied Science program guide, directing visitors around campus and labs}
+        \resumeItem{Answered program inquiries regarding courses, academic workload, and expectations}
+        \resumeItem{Gave prospective students practical advice on studying and effective time management}
+        \resumeItem{Encouraged interest in STEM fields and reassured students regarding program difficulty}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C\#, Python, JavaScript, TypeScript, Lua, SQL (Postgres + SQLite), HTML/CSS} \\
+     \textbf{Frameworks}{: React, FastAPI, Next.js, Playwright, Vitest, React Native, Tailwind} \\
+     \textbf{Developer Tools}{: Git, GitHub, Vercel, Railway, Expo, Supabase, Redis, VS Code, Visual Studio, Vite, Fusion360, Unity, Blender, Roblox Studio} \\
+     \textbf{AI Tooling}{: Claude Code, Antigravity, Hermes, Gemini CLI, OpenCode, Goose} \\
+     \textbf{Libraries}{: PyTrends, NumPy, Matplotlib, Mammoth, PDF Parse}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
