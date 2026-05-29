@@ -149,9 +149,9 @@ export const GameDev: React.FC = () => {
 
               <Y2KMediaCarousel
                 media={[
-                  { type: 'video', src: '/assets/videos/fbg_lancer_ult.mov', title: 'Anime themed Battlegrounds Test', aspectRatio: '16/9' },
+                  { type: 'video', src: 'assets/videos/fbg_lancer_ult.mov', title: 'Anime themed Battlegrounds Test', aspectRatio: '16/9' },
                   { type: 'youtube', youtubeId: 'S-thgACxqIw', title: 'Rocket space game : Stellar Blast', aspectRatio: '16/9' },
-                  { type: 'video', src: '/assets/videos/sirskittles building.mp4', title: '2020 Fortnite Building System', aspectRatio: '16/9' },
+                  { type: 'video', src: 'assets/videos/sirskittles building.mp4', title: '2020 Fortnite Building System', aspectRatio: '16/9' },
                 ]}
               />
             </div>

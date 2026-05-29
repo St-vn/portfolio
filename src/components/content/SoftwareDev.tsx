@@ -112,13 +112,13 @@ export const SoftwareDev: React.FC = () => {
               <div style={{ marginBottom: '10px', maxWidth: '280px' }}>
                 <Y2KMediaCarousel
                   media={[
-                    { type: 'image', src: '/assets/wallpaper_icons/vibefm.png', alt: 'vibe-fm logo', fileFormat: 'PNG', dimensions: '512 x 512', aspectRatio: '1/1' },
-                    { type: 'image', src: '/assets/images/software/vibefm_presentation_2.jpg', alt: 'vibe-fm presentation slide', fileFormat: 'JPEG', dimensions: '1920 x 1080', aspectRatio: '16/10' },
-                    { type: 'video', src: '/assets/images/software/vibefm_swipe_demo.mov', title: 'vibe-fm swipe matchmaking demo', aspectRatio: '9/16' },
-                    { type: 'image', src: '/assets/images/software/vibefm_capture.png', alt: 'vibe-fm capture screen', fileFormat: 'PNG', dimensions: '1290 x 2796', aspectRatio: '9/16' },
-                    { type: 'image', src: '/assets/images/software/vibefm_kanye.png', alt: 'vibe-fm Match Kanye', fileFormat: 'PNG', dimensions: '1290 x 2796', aspectRatio: '9/16' },
-                    { type: 'image', src: '/assets/images/software/vibefm_supernatural.png', alt: 'vibe-fm Match Supernatural', fileFormat: 'PNG', dimensions: '1290 x 2796', aspectRatio: '9/16' },
-                    { type: 'image', src: '/assets/images/software/vibefm_trending.png', alt: 'vibe-fm trending profiles', fileFormat: 'PNG', dimensions: '1290 x 2796', aspectRatio: '9/16' }
+                    { type: 'image', src: 'assets/wallpaper_icons/vibefm.png', alt: 'vibe-fm logo', fileFormat: 'PNG', dimensions: '512 x 512', aspectRatio: '1/1' },
+                    { type: 'image', src: 'assets/images/software/vibefm_presentation_2.jpg', alt: 'vibe-fm presentation slide', fileFormat: 'JPEG', dimensions: '1920 x 1080', aspectRatio: '16/10' },
+                    { type: 'video', src: 'assets/images/software/vibefm_swipe_demo.mov', title: 'vibe-fm swipe matchmaking demo', aspectRatio: '9/16' },
+                    { type: 'image', src: 'assets/images/software/vibefm_capture.png', alt: 'vibe-fm capture screen', fileFormat: 'PNG', dimensions: '1290 x 2796', aspectRatio: '9/16' },
+                    { type: 'image', src: 'assets/images/software/vibefm_kanye.png', alt: 'vibe-fm Match Kanye', fileFormat: 'PNG', dimensions: '1290 x 2796', aspectRatio: '9/16' },
+                    { type: 'image', src: 'assets/images/software/vibefm_supernatural.png', alt: 'vibe-fm Match Supernatural', fileFormat: 'PNG', dimensions: '1290 x 2796', aspectRatio: '9/16' },
+                    { type: 'image', src: 'assets/images/software/vibefm_trending.png', alt: 'vibe-fm trending profiles', fileFormat: 'PNG', dimensions: '1290 x 2796', aspectRatio: '9/16' }
                   ]}
                 />
               </div>
@@ -213,7 +213,7 @@ export const SoftwareDev: React.FC = () => {
                 media={[
                   {
                     type: 'image',
-                    src: '/assets/images/TestSprite_Logo-1999604977.jpg',
+                    src: 'assets/images/TestSprite_Logo-1999604977.jpg',
                     alt: "TestSprite Company Logo",
                     fileFormat: 'JPEG',
                     dimensions: '300 x 300',
@@ -221,7 +221,7 @@ export const SoftwareDev: React.FC = () => {
                   },
                   {
                     type: 'video',
-                    src: '/assets/videos/testsprite_hackathon_s2_demo.mp4',
+                    src: 'assets/videos/testsprite_hackathon_s2_demo.mp4',
                     title: 'TestSprite Hackathon Demo Stream',
                     aspectRatio: '16/9'
                   }
