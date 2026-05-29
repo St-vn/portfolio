@@ -39,10 +39,10 @@ export const Engineering: React.FC = () => {
           CV_TARGET: ENGINEERING
         </span>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-          <a href="/assets/resumes/hardware_en.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
+          <a href="assets/resumes/hardware_en.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
             [ Download CV: 🇬🇧 EN ]
           </a>
-          <a href="/assets/resumes/hardware_fr.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
+          <a href="assets/resumes/hardware_fr.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
             [ Télécharger CV: 🇫🇷 FR ]
           </a>
         </div>
