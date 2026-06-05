@@ -1,7 +1,7 @@
 <svg width="180" height="110" viewBox="0 0 180 110" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Vinyl sticker outer drop shadow -->
-    <filter id="vinylBorder" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="vinylBorder" x="-50%" y="-50%" width="200%" height="200%">
       <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.15" />
       <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.1" />
     </filter>
