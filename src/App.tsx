@@ -233,10 +233,10 @@ const StickerCollage: React.FC = () => {
           className="sticker cd-sticker cd-barcode"
         />
 
-        {/* 2. Hype sticker on the bottom right corner of the barcode sticker */}
+        {/* 2. Starburst sticker on the bottom right corner of the barcode sticker */}
         <img 
-          src="/assets/images/stickers/hype_sticker.svg" 
-          alt="Hype" 
+          src="/assets/images/stickers/starburst_sticker.svg" 
+          alt="Starburst" 
           className="sticker cd-sticker cd-hype"
         />
 
@@ -250,7 +250,7 @@ const StickerCollage: React.FC = () => {
         {/* 4. Random stickers from assets/images/stickers */}
         <img src="/assets/images/stickers/caution_sticker.svg" alt="Caution" className="sticker cd-sticker cd-caution" />
         <img src="/assets/images/stickers/doodle_exclamation.svg" alt="Exclamation" className="sticker cd-sticker cd-exclamation" />
-        <img src="/assets/images/stickers/starburst_sticker.svg" alt="Starburst" className="sticker cd-sticker cd-starburst" />
+        <img src="/assets/images/stickers/hype_sticker.svg" alt="Hype" className="sticker cd-sticker cd-starburst" />
         <img src="/assets/images/stickers/terminal_sticker.svg" alt="Terminal" className="sticker cd-sticker cd-terminal" />
         <img src="/assets/images/stickers/blue_distressed_star.png" alt="Blue Star" className="sticker cd-sticker cd-blue-star" />
 

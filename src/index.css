@@ -1289,7 +1289,7 @@ marquee {
   .cd-terminal { top: 52%; right: 10%; width: 58px; transform: rotate(14deg); }
   .cd-blue-star { top: 48%; left: 40%; width: 26px; transform: rotate(-12deg); }
 
-  .cd-tech { width: 18px; height: 18px; }
+  .cd-tech { width: 14px; height: 14px; }
   .cd-gemini { top: 32%; left: 28%; transform: rotate(8deg); }
   .cd-claude { top: 42%; left: 34%; transform: rotate(-5deg); }
   .cd-github { bottom: 35%; right: 28%; transform: rotate(12deg); }
@@ -1338,7 +1338,7 @@ marquee {
   .cd-terminal { top: 52%; right: 10%; width: 100px; transform: rotate(14deg); }
   .cd-blue-star { top: 48%; left: 40%; width: 45px; transform: rotate(-12deg); }
 
-  .cd-tech { width: 32px; height: 32px; }
+  .cd-tech { width: 24px; height: 24px; }
   .cd-gemini { top: 32%; left: 28%; transform: rotate(8deg); }
   .cd-claude { top: 42%; left: 34%; transform: rotate(-5deg); }
   .cd-github { bottom: 35%; right: 28%; transform: rotate(12deg); }
