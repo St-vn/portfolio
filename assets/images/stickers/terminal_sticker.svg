@@ -1,4 +1,4 @@
-<svg width="180" height="110" viewBox="0 0 180 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Vinyl sticker outer drop shadow -->
     <filter id="vinylBorder" x="-50%" y="-50%" width="200%" height="200%">
@@ -7,7 +7,7 @@
     </filter>
   </defs>
 
-  <g filter="url(#vinylBorder)" transform="translate(30, 15)">
+  <g filter="url(#vinylBorder)">
     <!-- 1. White die-cut backing (filled and stroked to form a single solid background shape) -->
     <g fill="#ffffff" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
       <path d="M 35 22 L 20 40 L 35 58 Z" />
