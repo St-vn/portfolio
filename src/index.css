@@ -1276,7 +1276,7 @@ marquee {
 
   /* Sticker positions on mobile */
   .cd-barcode { top: 6%; left: 6%; width: 65px; transform: rotate(-4deg); }
-  .cd-hype { top: 12%; left: 20%; width: 100px; transform: rotate(5deg); }
+  .cd-hype { bottom: 15%; right: 6%; width: 100px; transform: rotate(-8deg); }
   .cd-star-1 { top: 15%; right: 15%; width: 28px; transform: rotate(12deg); }
   .cd-star-2 { bottom: 20%; left: 12%; width: 25px; transform: rotate(-8deg); }
   .cd-star-3 { top: 45%; left: 8%; width: 27px; transform: rotate(18deg); }
@@ -1285,11 +1285,11 @@ marquee {
 
   .cd-caution { bottom: 8%; left: 30%; width: 50px; transform: rotate(6deg); }
   .cd-exclamation { top: 12%; left: 48%; width: 18px; transform: rotate(-10deg); }
-  .cd-starburst { bottom: 15%; right: 6%; width: 75px; transform: rotate(-8deg); }
+  .cd-starburst { top: 12%; left: 20%; width: 75px; transform: rotate(5deg); }
   .cd-terminal { top: 52%; right: 10%; width: 58px; transform: rotate(14deg); }
   .cd-blue-star { top: 48%; left: 40%; width: 26px; transform: rotate(-12deg); }
 
-  .cd-tech { width: 14px; height: 14px; }
+  .cd-tech { width: 26px; height: 26px; }
   .cd-gemini { top: 32%; left: 28%; transform: rotate(8deg); }
   .cd-claude { top: 42%; left: 34%; transform: rotate(-5deg); }
   .cd-github { bottom: 35%; right: 28%; transform: rotate(12deg); }
@@ -1325,7 +1325,7 @@ marquee {
 
   /* Sticker positions on desktop */
   .cd-barcode { top: 6%; left: 6%; width: 110px; transform: rotate(-4deg); }
-  .cd-hype { top: 13%; left: 20%; width: 180px; transform: rotate(5deg); }
+  .cd-hype { bottom: 15%; right: 6%; width: 180px; transform: rotate(-8deg); }
   .cd-star-1 { top: 15%; right: 15%; width: 50px; transform: rotate(12deg); }
   .cd-star-2 { bottom: 20%; left: 12%; width: 45px; transform: rotate(-8deg); }
   .cd-star-3 { top: 45%; left: 8%; width: 48px; transform: rotate(18deg); }
@@ -1334,11 +1334,11 @@ marquee {
 
   .cd-caution { bottom: 8%; left: 30%; width: 85px; transform: rotate(6deg); }
   .cd-exclamation { top: 12%; left: 48%; width: 32px; transform: rotate(-10deg); }
-  .cd-starburst { bottom: 15%; right: 6%; width: 130px; transform: rotate(-8deg); }
+  .cd-starburst { top: 13%; left: 20%; width: 130px; transform: rotate(5deg); }
   .cd-terminal { top: 52%; right: 10%; width: 100px; transform: rotate(14deg); }
   .cd-blue-star { top: 48%; left: 40%; width: 45px; transform: rotate(-12deg); }
 
-  .cd-tech { width: 24px; height: 24px; }
+  .cd-tech { width: 44px; height: 44px; }
   .cd-gemini { top: 32%; left: 28%; transform: rotate(8deg); }
   .cd-claude { top: 42%; left: 34%; transform: rotate(-5deg); }
   .cd-github { bottom: 35%; right: 28%; transform: rotate(12deg); }
