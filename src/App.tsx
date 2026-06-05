@@ -73,11 +73,7 @@ const StickerCollage: React.FC = () => {
 
       {/* Decorative Sparkles & Tech Badges */}
       <div className="sticker sticker-badge-1">
-<<<<<<< HEAD
         <img src="https://alexh.github.io/vintage-icons/icons/expansion_board_1.png" alt="Circuit Board" style={{ width: '200%', height: '200%', objectFit: 'contain' }} />
-=======
-        <img src="assets/wallpaper_icons/circuit_board.svg" alt="Circuit Board" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
->>>>>>> 45e39f9c45c0ecac13e0000aa5428d07d5bfe098
       </div>
       <div className="sticker sticker-badge-2">✨</div>
       <div className="sticker sticker-badge-3">🌟</div>
@@ -85,11 +81,7 @@ const StickerCollage: React.FC = () => {
         <img src="assets/wallpaper_icons/antigravity.svg" alt="Rocket" style={{ width: '200%', height: '200%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-badge-5">
-<<<<<<< HEAD
         <img src="https://win98icons.alexmeub.com/icons/png/computer_taskmgr-0.png" alt="Sine Wave" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-=======
-        <img src="assets/wallpaper_icons/sine_wave.svg" alt="Sine Wave" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
->>>>>>> 45e39f9c45c0ecac13e0000aa5428d07d5bfe098
       </div>
 
       {/* Tech Stack Logos as Stickers */}
