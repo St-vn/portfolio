@@ -71,6 +71,24 @@ const StickerCollage: React.FC = () => {
         />
       </div>
 
+      {/* Sticker 6: VHS Tape Sticker */}
+      <div className="sticker sticker-vhs">
+        <img
+          src="assets/images/stickers/VHS.png"
+          alt="VHS Tape"
+          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+        />
+      </div>
+
+      {/* Sticker 7: Halftone Picture Sticker */}
+      <div className="sticker sticker-halftone">
+        <img
+          src="assets/images/stickers/halftone.png"
+          alt="Halftone Graphic"
+          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+        />
+      </div>
+
       {/* Decorative Sparkles & Tech Badges */}
       <div className="sticker sticker-badge-1">
         <img src="https://alexh.github.io/vintage-icons/icons/expansion_board_1.png" alt="Circuit Board" style={{ width: '200%', height: '200%', objectFit: 'contain' }} />
@@ -196,6 +214,14 @@ const StickerCollage: React.FC = () => {
         <img className="sticker-tech" src="letter/script2_4.ico" alt="D" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
         <img className="sticker-tech" src="letter/script2_5.ico" alt="E" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
         <img className="sticker-tech" src="letter/script2_22.ico" alt="V" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+      </div>
+
+      {/* Chrome Liquid STVN spelling */}
+      <div className="sticker" style={{ position: 'absolute', bottom: '8%', left: '8%', transform: 'rotate(-6deg)', zIndex: 4, display: 'flex', gap: '4px' }}>
+        <img className="sticker-tech" src="letter/chrome_liquid_S.png" alt="S" style={{ width: '48px', height: '48px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="letter/chrome_liquid_T.png" alt="T" style={{ width: '48px', height: '48px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="letter/chrome_liquid_V.png" alt="V" style={{ width: '48px', height: '48px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="letter/chrome_liquid_N.png" alt="N" style={{ width: '48px', height: '48px', objectFit: 'contain', opacity: 1 }} />
       </div>
 
       {/* S Letter background */}
