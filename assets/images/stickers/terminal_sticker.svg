@@ -8,11 +8,11 @@
   </defs>
 
   <g filter="url(#vinylBorder)">
-    <!-- 1. White backing merge layer (very thick stroke) -->
-    <g stroke="#ffffff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M 35 22 L 20 40 L 35 58" />
+    <!-- 1. White die-cut backing (filled and stroked to form a single solid background shape) -->
+    <g fill="#ffffff" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 35 22 L 20 40 L 35 58 Z" />
       <path d="M 54 62 L 66 18" />
-      <path d="M 85 22 L 100 40 L 85 58" />
+      <path d="M 85 22 L 100 40 L 85 58 Z" />
     </g>
 
     <!-- 2. Black front text layer -->
