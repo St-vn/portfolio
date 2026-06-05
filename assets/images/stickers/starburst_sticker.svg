@@ -1,0 +1,16 @@
+<svg width="180" height="100" viewBox="0 0 180 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- <filter id="vinylBorder" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="1.5" flood-color="#ffffff" flood-opacity="1" />
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.4" />
+    </filter> -->
+  </defs>
+  <polygon 
+    filter="url(#vinylBorder)"
+    points="90,5 102.6,22 135,13 129.6,31 162,26 144,42 174.6,54 144,64 156.6,82 126,78 115.2,95 90,82 64.8,95 54,78 23.4,82 36,64 5.4,54 36,42 18,26 50.4,31 45,13 77.4,22" 
+    fill="#ff007a" 
+    stroke="#000000" 
+    stroke-width="4"
+  />
+  <text x="90" y="58" font-family="'Impact', 'Arial Black', sans-serif" font-size="20" stroke="#000000" stroke-width="0.5" font-weight="bold" fill="#ffffff" text-anchor="middle" transform="rotate(-8 90 50)">Developer!</text>
+</svg>
