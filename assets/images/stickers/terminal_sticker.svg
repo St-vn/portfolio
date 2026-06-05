@@ -1,0 +1,25 @@
+<svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Vinyl sticker outer drop shadow -->
+    <filter id="vinylBorder" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.15" />
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <g filter="url(#vinylBorder)">
+    <!-- 1. White backing merge layer (very thick stroke) -->
+    <g stroke="#ffffff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 35 22 L 20 40 L 35 58" />
+      <path d="M 54 62 L 66 18" />
+      <path d="M 85 22 L 100 40 L 85 58" />
+    </g>
+
+    <!-- 2. Black front text layer -->
+    <g stroke="#1a1a1a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 35 22 L 20 40 L 35 58" />
+      <path d="M 54 62 L 66 18" />
+      <path d="M 85 22 L 100 40 L 85 58" />
+    </g>
+  </g>
+</svg>
