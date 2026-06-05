@@ -186,21 +186,21 @@ const StickerCollage: React.FC = () => {
 
       {/* Script1 DEV spelling */}
       <div className="sticker" style={{ position: 'absolute', bottom: '40%', right: '15%', transform: 'rotate(-5deg)', zIndex: 3, display: 'flex', gap: '2px' }}>
-        <img className="sticker-tech" src="/letter/script1_4.ico" alt="D" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
-        <img className="sticker-tech" src="/letter/script1_5.ico" alt="E" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
-        <img className="sticker-tech" src="/letter/script1_22.ico" alt="V" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="letter/script1_4.ico" alt="D" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="letter/script1_5.ico" alt="E" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="letter/script1_22.ico" alt="V" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
       </div>
 
       {/* Script2 DEV spelling */}
       <div className="sticker" style={{ position: 'absolute', bottom: '15%', left: '26%', transform: 'rotate(5deg)', zIndex: 3, display: 'flex', gap: '2px' }}>
-        <img className="sticker-tech" src="/letter/script2_4.ico" alt="D" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
-        <img className="sticker-tech" src="/letter/script2_5.ico" alt="E" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
-        <img className="sticker-tech" src="/letter/script2_22.ico" alt="V" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="letter/script2_4.ico" alt="D" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="letter/script2_5.ico" alt="E" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="letter/script2_22.ico" alt="V" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
       </div>
 
       {/* S Letter background */}
       <div className="sticker" style={{ position: 'absolute', top: '45%', left: '42%', transform: 'rotate(12deg)', zIndex: 3 }}>
-        <img className="sticker-tech" src="/letter/letters_61.ico" alt="S" style={{ width: '38px', height: '38px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="letter/letters_61.ico" alt="S" style={{ width: '38px', height: '38px', objectFit: 'contain', opacity: 1 }} />
       </div>
 
       {/* Floating Title Graphic */}
@@ -224,44 +224,44 @@ const StickerCollage: React.FC = () => {
         </div>
 
         {/* Transparent CD case image */}
-        <img src="/assets/images/empty_cd_case.png" alt="CD Case" className="cd-case-img" />
+        <img src="assets/images/empty_cd_case.png" alt="CD Case" className="cd-case-img" />
 
         {/* 1. Barcode sticker on the top left corner */}
         <img 
-          src="/assets/images/stickers/barcode_sticker.svg" 
+          src="assets/images/stickers/barcode_sticker.svg" 
           alt="Barcode" 
           className="sticker cd-sticker cd-barcode"
         />
 
         {/* 2. Starburst sticker on the bottom right corner of the barcode sticker */}
         <img 
-          src="/assets/images/stickers/starburst_sticker.svg" 
+          src="assets/images/stickers/starburst_sticker.svg" 
           alt="Starburst" 
           className="sticker cd-sticker cd-hype"
         />
 
         {/* 3. 5 Doodle stars (different color per number variant) */}
-        <img src="/assets/images/stickers/stars/doodle_star_1_blue.svg" alt="Star 1" className="sticker cd-sticker cd-star-1" />
-        <img src="/assets/images/stickers/stars/doodle_star_2_pink.svg" alt="Star 2" className="sticker cd-sticker cd-star-2" />
-        <img src="/assets/images/stickers/stars/doodle_star_3_yellow.svg" alt="Star 3" className="sticker cd-sticker cd-star-3" />
-        <img src="/assets/images/stickers/stars/doodle_star_4_blue.svg" alt="Star 4" className="sticker cd-sticker cd-star-4" />
-        <img src="/assets/images/stickers/stars/doodle_star_5_pink.svg" alt="Star 5" className="sticker cd-sticker cd-star-5" />
+        <img src="assets/images/stickers/stars/doodle_star_1_blue.svg" alt="Star 1" className="sticker cd-sticker cd-star-1" />
+        <img src="assets/images/stickers/stars/doodle_star_2_pink.svg" alt="Star 2" className="sticker cd-sticker cd-star-2" />
+        <img src="assets/images/stickers/stars/doodle_star_3_yellow.svg" alt="Star 3" className="sticker cd-sticker cd-star-3" />
+        <img src="assets/images/stickers/stars/doodle_star_4_blue.svg" alt="Star 4" className="sticker cd-sticker cd-star-4" />
+        <img src="assets/images/stickers/stars/doodle_star_5_pink.svg" alt="Star 5" className="sticker cd-sticker cd-star-5" />
 
         {/* 4. Random stickers from assets/images/stickers */}
-        <img src="/assets/images/stickers/caution_sticker.svg" alt="Caution" className="sticker cd-sticker cd-caution" />
-        <img src="/assets/images/stickers/doodle_exclamation.svg" alt="Exclamation" className="sticker cd-sticker cd-exclamation" />
-        <img src="/assets/images/stickers/hype_sticker.svg" alt="Hype" className="sticker cd-sticker cd-starburst" />
-        <img src="/assets/images/stickers/terminal_sticker.svg" alt="Terminal" className="sticker cd-sticker cd-terminal" />
-        <img src="/assets/images/stickers/blue_distressed_star.png" alt="Blue Star" className="sticker cd-sticker cd-blue-star" />
+        <img src="assets/images/stickers/caution_sticker.svg" alt="Caution" className="sticker cd-sticker cd-caution" />
+        <img src="assets/images/stickers/doodle_exclamation.svg" alt="Exclamation" className="sticker cd-sticker cd-exclamation" />
+        <img src="assets/images/stickers/hype_sticker.svg" alt="Hype" className="sticker cd-sticker cd-starburst" />
+        <img src="assets/images/stickers/terminal_sticker.svg" alt="Terminal" className="sticker cd-sticker cd-terminal" />
+        <img src="assets/images/stickers/blue_distressed_star.png" alt="Blue Star" className="sticker cd-sticker cd-blue-star" />
 
         {/* 5. Tech stack icons */}
-        <img src="/assets/wallpaper_icons/gemini.svg" alt="Gemini" className="sticker cd-sticker cd-tech cd-gemini" />
-        <img src="/assets/wallpaper_icons/claude.svg" alt="Claude" className="sticker cd-sticker cd-tech cd-claude" />
-        <img src="/assets/wallpaper_icons/github.svg" alt="GitHub" className="sticker cd-sticker cd-tech cd-github" />
-        <img src="/assets/wallpaper_icons/railway.svg" alt="Railway" className="sticker cd-sticker cd-tech cd-railway" />
-        <img src="/assets/wallpaper_icons/javascript_logo.svg" alt="JavaScript" className="sticker cd-sticker cd-tech cd-js" />
-        <img src="/assets/wallpaper_icons/csharp.svg" alt="C#" className="sticker cd-sticker cd-tech cd-csharp" />
-        <img src="/assets/wallpaper_icons/supabase.svg" alt="Supabase" className="sticker cd-sticker cd-tech cd-supabase" />
+        <img src="assets/wallpaper_icons/gemini.svg" alt="Gemini" className="sticker cd-sticker cd-tech cd-gemini" />
+        <img src="assets/wallpaper_icons/claude.svg" alt="Claude" className="sticker cd-sticker cd-tech cd-claude" />
+        <img src="assets/wallpaper_icons/github.svg" alt="GitHub" className="sticker cd-sticker cd-tech cd-github" />
+        <img src="assets/wallpaper_icons/railway.svg" alt="Railway" className="sticker cd-sticker cd-tech cd-railway" />
+        <img src="assets/wallpaper_icons/javascript_logo.svg" alt="JavaScript" className="sticker cd-sticker cd-tech cd-js" />
+        <img src="assets/wallpaper_icons/csharp.svg" alt="C#" className="sticker cd-sticker cd-tech cd-csharp" />
+        <img src="assets/wallpaper_icons/supabase.svg" alt="Supabase" className="sticker cd-sticker cd-tech cd-supabase" />
       </div>
     </div>
   );
