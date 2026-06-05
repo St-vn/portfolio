@@ -17,7 +17,7 @@
   --border-dark: #08090a;
   /* Outer shadow bevel */
 
-  --accent-green: #00ff66;
+  --accent-green: #00ddff;
   /* Telemetry Green */
   --accent-amber: #ff9900;
   /* Telemetry Orange/Amber */
@@ -58,6 +58,40 @@ body {
   border: 2px solid;
   border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
   background-color: var(--bg-inset);
+}
+
+.window-title-bar {
+  height: 30px;
+  border-bottom: 2px solid var(--border-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  cursor: move;
+}
+
+.window-title-bar.active {
+  background: linear-gradient(-90deg, #9fb3ff 0%, #5277ffc5 100%);
+  color: #ffffff;
+  /* Dark text for contrast on cyan */
+}
+
+.window-title-bar.inactive {
+  background: linear-gradient(90deg, #9fb3ff 0%, #5277ffc5 100%);
+  color: var(--text-primary);
+  opacity: 0.7;
+}
+
+.item-card {
+  border: 2px solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+  /* bevel-out */
+  padding: 10px;
+  background-color: var(--bg-inset);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .button-retro {
@@ -686,8 +720,7 @@ marquee {
     text-shadow: 4px 4px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 1px 1px 0px #000;
     z-index: 10;
     letter-spacing: 2px;
-  }
-}
+  }}
 
 /* Existing tech stickers — positions (Global positioning, scaled on mobile) */
 .sticker-tech-react {
@@ -1096,12 +1129,12 @@ marquee {
 }
 
 /* Align player title bar and control rail with the media viewport width in fullscreen */
-.y2k-player:fullscreen > div:first-child {
+.y2k-player:fullscreen>div:first-child {
   width: min(90vw, calc(80vh * var(--aspect-ratio, 1.777))) !important;
   margin-bottom: 6px !important;
 }
 
-.y2k-player:fullscreen > div:last-child {
+.y2k-player:fullscreen>div:last-child {
   width: min(90vw, calc(80vh * var(--aspect-ratio, 1.777))) !important;
   margin-top: 6px !important;
 }

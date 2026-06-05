@@ -73,7 +73,7 @@ const StickerCollage: React.FC = () => {
 
       {/* Decorative Sparkles & Tech Badges */}
       <div className="sticker sticker-badge-1">
-        <img src="/assets/wallpaper_icons/circuit_board.svg" alt="Circuit Board" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="https://alexh.github.io/vintage-icons/icons/expansion_board_1.png" alt="Circuit Board" style={{ width: '200%', height: '200%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-badge-2">✨</div>
       <div className="sticker sticker-badge-3">🌟</div>
@@ -81,7 +81,7 @@ const StickerCollage: React.FC = () => {
         <img src="/assets/wallpaper_icons/antigravity.svg" alt="Rocket" style={{ width: '200%', height: '200%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-badge-5">
-        <img src="/assets/wallpaper_icons/sine_wave.svg" alt="Sine Wave" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="https://win98icons.alexmeub.com/icons/png/computer_taskmgr-0.png" alt="Sine Wave" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
 
       {/* Tech Stack Logos as Stickers */}
@@ -184,6 +184,25 @@ const StickerCollage: React.FC = () => {
         <img src="/assets/wallpaper_icons/mlh.png" alt="MLH" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
 
+      {/* Script1 DEV spelling */}
+      <div className="sticker" style={{ position: 'absolute', bottom: '40%', right: '15%', transform: 'rotate(-5deg)', zIndex: 3, display: 'flex', gap: '2px' }}>
+        <img className="sticker-tech" src="/letter/script1_4.ico" alt="D" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="/letter/script1_5.ico" alt="E" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="/letter/script1_22.ico" alt="V" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+      </div>
+
+      {/* Script2 DEV spelling */}
+      <div className="sticker" style={{ position: 'absolute', bottom: '15%', left: '26%', transform: 'rotate(5deg)', zIndex: 3, display: 'flex', gap: '2px' }}>
+        <img className="sticker-tech" src="/letter/script2_4.ico" alt="D" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="/letter/script2_5.ico" alt="E" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+        <img className="sticker-tech" src="/letter/script2_22.ico" alt="V" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
+      </div>
+
+      {/* S Letter background */}
+      <div className="sticker" style={{ position: 'absolute', top: '45%', left: '42%', transform: 'rotate(12deg)', zIndex: 3 }}>
+        <img className="sticker-tech" src="/letter/letters_61.ico" alt="S" style={{ width: '38px', height: '38px', objectFit: 'contain', opacity: 1 }} />
+      </div>
+
       {/* Floating Title Graphic */}
       <div className="sticker sticker-main-title">
         St-vn
@@ -199,12 +218,11 @@ export const App: React.FC = () => {
   const [currentTime, setCurrentTime] = useState('');
   const [selectedIconId, setSelectedIconId] = useState<string | null>(null);
 
-  // Manage all windows state in one hook
   const [windows, setWindows] = useState<WindowState[]>([
     {
       id: 'profile',
       title: 'Profile.lnk',
-      icon: '👤',
+      icon: 'https://win98icons.alexmeub.com/icons/png/users-2.png',
       isOpen: false,
       isActive: false,
       telemetry: 'Profile Core: OK',
@@ -216,7 +234,7 @@ export const App: React.FC = () => {
     {
       id: 'skills',
       title: 'Skills.cab',
-      icon: '💾',
+      icon: 'https://alexh.github.io/vintage-icons/icons/keys_0.png',
       isOpen: false,
       isActive: false,
       telemetry: 'Skill Database: Loaded',
@@ -228,7 +246,7 @@ export const App: React.FC = () => {
     {
       id: 'resume',
       title: 'Resume_2026.doc',
-      icon: '📄',
+      icon: 'https://alexh.github.io/vintage-icons/icons/write_file_1.png',
       isOpen: false,
       isActive: false,
       telemetry: 'Document Payload: Compiled',
@@ -240,7 +258,7 @@ export const App: React.FC = () => {
     {
       id: 'academic',
       title: 'Education.dll',
-      icon: '🎓',
+      icon: 'https://alexh.github.io/vintage-icons/icons/help_book_cool_1.png',
       isOpen: false,
       isActive: false,
       telemetry: 'Academic Database: Sync',
@@ -252,7 +270,7 @@ export const App: React.FC = () => {
     {
       id: 'structural',
       title: 'Engineering.sys',
-      icon: '⚙️',
+      icon: 'https://alexh.github.io/vintage-icons/icons/tools_gear_0.png',
       isOpen: false,
       isActive: false,
       telemetry: 'Fluid Dynamics Solver: OK',
@@ -264,7 +282,7 @@ export const App: React.FC = () => {
     {
       id: 'software',
       title: 'Software_Dev.exe',
-      icon: '💻',
+      icon: 'https://win98icons.alexmeub.com/icons/png/console_prompt-0.png',
       isOpen: false,
       isActive: false,
       telemetry: 'Vite/TS Compiler: Online',
@@ -276,7 +294,7 @@ export const App: React.FC = () => {
     {
       id: 'arcade',
       title: 'Game_Dev.bin',
-      icon: '🎮',
+      icon: 'https://alexh.github.io/vintage-icons/icons/joystick_3.png',
       isOpen: false,
       isActive: false,
       telemetry: 'Roblox Data Pipeline: 3.4B+',
@@ -288,7 +306,7 @@ export const App: React.FC = () => {
     {
       id: 'mail',
       title: 'Contact.bat',
-      icon: '📬',
+      icon: 'https://alexh.github.io/vintage-icons/icons/message_envelope_open_0.png',
       isOpen: false,
       isActive: false,
       telemetry: 'Contact Gateway: Ready',
@@ -413,7 +431,7 @@ export const App: React.FC = () => {
                 className="mobile-shortcut-tile"
                 onClick={() => openWindow(win.id)}
               >
-                <span className="mobile-shortcut-tile-icon">{win.icon}</span>
+                <img className="mobile-shortcut-tile-icon" src={win.icon} alt="" style={{ width: '35px', height: '35px', objectFit: 'contain' }} />
                 <span className="mobile-shortcut-tile-label">{win.title}</span>
               </div>
             ))}
@@ -433,7 +451,7 @@ export const App: React.FC = () => {
             {/* Overlay Header */}
             <div className="mobile-window-header">
               <div className="mobile-window-title">
-                <span>{openWindowData.icon}</span>
+                <img src={openWindowData.icon} alt="" style={{ width: '16px', height: '16px', objectFit: 'contain' }} />
                 <span>{openWindowData.title}</span>
               </div>
               <button
@@ -510,6 +528,7 @@ export const App: React.FC = () => {
           <WindowFrame
             key={win.id}
             title={win.title}
+            icon={win.icon}
             isOpen={win.isOpen}
             onClose={() => closeWindow(win.id)}
             onFocus={() => focusWindow(win.id)}
@@ -606,7 +625,7 @@ export const App: React.FC = () => {
                     (e.target as HTMLElement).style.color = 'var(--text-primary)';
                   }}
                 >
-                  <span>{win.icon}</span> {win.title}
+                  <img src={win.icon} alt="" style={{ width: '16px', height: '16px', objectFit: 'contain' }} /> {win.title}
                 </button>
               ))}
             </div>
@@ -634,10 +653,13 @@ export const App: React.FC = () => {
                   fontSize: '12px',
                   padding: '2px 10px',
                   whiteSpace: 'nowrap',
-                  fontFamily: 'var(--font-system)'
+                  fontFamily: 'var(--font-system)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px'
                 }}
               >
-                <span>{win.icon}</span> {win.title}
+                <img src={win.icon} alt="" style={{ width: '16px', height: '16px', objectFit: 'contain' }} /> {win.title}
               </button>
             );
           })}

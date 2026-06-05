@@ -2,13 +2,13 @@ import React from 'react';
 
 export const Profile: React.FC = () => {
   return (
-    <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '20px', overflowY: 'auto', height: '100%' }}>
+    <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '16px', overflowY: 'auto', height: '100%' }}>
       {/* Bio section */}
-      <div>
-        <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', marginBottom: '8px', fontSize: '16px', fontWeight: 600 }}>
-          [ SYSTEM PROFILE: STEVEN CHHAY ]
-        </h3>
-        <p style={{ fontSize: '14px', lineHeight: '1.6', color: 'var(--text-primary)' }}>
+      <div className="item-card">
+        <div style={{ display: 'flex', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
+          <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>[ SYSTEM PROFILE: STEVEN CHHAY ]</span>
+        </div>
+        <p style={{ fontSize: '13px', lineHeight: '1.6', color: 'var(--text-primary)', margin: 0 }}>
           I build software at the intersection of engineering and applied physics. I have five years of
           experience in game development and full-stack software. My
           technical interests span aerodynamics, avionics systems, embedded systems, game development, fluid simulation,
@@ -17,15 +17,15 @@ export const Profile: React.FC = () => {
       </div>
 
       {/* Education Section */}
-      <div>
-        <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', marginBottom: '8px', fontSize: '16px', fontWeight: 600 }}>
-          [ EDUCATION HISTORICAL LOG ]
-        </h3>
+      <div className="item-card">
+        <div style={{ display: 'flex', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
+          <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>[ EDUCATION HISTORICAL LOG ]</span>
+        </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 500, fontSize: '14px' }}>
-              <strong>Concordia University</strong>
-              <span>2026 - 2030</span>
+              <strong style={{ color: 'var(--text-primary)' }}>Concordia University</strong>
+              <span style={{ color: 'var(--accent-green)', fontFamily: 'var(--font-system)', fontSize: '12px' }}>2026 - 2030</span>
             </div>
             <div style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
               Bachelor of Engineering in Computer Engineering
@@ -33,8 +33,8 @@ export const Profile: React.FC = () => {
           </div>
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 500, fontSize: '14px' }}>
-              <strong>Collège Lionel-Groulx</strong>
-              <span>2023 - 2026</span>
+              <strong style={{ color: 'var(--text-primary)' }}>Collège Lionel-Groulx</strong>
+              <span style={{ color: 'var(--accent-green)', fontFamily: 'var(--font-system)', fontSize: '12px' }}>2023 - 2026</span>
             </div>
             <div style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
               Diploma of College Studies in Pure and Applied Science (DEC)
@@ -44,10 +44,10 @@ export const Profile: React.FC = () => {
       </div>
 
       {/* Languages */}
-      <div>
-        <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', marginBottom: '8px', fontSize: '16px', fontWeight: 600 }}>
-          [ LANGUAGES ]
-        </h3>
+      <div className="item-card">
+        <div style={{ display: 'flex', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
+          <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>[ LANGUAGES ]</span>
+        </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', fontSize: '12px' }}>
           <span style={{ padding: '2px 8px', border: '1px solid var(--accent-green)', color: 'var(--accent-green)', fontFamily: 'var(--font-system)', fontSize: '14px' }}>
             ENGLISH
@@ -62,10 +62,10 @@ export const Profile: React.FC = () => {
       </div>
 
       {/* Core Tooling Stack Overview */}
-      <div>
-        <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', marginBottom: '8px', fontSize: '16px', fontWeight: 600 }}>
-          [ SPECIALIST FIELD MATRIX ]
-        </h3>
+      <div className="item-card">
+        <div style={{ display: 'flex', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
+          <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>[ SPECIALIST FIELD MATRIX ]</span>
+        </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', fontSize: '12px' }}>
           <span style={{ padding: '2px 8px', border: '1px solid var(--accent-green)', color: 'var(--accent-green)', fontFamily: 'var(--font-system)', fontSize: '14px' }}>
             AI ENGINEERING
@@ -104,10 +104,10 @@ export const Profile: React.FC = () => {
       </div>
 
       {/* {Programming Languages} */}
-      <div>
-        <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', marginBottom: '8px', fontSize: '16px', fontWeight: 600 }}>
-          [ PROGRAMMING LANGUAGES ]
-        </h3>
+      <div className="item-card">
+        <div style={{ display: 'flex', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
+          <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>[ PROGRAMMING LANGUAGES ]</span>
+        </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', fontSize: '12px' }}>
           <span style={{ padding: '2px 8px', border: '1px solid var(--accent-green)', color: 'var(--accent-green)', fontFamily: 'var(--font-system)', fontSize: '14px' }}>
             C#
@@ -140,10 +140,10 @@ export const Profile: React.FC = () => {
       </div>
 
       {/* Frameworks */}
-      <div>
-        <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', marginBottom: '8px', fontSize: '16px', fontWeight: 600 }}>
-          [ FRAMEWORKS & TESTING ]
-        </h3>
+      <div className="item-card">
+        <div style={{ display: 'flex', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
+          <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>[ FRAMEWORKS & TESTING ]</span>
+        </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', fontSize: '12px' }}>
           <span style={{ padding: '2px 8px', border: '1px solid var(--accent-green)', color: 'var(--accent-green)', fontFamily: 'var(--font-system)', fontSize: '14px' }}>
             React
@@ -184,10 +184,10 @@ export const Profile: React.FC = () => {
       </div>
 
       {/* Developer Tools & Engines */}
-      <div>
-        <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', marginBottom: '8px', fontSize: '16px', fontWeight: 600 }}>
-          [ DEVELOPER TOOLS & ENGINES ]
-        </h3>
+      <div className="item-card">
+        <div style={{ display: 'flex', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
+          <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>[ DEVELOPER TOOLS & ENGINES ]</span>
+        </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', fontSize: '12px' }}>
           <span style={{ padding: '2px 8px', border: '1px solid var(--accent-green)', color: 'var(--accent-green)', fontFamily: 'var(--font-system)', fontSize: '14px' }}>
             Unity Engine
@@ -240,10 +240,10 @@ export const Profile: React.FC = () => {
       </div>
 
       {/* AI Utilities */}
-      <div>
-        <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', marginBottom: '8px', fontSize: '16px', fontWeight: 600 }}>
-          [ AI UTILITIES ]
-        </h3>
+      <div className="item-card">
+        <div style={{ display: 'flex', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
+          <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>[ AI UTILITIES ]</span>
+        </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', fontSize: '12px' }}>
           <span style={{ padding: '2px 8px', border: '1px solid var(--accent-green)', color: 'var(--accent-green)', fontFamily: 'var(--font-system)', fontSize: '14px' }}>
             Claude Code
@@ -272,10 +272,10 @@ export const Profile: React.FC = () => {
       </div>
 
       {/* Libraries */}
-      <div>
-        <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', marginBottom: '8px', fontSize: '16px', fontWeight: 600 }}>
-          [ LIBRARIES ]
-        </h3>
+      <div className="item-card">
+        <div style={{ display: 'flex', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
+          <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>[ LIBRARIES ]</span>
+        </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', fontSize: '12px' }}>
           <span style={{ padding: '2px 8px', border: '1px solid var(--accent-green)', color: 'var(--accent-green)', fontFamily: 'var(--font-system)', fontSize: '14px' }}>
             NumPy

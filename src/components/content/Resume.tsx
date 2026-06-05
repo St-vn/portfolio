@@ -40,15 +40,7 @@ export const Resume: React.FC = () => {
         {tracks.map((track, idx) => (
           <div 
             key={idx} 
-            className="bevel-out" 
-            style={{ 
-              padding: '10px', 
-              backgroundColor: 'var(--bg-inset)', 
-              display: 'flex', 
-              flexDirection: 'column', 
-              justifyContent: 'space-between',
-              gap: '10px'
-            }}
+            className="item-card"
           >
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '6px' }}>

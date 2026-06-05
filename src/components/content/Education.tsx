@@ -28,12 +28,12 @@ export const Education: React.FC = () => {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
         {/* University */}
-        <div style={{ padding: '10px', border: '1px solid var(--border-light)', backgroundColor: 'rgba(255,255,255,0.01)' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 'bold', fontSize: '14px' }}>
-            <span>Concordia University</span>
-            <span style={{ color: 'var(--accent-green)' }}>2026 - 2030</span>
+        <div className="item-card">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '6px' }}>
+            <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>Concordia University</span>
+            <span style={{ fontSize: '12px', color: 'var(--accent-green)', fontFamily: 'var(--font-system)' }}>2026 - 2030</span>
           </div>
-          <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginTop: '4px' }}>
+          <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginTop: '2px' }}>
             Bachelor of Engineering (B.Eng)
           </div>
           <div style={{ fontSize: '12px', color: 'var(--text-primary)', marginTop: '2px', fontWeight: 500 }}>
@@ -45,12 +45,12 @@ export const Education: React.FC = () => {
         </div>
 
         {/* College */}
-        <div style={{ padding: '10px', border: '1px solid var(--border-light)', backgroundColor: 'rgba(255,255,255,0.01)' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 'bold', fontSize: '14px' }}>
-            <span>Collège Lionel-Groulx</span>
-            <span style={{ color: 'var(--accent-green)' }}>2023 - 2026</span>
+        <div className="item-card">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '6px' }}>
+            <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>Collège Lionel-Groulx</span>
+            <span style={{ fontSize: '12px', color: 'var(--accent-green)', fontFamily: 'var(--font-system)' }}>2023 - 2026</span>
           </div>
-          <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginTop: '4px' }}>
+          <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginTop: '2px' }}>
             Diploma of College Studies (DEC)
           </div>
           <div style={{ fontSize: '12px', color: 'var(--text-primary)', marginTop: '2px', fontWeight: 500 }}>

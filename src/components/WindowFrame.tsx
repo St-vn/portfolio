@@ -3,6 +3,7 @@ import Draggable from 'react-draggable';
 
 interface WindowFrameProps {
   title: string;
+  icon: string;
   isOpen: boolean;
   onClose: () => void;
   onFocus: () => void;
@@ -16,6 +17,7 @@ interface WindowFrameProps {
 
 export const WindowFrame: React.FC<WindowFrameProps> = ({
   title,
+  icon,
   isOpen,
   onClose,
   onFocus,
@@ -53,21 +55,10 @@ export const WindowFrame: React.FC<WindowFrameProps> = ({
       >
         {/* Title Bar */}
         <div
-          className="window-title-bar"
-          style={{
-            height: '30px',
-            backgroundColor: isActive ? '#1e293b' : '#334155',
-            borderBottom: '2px solid var(--border-dark)',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            padding: '0 8px',
-            cursor: 'move',
-            backgroundImage: 'repeating-linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.03) 1px, transparent 1px, transparent 4px)'
-          }}
+          className={`window-title-bar ${isActive ? 'active' : 'inactive'}`}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', fontWeight: 600, fontFamily: 'var(--font-system)', letterSpacing: '0.5px' }}>
-            <span>{isActive ? '🟢' : '⚫'}</span>
+            <img src={icon} alt="" style={{ width: '16px', height: '16px', objectFit: 'contain' }} />
             <span>{title}</span>
           </div>
           

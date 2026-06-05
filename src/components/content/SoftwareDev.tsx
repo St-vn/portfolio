@@ -80,13 +80,13 @@ export const SoftwareDev: React.FC = () => {
         {activeTab === 'experience' ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {/* Magicbox */}
-            <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', marginBottom: '4px' }}>
-                <strong style={{ color: 'var(--accent-green)' }}>Full-Stack and Lead Developer</strong>
-                <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>2025 -- Present</span>
+            <div className="item-card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '6px', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>Full-Stack and Lead Developer</span>
+                <span style={{ fontSize: '12px', color: 'var(--accent-green)', fontFamily: 'var(--font-system)' }}>2025 -- Present</span>
               </div>
               <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '8px' }}>Magicbox Logistics LLC // Remote</div>
-              <ul style={{ paddingLeft: '18px', fontSize: '13px', lineHeight: '1.6', color: 'var(--text-primary)' }}>
+              <ul style={{ paddingLeft: '18px', fontSize: '13px', lineHeight: '1.6', color: 'var(--text-primary)', margin: 0 }}>
                 <li>Communicated with manager to co-author granular technical plans and architecture blueprints</li>
                 <li>Leveraged statistical modeling to project sales velocity, trend direction, and volume targets</li>
                 <li>Engineered scalable database systems to index, cache, and track viral/trending market products</li>
@@ -97,14 +97,14 @@ export const SoftwareDev: React.FC = () => {
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {/* vibe-fm */}
-            <div style={{ padding: '12px', border: '1px solid var(--border-light)', backgroundColor: '#1e2229' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                <strong style={{ color: 'var(--accent-amber)', fontSize: '14px' }}>vibe-fm (HackTheMountain Hackathon)</strong>
+            <div className="item-card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>vibe-fm (HackTheMountain Hackathon)</span>
                 <span style={{ fontSize: '11px', padding: '2px 6px', border: '1px solid var(--accent-amber)', color: 'var(--accent-amber)', fontFamily: 'var(--font-system)' }}>
                   SOLO_BUILD
                 </span>
               </div>
-              <p style={{ fontSize: '13px', lineHeight: '1.5', marginBottom: '8px', color: 'var(--text-primary)' }}>
+              <p style={{ fontSize: '13px', lineHeight: '1.5', marginBottom: '8px', color: 'var(--text-primary)', margin: 0 }}>
                 Designed and developed a real-time Music Information Retrieval (MIR) mobile application. Captures low-latency PCM audio stream, extracts acoustic vectors (BPM, energy, valence) via Shazam & FreqBlog, and performs LLM-synthesized semantic profiling alongside vector similarity matchmaking (Cosine Similarity) for compatible profiles. Resolves iOS hardware taptic-recording locks asynchronously.
               </p>
 
@@ -139,14 +139,14 @@ export const SoftwareDev: React.FC = () => {
             </div>
 
             {/* levlrai */}
-            <div style={{ padding: '12px', border: '1px solid var(--border-light)', backgroundColor: '#1e2229' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                <strong style={{ color: 'var(--accent-amber)', fontSize: '14px' }}>levlrai</strong>
+            <div className="item-card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>levlrai</span>
                 <span style={{ fontSize: '11px', padding: '2px 6px', border: '1px solid var(--accent-amber)', color: 'var(--accent-amber)', fontFamily: 'var(--font-system)' }}>
                   ACTIVE_DEPLOY
                 </span>
               </div>
-              <p style={{ fontSize: '13px', lineHeight: '1.5', marginBottom: '8px', color: 'var(--text-primary)' }}>
+              <p style={{ fontSize: '13px', lineHeight: '1.5', marginBottom: '8px', color: 'var(--text-primary)', margin: 0 }}>
                 Architected an AI-powered study platform featuring Mammoth/PDF-Parse course parsing, secure Supabase Postgres DB, Google OAuth, Upstash Redis rate-limiting, and Stripe subscription logic.
               </p>
               <div style={{ fontSize: '12px', color: 'var(--text-secondary)', fontFamily: 'var(--font-system)' }}>
@@ -155,14 +155,14 @@ export const SoftwareDev: React.FC = () => {
             </div>
 
             {/* AI Hackfest / Market MCP */}
-            <div style={{ padding: '12px', border: '1px solid var(--border-light)', backgroundColor: '#1e2229' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                <strong style={{ color: 'var(--accent-amber)', fontSize: '14px' }}>Market MCP Server (AI Hackfest Hackathon)</strong>
+            <div className="item-card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>Market MCP Server (AI Hackfest Hackathon)</span>
                 <span style={{ fontSize: '11px', padding: '2px 6px', border: '1px solid var(--accent-amber)', color: 'var(--accent-amber)', fontFamily: 'var(--font-system)' }}>
                   GITHUB_REPO
                 </span>
               </div>
-              <p style={{ fontSize: '13px', lineHeight: '1.5', marginBottom: '8px', color: 'var(--text-primary)' }}>
+              <p style={{ fontSize: '13px', lineHeight: '1.5', marginBottom: '8px', color: 'var(--text-primary)', margin: 0 }}>
                 Created a Market Intelligence MCP server for AI agents to query live data from Roblox ecosystem wikis, Rolimons, and Cloud APIs.
               </p>
 
@@ -171,7 +171,7 @@ export const SoftwareDev: React.FC = () => {
                 media={[
                   {
                     type: 'image',
-                    src: 'https://events.mlh.io/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbDg5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f6d19345230b1613fddfc7f14ec01bd95fd6b20f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRGpFeU1EQjROakF3SVFZN0JsUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--e95a9989726607e7d6ee02cb34a6a4d9a8bf29c1/website-corrected.jpg',
+                    src: 'https://events.mlh.io/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbDg5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f6d19345230b1613fddfc7f14ec01bd95fd6b20f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRGpFeU1EQjROakF3SVFZN0JsUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--e95a9989726607e7d6ee02cb34a6a4d9a8bf29c1/website-corrected.jpg',
                     alt: "AI Hackfest Event Banner",
                     fileFormat: 'JPEG',
                     dimensions: '300 x 300',
@@ -197,14 +197,14 @@ export const SoftwareDev: React.FC = () => {
             </div>
 
             {/* TestSprite Hackathon */}
-            <div style={{ padding: '12px', border: '1px solid var(--border-light)', backgroundColor: '#1e2229' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                <strong style={{ color: 'var(--accent-amber)', fontSize: '14px' }}>J*b Scout (Testsprite Hackathon)</strong>
+            <div className="item-card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>J*b Scout (Testsprite Hackathon)</span>
                 <span style={{ fontSize: '11px', padding: '2px 6px', border: '1px solid var(--accent-amber)', color: 'var(--accent-amber)', fontFamily: 'var(--font-system)' }}>
                   VERCEL_DEMO
                 </span>
               </div>
-              <p style={{ fontSize: '13px', lineHeight: '1.5', marginBottom: '8px', color: 'var(--text-primary)' }}>
+              <p style={{ fontSize: '13px', lineHeight: '1.5', marginBottom: '8px', color: 'var(--text-primary)', margin: 0 }}>
                 Led a three-person development team to create an AI job match tool utilizing Gemini resume parsing, SerpAPI job fetching, and automated cover letter generation.
               </p>
 

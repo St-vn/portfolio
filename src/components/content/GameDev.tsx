@@ -88,16 +88,16 @@ export const GameDev: React.FC = () => {
         {activeTab === 'production' ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {/* Oakley Productions */}
-            <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', marginBottom: '4px' }}>
-                <strong style={{ color: 'var(--accent-green)' }}>Frontend Game Developer</strong>
-                <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>2024</span>
+            <div className="item-card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '6px', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>Frontend Game Developer</span>
+                <span style={{ fontSize: '12px', color: 'var(--accent-green)', fontFamily: 'var(--font-system)' }}>2024</span>
               </div>
               <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '8px' }}>Oakley Productions LLC // Remote</div>
-              <p style={{ fontSize: '13px', color: 'var(--text-primary)', marginBottom: '6px', lineHeight: '1.5' }}>
+              <p style={{ fontSize: '13px', color: 'var(--text-primary)', marginBottom: '6px', lineHeight: '1.5', margin: 0 }}>
                 Contributed frontend game logic and visual scripting to <strong>Anime Defenders</strong>, a premier tower-defense title on Roblox.
               </p>
-              <ul style={{ paddingLeft: '18px', fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '12px' }}>
+              <ul style={{ paddingLeft: '18px', fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '12px', margin: 0 }}>
                 <li>Scaled visual effects (VFX) utilizing particle engines, custom projectile motion vectors, and Bézier paths.</li>
                 <li>Programmed gameplay abilities, visual indicators, and status updates for 10+ character systems.</li>
                 <li>Supported a dynamic production workflow generating +3.4B visits and peaking at 100K concurrent connections.</li>
@@ -110,16 +110,16 @@ export const GameDev: React.FC = () => {
             </div>
 
             {/* Boss Studios */}
-            <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', marginBottom: '4px' }}>
-                <strong style={{ color: 'var(--accent-green)' }}>Full-Stack Game Developer</strong>
-                <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>2024</span>
+            <div className="item-card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '6px', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>Full-Stack Game Developer</span>
+                <span style={{ fontSize: '12px', color: 'var(--accent-green)', fontFamily: 'var(--font-system)' }}>2024</span>
               </div>
               <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '8px' }}>Boss Studios LLC // Remote</div>
-              <p style={{ fontSize: '13px', color: 'var(--text-primary)', marginBottom: '6px', lineHeight: '1.5' }}>
+              <p style={{ fontSize: '13px', color: 'var(--text-primary)', marginBottom: '6px', lineHeight: '1.5', margin: 0 }}>
                 Engineered server/client synchronization and combat loops for a Minecraft BedWars-inspired title.
               </p>
-              <ul style={{ paddingLeft: '18px', fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '12px' }}>
+              <ul style={{ paddingLeft: '18px', fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '12px', margin: 0 }}>
                 <li>Designed blocks placement system with rapid voxel rendering constraints.</li>
                 <li>Scripted PvP combat logic, collision boxes, projectiles, melee attacks, and inventory data structures.</li>
                 <li>Programmed multiplayer lobby setups, server routing, and matchmaking connections.</li>
@@ -132,15 +132,15 @@ export const GameDev: React.FC = () => {
             </div>
 
             {/* Full-Stack Game Development Freelancer */}
-            <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', marginBottom: '4px' }}>
-                <strong style={{ color: 'var(--accent-green)' }}>Full-Stack Game Development Freelancer</strong>
-                <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>2020–Present</span>
+            <div className="item-card">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '6px', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>Full-Stack Game Development Freelancer</span>
+                <span style={{ fontSize: '12px', color: 'var(--accent-green)', fontFamily: 'var(--font-system)' }}>2020–Present</span>
               </div>
-              <p style={{ fontSize: '13px', color: 'var(--text-primary)', marginBottom: '6px', lineHeight: '1.5' }}>
+              <p style={{ fontSize: '13px', color: 'var(--text-primary)', marginBottom: '6px', lineHeight: '1.5', margin: 0 }}>
                 Five years of professional game development across Unity and Roblox — building industry-grade systems with applied mathematics, physics simulation, and networking architecture.
               </p>
-              <ul style={{ paddingLeft: '18px', fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '12px' }}>
+              <ul style={{ paddingLeft: '18px', fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '12px', margin: 0 }}>
                 <li>Applied math and physics — projectile motion, FABRIK inversed kinematics, collision systems, wall running, building mechanics</li>
                 <li>Networking — client-side prediction, server-side reconciliation, latency compensation, anti-cheat systems</li>
                 <li>AI pathfinding — A* and Dijkstra's algorithm implementations</li>
@@ -159,23 +159,29 @@ export const GameDev: React.FC = () => {
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {/* Systems details */}
-            <div>
-              <h4 style={{ color: 'var(--accent-amber)', fontSize: '14px', marginBottom: '8px' }}>APPLIED PHYSICS & MATHEMATICS CORES</h4>
-              <p style={{ fontSize: '13px', lineHeight: '1.6', color: 'var(--text-primary)', marginBottom: '12px' }}>
+            <div className="item-card">
+              <div style={{ borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>APPLIED PHYSICS & MATHEMATICS CORES</span>
+              </div>
+              <p style={{ fontSize: '13px', lineHeight: '1.6', color: 'var(--text-primary)', margin: 0 }}>
                 Leveraged linear algebra, 3D vectors, matrix transformations, and kinematics formulas to build custom engines for mechanics (wall-running, grappling hooks, client-side hit validation).
               </p>
             </div>
 
-            <div>
-              <h4 style={{ color: 'var(--accent-amber)', fontSize: '14px', marginBottom: '8px' }}>NETWORKING ARCHITECTURE</h4>
-              <p style={{ fontSize: '13px', lineHeight: '1.6', color: 'var(--text-primary)', marginBottom: '12px' }}>
+            <div className="item-card">
+              <div style={{ borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>NETWORKING ARCHITECTURE</span>
+              </div>
+              <p style={{ fontSize: '13px', lineHeight: '1.6', color: 'var(--text-primary)', margin: 0 }}>
                 Implemented client-side prediction, server reconciliation logic, and anti-cheat systems to make high-ping gaming connections feel seamless.
               </p>
             </div>
 
-            <div>
-              <h4 style={{ color: 'var(--accent-amber)', fontSize: '14px', marginBottom: '8px' }}>AI & PATHFINDING LOGISTICS</h4>
-              <p style={{ fontSize: '13px', lineHeight: '1.6', color: 'var(--text-primary)' }}>
+            <div className="item-card">
+              <div style={{ borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
+                <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>AI & PATHFINDING LOGISTICS</span>
+              </div>
+              <p style={{ fontSize: '13px', lineHeight: '1.6', color: 'var(--text-primary)', margin: 0 }}>
                 Deployed A* (A-Star) search matrices, Dijkstra grids, and customized state machine AI behaviors for NPCs traversing complex 3D environments.
               </p>
             </div>

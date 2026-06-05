@@ -11,7 +11,7 @@ export const BootSequence: React.FC<BootSequenceProps> = ({ onComplete }) => {
   const bootLogs = [
     'ST-VN BIOS V2.0 - INITIALIZING ENVIRONMENT...',
     'CORE: CONCORDIA COMP_ENG MATRIX [OK]',
-    'REPOSITORIES: RUST_INFRASTRUCTURE // SYSTEM_LOGIC [OK]',
+    'REPOSITORIES: TS_INFRASTRUCTURE // SYSTEM_LOGIC [OK]',
     'METRICS: 3.4B+ LIVE GAME SESSIONS ALLOCATED [OK]',
     'LOADING SYSTEM BINARIES... [OK]',
     'MOUNTING VIRTUAL DESKTOP WORKSPACE...'
@@ -68,7 +68,7 @@ export const BootSequence: React.FC<BootSequenceProps> = ({ onComplete }) => {
           </div>
         ))}
       </div>
-      
+
       <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '18px' }}>
           <span>SYSTEM LOADING: {progress}%</span>

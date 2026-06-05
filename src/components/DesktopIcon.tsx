@@ -21,33 +21,48 @@ export const DesktopIcon: React.FC<DesktopIconProps> = ({ label, icon, isSelecte
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: '8px',
-        padding: '12px 6px',
-        cursor: 'pointer',
-        border: isSelected ? '1px dashed var(--accent-green)' : '1px solid transparent',
-        backgroundColor: isSelected ? 'rgba(0, 255, 102, 0.05)' : 'transparent',
-        transition: 'background-color 0.1s'
+        cursor: 'pointer'
       }}
       className="desktop-icon-node"
     >
       <div style={{
-        fontSize: '52px',
-        filter: isSelected ? 'drop-shadow(0px 0px 6px var(--accent-green))' : 'none'
+        width: '104px',
+        height: '104px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '8px',
+        padding: '12px 6px',
+        border: isSelected ? '1px dashed var(--accent-green)' : '1px solid transparent',
+        backgroundColor: isSelected ? 'rgba(0, 255, 102, 0.05)' : 'transparent',
+        transition: 'background-color 0.1s',
+        boxSizing: 'border-box'
       }}>
-        {icon}
+        <div style={{
+          width: '52px',
+          height: '52px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          filter: isSelected ? 'drop-shadow(0px 0px 6px var(--accent-green))' : 'none'
+        }}>
+          <img src={icon} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        </div>
+        <span style={{
+          fontSize: '13px',
+          color: isSelected ? 'var(--accent-green)' : 'var(--text-primary)',
+          textAlign: 'center',
+          wordBreak: 'normal',
+          overflowWrap: 'break-word',
+          fontFamily: 'var(--font-system)',
+          letterSpacing: '0.5px',
+          textShadow: '1px 1px 2px #000',
+          lineHeight: '1.2'
+        }}>
+          {label}
+        </span>
       </div>
-      <span style={{
-        fontSize: '13px',
-        color: isSelected ? 'var(--accent-green)' : 'var(--text-primary)',
-        textAlign: 'center',
-        wordBreak: 'normal',
-        overflowWrap: 'break-word',
-        fontFamily: 'var(--font-system)',
-        letterSpacing: '0.5px',
-        textShadow: '1px 1px 2px #000'
-      }}>
-        {label}
-      </span>
     </div>
   );
 };
