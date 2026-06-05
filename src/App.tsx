@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { BootSequence } from './components/BootSequence';
 import { DesktopIcon } from './components/DesktopIcon';
 import { WindowFrame } from './components/WindowFrame';
@@ -41,7 +41,7 @@ const StickerCollage: React.FC = () => {
 
       {/* Sticker 2: Lifestyle Polaroid */}
       <div className="sticker sticker-polaroid sticker-p2">
-        <img src="/assets/steven presentation.jpeg" alt="Steven Lifestyle" />
+        <img src="assets/steven presentation.jpeg" alt="Steven Lifestyle" />
       </div>
 
       {/* Sticker 3: Keychain Tag */}
@@ -56,7 +56,7 @@ const StickerCollage: React.FC = () => {
       {/* Sticker 4: DDA Icon / Tech Sticker */}
       <div className="sticker sticker-dda">
         <img
-          src="/assets/images/dda_icon.png"
+          src="assets/images/dda_icon.png"
           alt="DDA"
           style={{ width: '100%', height: '100%', objectFit: 'contain', filter: 'drop-shadow(2px 2px 2px rgba(0,0,0,0.4))' }}
         />
@@ -65,7 +65,7 @@ const StickerCollage: React.FC = () => {
       {/* Sticker 5: TestSprite Logo Sticker */}
       <div className="sticker sticker-testsprite">
         <img
-          src="/assets/images/TestSprite_Logo-1999604977.jpg"
+          src="assets/images/TestSprite_Logo-1999604977.jpg"
           alt="TestSprite"
           style={{ width: '100%', height: '100%', borderRadius: '50%', border: '2px solid white', filter: 'drop-shadow(2px 2px 2px rgba(0,0,0,0.4))' }}
         />
@@ -73,115 +73,123 @@ const StickerCollage: React.FC = () => {
 
       {/* Decorative Sparkles & Tech Badges */}
       <div className="sticker sticker-badge-1">
+<<<<<<< HEAD
         <img src="https://alexh.github.io/vintage-icons/icons/expansion_board_1.png" alt="Circuit Board" style={{ width: '200%', height: '200%', objectFit: 'contain' }} />
+=======
+        <img src="assets/wallpaper_icons/circuit_board.svg" alt="Circuit Board" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+>>>>>>> 45e39f9c45c0ecac13e0000aa5428d07d5bfe098
       </div>
       <div className="sticker sticker-badge-2">✨</div>
       <div className="sticker sticker-badge-3">🌟</div>
       <div className="sticker sticker-badge-4">
-        <img src="/assets/wallpaper_icons/antigravity.svg" alt="Rocket" style={{ width: '200%', height: '200%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/antigravity.svg" alt="Rocket" style={{ width: '200%', height: '200%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-badge-5">
+<<<<<<< HEAD
         <img src="https://win98icons.alexmeub.com/icons/png/computer_taskmgr-0.png" alt="Sine Wave" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+=======
+        <img src="assets/wallpaper_icons/sine_wave.svg" alt="Sine Wave" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+>>>>>>> 45e39f9c45c0ecac13e0000aa5428d07d5bfe098
       </div>
 
       {/* Tech Stack Logos as Stickers */}
       <div className="sticker sticker-tech-react">
-        <img src="/assets/wallpaper_icons/react.svg" alt="React" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/react.svg" alt="React" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech-typescript">
-        <img src="/assets/wallpaper_icons/typescript.svg" alt="TypeScript" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/typescript.svg" alt="TypeScript" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech-python">
-        <img src="/assets/wallpaper_icons/python.svg" alt="Python" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/python.svg" alt="Python" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech-git">
-        <img src="/assets/wallpaper_icons/git.svg" alt="Git" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/git.svg" alt="Git" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
 
       {/* Extended Tech Stack — All Remaining Wallpaper Icons */}
       <div className="sticker sticker-tech sticker-tech-js">
-        <img src="/assets/wallpaper_icons/javascript_logo.svg" alt="JavaScript" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/javascript_logo.svg" alt="JavaScript" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-nextjs">
-        <img src="/assets/wallpaper_icons/nextjs.svg" alt="Next.js" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/nextjs.svg" alt="Next.js" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-vite">
-        <img src="/assets/wallpaper_icons/vite.svg" alt="Vite" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/vite.svg" alt="Vite" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-tailwind">
-        <img src="/assets/wallpaper_icons/tailwind.svg" alt="Tailwind CSS" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/tailwind.svg" alt="Tailwind CSS" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-fastapi">
-        <img src="/assets/wallpaper_icons/fastapi.svg" alt="FastAPI" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/fastapi.svg" alt="FastAPI" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-redis">
-        <img src="/assets/wallpaper_icons/redis.svg" alt="Redis" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/redis.svg" alt="Redis" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-supabase">
-        <img src="/assets/wallpaper_icons/supabase.svg" alt="Supabase" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/supabase.svg" alt="Supabase" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-railway">
-        <img src="/assets/wallpaper_icons/railway.svg" alt="Railway" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/railway.svg" alt="Railway" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-vercel">
-        <img src="/assets/wallpaper_icons/vercel.svg" alt="Vercel" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/vercel.svg" alt="Vercel" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-github">
-        <img src="/assets/wallpaper_icons/github.svg" alt="GitHub" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/github.svg" alt="GitHub" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-playwright">
-        <img src="/assets/wallpaper_icons/playwright.svg" alt="Playwright" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/playwright.svg" alt="Playwright" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-csharp">
-        <img src="/assets/wallpaper_icons/csharp.svg" alt="C#" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/csharp.svg" alt="C#" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-lua">
-        <img src="/assets/wallpaper_icons/lua.svg" alt="Lua" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/lua.svg" alt="Lua" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-unity">
-        <img src="/assets/wallpaper_icons/unity.svg" alt="Unity" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/unity.svg" alt="Unity" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-blender">
-        <img src="/assets/wallpaper_icons/blender.svg" alt="Blender" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/blender.svg" alt="Blender" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-fusion360">
-        <img src="/assets/wallpaper_icons/fusion360.svg" alt="Fusion 360" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/fusion360.svg" alt="Fusion 360" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-roblox">
-        <img src="/assets/wallpaper_icons/roblox_icon.png" alt="Roblox" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/roblox_icon.png" alt="Roblox" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-robloxstudio">
-        <img src="/assets/wallpaper_icons/roblox_studio_icon.png" alt="Roblox Studio" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/roblox_studio_icon.png" alt="Roblox Studio" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-vsc">
-        <img src="/assets/wallpaper_icons/vsc.svg" alt="VS Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/vsc.svg" alt="VS Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-chatgpt">
-        <img src="/assets/wallpaper_icons/chatgpt.svg" alt="ChatGPT" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/chatgpt.svg" alt="ChatGPT" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-gemini">
-        <img src="/assets/wallpaper_icons/gemini.svg" alt="Gemini" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/gemini.svg" alt="Gemini" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-claude">
-        <img src="/assets/wallpaper_icons/claude.svg" alt="Claude" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/claude.svg" alt="Claude" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-concordia">
-        <img src="/assets/wallpaper_icons/concordia.png" alt="Concordia" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/concordia.png" alt="Concordia" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-clg">
-        <img src="/assets/wallpaper_icons/clg.png" alt="CLG" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/clg.png" alt="CLG" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-expogo">
-        <img src="/assets/wallpaper_icons/expo-go.png" alt="Expo Go" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/expo-go.png" alt="Expo Go" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-vibefm">
-        <img src="/assets/wallpaper_icons/vibefm.png" alt="VibeFM" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/vibefm.png" alt="VibeFM" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-devpost">
-        <img src="/assets/wallpaper_icons/devpost-logo.svg" alt="Devpost" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/devpost-logo.svg" alt="Devpost" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
       <div className="sticker sticker-tech sticker-tech-mlh">
-        <img src="/assets/wallpaper_icons/mlh.png" alt="MLH" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src="assets/wallpaper_icons/mlh.png" alt="MLH" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </div>
 
       {/* Script1 DEV spelling */}
@@ -450,8 +458,10 @@ export const App: React.FC = () => {
     setSelectedIconId(null);
   };
 
+  const handleBootComplete = useCallback(() => setBooting(false), []);
+
   if (booting) {
-    return <BootSequence onComplete={() => setBooting(false)} />;
+    return <BootSequence onComplete={handleBootComplete} />;
   }
 
   // Mobile viewport: Phoning-inspired collage + tactile grid + full-screen overlays

@@ -22,10 +22,10 @@ export const GameDev: React.FC = () => {
           CV_TARGET: GAME_DEV
         </span>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-          <a href="/assets/resumes/gamedev_en.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
+          <a href="assets/resumes/gamedev_en.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
             [ Download CV: 🇬🇧 EN ]
           </a>
-          <a href="/assets/resumes/gamedev_fr.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
+          <a href="assets/resumes/gamedev_fr.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
             [ Télécharger CV: 🇫🇷 FR ]
           </a>
         </div>
@@ -105,7 +105,7 @@ export const GameDev: React.FC = () => {
 
               {/* Media showcase (Image only) */}
               <div style={{ maxWidth: '340px', marginTop: '10px' }}>
-                <Y2KImageViewer src="/assets/images/anime defenders thumbnail.webp" alt="Anime Defenders" fileFormat="WebP" dimensions="728 x 410" />
+                <Y2KImageViewer src="assets/images/anime defenders thumbnail.webp" alt="Anime Defenders" fileFormat="WebP" dimensions="728 x 410" />
               </div>
             </div>
 
@@ -127,7 +127,7 @@ export const GameDev: React.FC = () => {
 
               {/* Media showcase (Image only) */}
               <div style={{ maxWidth: '180px', marginTop: '10px' }}>
-                <Y2KImageViewer src="/assets/images/boss studios logo.png" alt="Boss Studios" fileFormat="PNG" dimensions="400 x 400" />
+                <Y2KImageViewer src="assets/images/boss studios logo.png" alt="Boss Studios" fileFormat="PNG" dimensions="400 x 400" />
               </div>
             </div>
 
@@ -149,9 +149,9 @@ export const GameDev: React.FC = () => {
 
               <Y2KMediaCarousel
                 media={[
-                  { type: 'video', src: '/assets/videos/fbg_lancer_ult.mov', title: 'Anime themed Battlegrounds Test', aspectRatio: '16/9' },
+                  { type: 'video', src: 'assets/videos/fbg_lancer_ult.mov', title: 'Anime themed Battlegrounds Test', aspectRatio: '16/9' },
                   { type: 'youtube', youtubeId: 'S-thgACxqIw', title: 'Rocket space game : Stellar Blast', aspectRatio: '16/9' },
-                  { type: 'video', src: '/assets/videos/sirskittles building.mp4', title: '2020 Fortnite Building System', aspectRatio: '16/9' },
+                  { type: 'video', src: 'assets/videos/sirskittles building.mp4', title: '2020 Fortnite Building System', aspectRatio: '16/9' },
                 ]}
               />
             </div>

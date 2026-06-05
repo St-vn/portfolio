@@ -5,22 +5,22 @@ export const Resume: React.FC = () => {
     {
       title: 'Software Engineering',
       desc: 'Full-stack development, cloud DBs, system design, and APIs.',
-      enPath: '/assets/resumes/software_en.pdf',
-      frPath: '/assets/resumes/software_fr.pdf',
+      enPath: 'assets/resumes/software_en.pdf',
+      frPath: 'assets/resumes/software_fr.pdf',
       icon: '💻'
     },
     {
       title: 'Game Development',
       desc: 'Gameplay scripting, multiplayer netcode, kinematics & physics.',
-      enPath: '/assets/resumes/gamedev_en.pdf',
-      frPath: '/assets/resumes/gamedev_fr.pdf',
+      enPath: 'assets/resumes/gamedev_en.pdf',
+      frPath: 'assets/resumes/gamedev_fr.pdf',
       icon: '🎮'
     },
     {
       title: 'Engineering & Physics',
       desc: 'Computational fluid dynamics, alternators & vertical wind turbines.',
-      enPath: '/assets/resumes/hardware_en.pdf',
-      frPath: '/assets/resumes/hardware_fr.pdf',
+      enPath: 'assets/resumes/hardware_en.pdf',
+      frPath: 'assets/resumes/hardware_fr.pdf',
       icon: '⚙️'
     }
   ];

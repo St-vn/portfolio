@@ -3,23 +3,23 @@ import { Y2KMediaCarousel, CarouselMediaItem } from '../Y2KMediaCarousel';
 
 export const Engineering: React.FC = () => {
   const cfdMedia: CarouselMediaItem[] = [
-    { type: 'video', src: '/assets/videos/cfd_bugatti.mp4', title: 'Bugatti CFD Streamline Simulation', aspectRatio: '16/9' },
-    { type: 'video', src: '/assets/videos/cfd_naca.mp4', title: 'NACA Airfoil Flow Sim', aspectRatio: '16/9' },
-    { type: 'video', src: '/assets/videos/cfd_wedge.mp4', title: 'Wedge Aerodynamics', aspectRatio: '16/9' }
+    { type: 'video', src: 'assets/videos/cfd_bugatti.mp4', title: 'Bugatti CFD Streamline Simulation', aspectRatio: '16/9' },
+    { type: 'video', src: 'assets/videos/cfd_naca.mp4', title: 'NACA Airfoil Flow Sim', aspectRatio: '16/9' },
+    { type: 'video', src: 'assets/videos/cfd_wedge.mp4', title: 'Wedge Aerodynamics', aspectRatio: '16/9' }
   ];
 
   const turbineMedia: CarouselMediaItem[] = [
-    { type: 'image', src: '/assets/images/engineering/h_rotor_1.jpg', alt: "H-Rotor turbine CAD", fileFormat: 'PNG', dimensions: '250 x 250', aspectRatio: '1/1' },
-    { type: 'image', src: '/assets/images/engineering/h_rotor_2.jpg', title: 'H-Rotor turbine CAD', aspectRatio: '1/1' }
+    { type: 'image', src: 'assets/images/engineering/h_rotor_1.jpg', alt: "H-Rotor turbine CAD", fileFormat: 'PNG', dimensions: '250 x 250', aspectRatio: '1/1' },
+    { type: 'image', src: 'assets/images/engineering/h_rotor_2.jpg', title: 'H-Rotor turbine CAD', aspectRatio: '1/1' }
   ];
 
   const ddaMedia: CarouselMediaItem[] = [
-    { type: 'video', src: '/assets/videos/h-rotor-test.mov', title: 'H-Rotor Turbine Test Run', aspectRatio: '1/1' },
-    { type: 'image', src: '/assets/images/dda_icon.png', alt: "Déplace d'air competition", fileFormat: 'PNG', dimensions: '250 x 250', aspectRatio: '1/1' },
-    { type: 'image', src: '/assets/images/engineering/dda_prototype_1.jpg', alt: "Déplace d'air competition prototype 1", fileFormat: 'PNG', dimensions: '250 x 250', aspectRatio: '1/1' },
-    { type: 'image', src: '/assets/images/engineering/dda_prototype_2.jpg', alt: "Déplace d'air competition prototype 2", fileFormat: 'PNG', dimensions: '250 x 250', aspectRatio: '1/1' },
-    { type: 'image', src: '/assets/images/engineering/dda_prototype_3.jpg', alt: "Déplace d'air competition prototype 3", fileFormat: 'PNG', dimensions: '250 x 250', aspectRatio: '1/1' },
-    { type: 'image', src: '/assets/images/engineering/dda_coils.jpg', alt: "Turbine coils", fileFormat: 'PNG', dimensions: '250 x 250', aspectRatio: '1/1' },
+    { type: 'video', src: 'assets/videos/h-rotor-test.mov', title: 'H-Rotor Turbine Test Run', aspectRatio: '1/1' },
+    { type: 'image', src: 'assets/images/dda_icon.png', alt: "Déplace d'air competition", fileFormat: 'PNG', dimensions: '250 x 250', aspectRatio: '1/1' },
+    { type: 'image', src: 'assets/images/engineering/dda_prototype_1.jpg', alt: "Déplace d'air competition prototype 1", fileFormat: 'PNG', dimensions: '250 x 250', aspectRatio: '1/1' },
+    { type: 'image', src: 'assets/images/engineering/dda_prototype_2.jpg', alt: "Déplace d'air competition prototype 2", fileFormat: 'PNG', dimensions: '250 x 250', aspectRatio: '1/1' },
+    { type: 'image', src: 'assets/images/engineering/dda_prototype_3.jpg', alt: "Déplace d'air competition prototype 3", fileFormat: 'PNG', dimensions: '250 x 250', aspectRatio: '1/1' },
+    { type: 'image', src: 'assets/images/engineering/dda_coils.jpg', alt: "Turbine coils", fileFormat: 'PNG', dimensions: '250 x 250', aspectRatio: '1/1' },
   ];
 
   return (
@@ -39,10 +39,10 @@ export const Engineering: React.FC = () => {
           CV_TARGET: ENGINEERING
         </span>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-          <a href="/assets/resumes/hardware_en.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
+          <a href="assets/resumes/hardware_en.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
             [ Download CV: 🇬🇧 EN ]
           </a>
-          <a href="/assets/resumes/hardware_fr.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
+          <a href="assets/resumes/hardware_fr.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
             [ Télécharger CV: 🇫🇷 FR ]
           </a>
         </div>

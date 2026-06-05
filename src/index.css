@@ -48,6 +48,7 @@ body {
   font-family: var(--font-editorial);
   overflow: hidden;
   height: 100vh;
+  height: 100dvh;
   width: 100vw;
 }
 
@@ -279,6 +280,7 @@ marquee {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    height: 100dvh;
     width: 100vw;
     overflow: hidden;
     background: linear-gradient(180deg, #1b263b 0%, #0d1b2a 100%);
@@ -286,7 +288,8 @@ marquee {
   }
 
   .mobile-collage {
-    height: 42%;
+    flex: 1;
+    min-height: 120px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -298,7 +301,7 @@ marquee {
   }
 
   .mobile-grid-container {
-    height: 58%;
+    flex: none;
     width: 100%;
     padding: 8px 12px;
     display: flex;
@@ -372,6 +375,7 @@ marquee {
     bottom: 0;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     background-color: var(--bg-window);
     z-index: 100000;
     display: flex;
