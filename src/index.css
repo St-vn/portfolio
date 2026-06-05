@@ -1138,3 +1138,217 @@ marquee {
   width: min(90vw, calc(80vh * var(--aspect-ratio, 1.777))) !important;
   margin-top: 6px !important;
 }
+
+/* Y2K CD Jewel Case centerpiece styles */
+.cd-case {
+  position: absolute;
+  filter: drop-shadow(5px 10px 15px rgba(0, 0, 0, 0.45));
+  transform: rotate(-3deg);
+  transform-style: preserve-3d;
+  z-index: 5;
+}
+
+.cd-case-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: auto;
+  z-index: 8;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cd-case-inner-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.04) 100%);
+  pointer-events: none;
+  z-index: 9;
+}
+
+.cd-disc {
+  position: absolute;
+  border-radius: 50%;
+  background: conic-gradient(from 180deg, #2b2b2b, #8a8a8a, #4a4a4a, #d4d4d4, #2b2b2b, #8a8a8a, #4a4a4a, #d4d4d4, #2b2b2b);
+  z-index: 2;
+  animation: spin 25s linear infinite;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+.cd-disc-grooves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, transparent 30%, rgba(0,0,0,0.2) 30.5%, transparent 31%, rgba(0,0,0,0.25) 45%, transparent 45.5%, rgba(0,0,0,0.15) 60%, transparent 60.5%);
+  pointer-events: none;
+}
+
+.cd-disc-label {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: #ff007a;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.cd-disc-label-text {
+  font-family: var(--font-system);
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 0px #000;
+  transform: rotate(-15deg);
+}
+
+.cd-disc-center-ring {
+  position: absolute;
+  top: 37.5%;
+  left: 37.5%;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  background: transparent;
+  z-index: 4;
+}
+
+.cd-disc-center-hole {
+  position: absolute;
+  top: 42.5%;
+  left: 42.5%;
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  background: var(--bg-workspace);
+  border: 2px solid #000;
+  z-index: 5;
+}
+
+.cd-sticker {
+  position: absolute;
+  z-index: 10;
+  pointer-events: auto;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.35));
+}
+
+.cd-sticker:hover {
+  transform: scale(1.08) rotate(0deg) !important;
+  z-index: 25 !important;
+}
+
+/* Mobile responsive CD case styles */
+@media (max-width: 768px) {
+  .cd-case {
+    position: relative;
+    width: 284px;
+    height: 250px;
+    margin: 20px auto;
+  }
+
+  .cd-disc {
+    top: 11.5px;
+    left: 28.5px;
+    width: 227px;
+    height: 227px;
+  }
+
+  .cd-disc-label-text {
+    font-size: 14px;
+  }
+
+  .cd-disc-center-ring {
+    border: 4px solid rgba(255,255,255,0.3);
+  }
+
+  /* Sticker positions on mobile */
+  .cd-barcode { top: 6%; left: 6%; width: 65px; transform: rotate(-4deg); }
+  .cd-hype { top: 12%; left: 20%; width: 100px; transform: rotate(5deg); }
+  .cd-star-1 { top: 15%; right: 15%; width: 28px; transform: rotate(12deg); }
+  .cd-star-2 { bottom: 20%; left: 12%; width: 25px; transform: rotate(-8deg); }
+  .cd-star-3 { top: 45%; left: 8%; width: 27px; transform: rotate(18deg); }
+  .cd-star-4 { bottom: 12%; right: 32%; width: 26px; transform: rotate(-15deg); }
+  .cd-star-5 { top: 35%; right: 28%; width: 30px; transform: rotate(5deg); }
+
+  .cd-caution { bottom: 8%; left: 30%; width: 50px; transform: rotate(6deg); }
+  .cd-exclamation { top: 12%; left: 48%; width: 18px; transform: rotate(-10deg); }
+  .cd-starburst { bottom: 15%; right: 6%; width: 75px; transform: rotate(-8deg); }
+  .cd-terminal { top: 52%; right: 10%; width: 58px; transform: rotate(14deg); }
+  .cd-blue-star { top: 48%; left: 40%; width: 26px; transform: rotate(-12deg); }
+
+  .cd-tech { width: 18px; height: 18px; }
+  .cd-gemini { top: 32%; left: 28%; transform: rotate(8deg); }
+  .cd-claude { top: 42%; left: 34%; transform: rotate(-5deg); }
+  .cd-github { bottom: 35%; right: 28%; transform: rotate(12deg); }
+  .cd-railway { bottom: 30%; left: 26%; transform: rotate(-8deg); }
+  .cd-js { top: 26%; right: 38%; transform: rotate(15deg); }
+  .cd-csharp { bottom: 45%; right: 12%; transform: rotate(-6deg); }
+  .cd-supabase { top: 58%; left: 24%; transform: rotate(10deg); }
+}
+
+/* Desktop CD case styles */
+@media (min-width: 769px) {
+  .cd-case {
+    top: 32%;
+    left: 8%;
+    width: 500px;
+    height: 440px;
+  }
+
+  .cd-disc {
+    top: 20px;
+    left: 50px;
+    width: 400px;
+    height: 400px;
+  }
+
+  .cd-disc-label-text {
+    font-size: 22px;
+  }
+
+  .cd-disc-center-ring {
+    border: 6px solid rgba(255,255,255,0.3);
+  }
+
+  /* Sticker positions on desktop */
+  .cd-barcode { top: 6%; left: 6%; width: 110px; transform: rotate(-4deg); }
+  .cd-hype { top: 13%; left: 20%; width: 180px; transform: rotate(5deg); }
+  .cd-star-1 { top: 15%; right: 15%; width: 50px; transform: rotate(12deg); }
+  .cd-star-2 { bottom: 20%; left: 12%; width: 45px; transform: rotate(-8deg); }
+  .cd-star-3 { top: 45%; left: 8%; width: 48px; transform: rotate(18deg); }
+  .cd-star-4 { bottom: 12%; right: 32%; width: 46px; transform: rotate(-15deg); }
+  .cd-star-5 { top: 35%; right: 28%; width: 52px; transform: rotate(5deg); }
+
+  .cd-caution { bottom: 8%; left: 30%; width: 85px; transform: rotate(6deg); }
+  .cd-exclamation { top: 12%; left: 48%; width: 32px; transform: rotate(-10deg); }
+  .cd-starburst { bottom: 15%; right: 6%; width: 130px; transform: rotate(-8deg); }
+  .cd-terminal { top: 52%; right: 10%; width: 100px; transform: rotate(14deg); }
+  .cd-blue-star { top: 48%; left: 40%; width: 45px; transform: rotate(-12deg); }
+
+  .cd-tech { width: 32px; height: 32px; }
+  .cd-gemini { top: 32%; left: 28%; transform: rotate(8deg); }
+  .cd-claude { top: 42%; left: 34%; transform: rotate(-5deg); }
+  .cd-github { bottom: 35%; right: 28%; transform: rotate(12deg); }
+  .cd-railway { bottom: 30%; left: 26%; transform: rotate(-8deg); }
+  .cd-js { top: 26%; right: 38%; transform: rotate(15deg); }
+  .cd-csharp { bottom: 45%; right: 12%; transform: rotate(-6deg); }
+  .cd-supabase { top: 58%; left: 24%; transform: rotate(10deg); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
