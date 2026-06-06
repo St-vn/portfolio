@@ -26,9 +26,73 @@ interface WindowState {
   children: React.ReactNode;
 }
 
+const BACKGROUND_STARS = [
+  // Left side / Under desktop icons
+  { src: 'assets/images/stickers/stars/Group_23_blue.svg', top: '12%', left: '16%', size: '32px', rotate: '15deg' },
+  { src: 'assets/images/stickers/stars/Group_25_pink.svg', top: '26%', left: '14%', size: '26px', rotate: '-22deg' },
+  { src: 'assets/images/stickers/stars/Vector_194_yellow.svg', top: '44%', left: '9%', size: '34px', rotate: '12deg' },
+  { src: 'assets/images/stickers/stars/Vector_195_blue.svg', top: '68%', left: '13%', size: '28px', rotate: '45deg' },
+  { src: 'assets/images/stickers/blue_distressed_star.png', top: '80%', left: '6%', size: '48px', rotate: '-12deg' },
+
+  // Mid-left / Cluster around Polaroid 1 and bottom-left
+  { src: 'assets/images/stickers/stars/Group_24_pink.svg', top: '9%', left: '32%', size: '38px', rotate: '-10deg' },
+  { src: 'assets/images/stickers/stars/Group_26_yellow.svg', top: '30%', left: '24%', size: '32px', rotate: '25deg' },
+  { src: 'assets/images/stickers/stars/Group_27_blue.svg', top: '36%', left: '36%', size: '36px', rotate: '-8deg' },
+  { src: 'assets/images/stickers/doodle_star.svg', top: '56%', left: '20%', size: '40px', rotate: '18deg' },
+  { src: 'assets/images/stickers/stars/Group_28_pink.svg', top: '64%', left: '29%', size: '30px', rotate: '-32deg' },
+
+  // Center / Around the CD Case and Halftone
+  { src: 'assets/images/stickers/stars/Group_23_yellow.svg', top: '6%', left: '46%', size: '30px', rotate: '5deg' },
+  { src: 'assets/images/stickers/stars/Group_25_blue.svg', top: '14%', left: '50%', size: '28px', rotate: '-15deg' },
+  { src: 'assets/images/stickers/stars/Group_27_pink.svg', top: '84%', left: '44%', size: '38px', rotate: '30deg' },
+  { src: 'assets/images/stickers/stars/Vector_194_yellow.svg', top: '76%', left: '53%', size: '32px', rotate: '-25deg' },
+
+  // Mid-right / Cluster around Polaroid 2 and VHS
+  { src: 'assets/images/stickers/stars/Vector_195_blue.svg', top: '10%', right: '28%', size: '35px', rotate: '20deg' },
+  { src: 'assets/images/stickers/stars/Group_24_pink.svg', top: '32%', right: '26%', size: '26px', rotate: '-12deg' },
+  { src: 'assets/images/stickers/stars/Group_26_yellow.svg', top: '46%', right: '34%', size: '30px', rotate: '42deg' },
+  { src: 'assets/images/stickers/stars/Group_28_blue.svg', top: '62%', right: '24%', size: '28px', rotate: '-6deg' },
+  { src: 'assets/images/stickers/stars/Group_23_pink.svg', top: '78%', right: '36%', size: '32px', rotate: '18deg' },
+
+  // Far Right / Edge cluster
+  { src: 'assets/images/stickers/stars/Group_25_blue.svg', top: '6%', right: '10%', size: '40px', rotate: '15deg' },
+  { src: 'assets/images/stickers/stars/Group_27_yellow.svg', top: '28%', right: '8%', size: '28px', rotate: '-18deg' },
+  { src: 'assets/images/stickers/stars/Vector_194_pink.svg', top: '44%', right: '11%', size: '36px', rotate: '8deg' },
+  { src: 'assets/images/stickers/stars/Vector_195_blue.svg', top: '72%', right: '13%', size: '30px', rotate: '-35deg' },
+  { src: 'assets/images/stickers/stars/Group_26_yellow.svg', top: '86%', right: '15%', size: '35px', rotate: '20deg' },
+
+  // Older doodle stars
+  { src: 'assets/images/stickers/doodle_star_1.svg', top: '18%', left: '42%', size: '24px', rotate: '-8deg' },
+  { src: 'assets/images/stickers/doodle_star_2.svg', top: '50%', left: '48%', size: '28px', rotate: '14deg' },
+  { src: 'assets/images/stickers/doodle_star_3.svg', top: '62%', right: '45%', size: '25px', rotate: '-30deg' },
+  { src: 'assets/images/stickers/doodle_star_4.svg', top: '22%', right: '48%', size: '27px', rotate: '10deg' },
+  { src: 'assets/images/stickers/doodle_star_5.svg', top: '70%', left: '38%', size: '29px', rotate: '22deg' },
+];
+
 const StickerCollage: React.FC = () => {
   return (
     <div className="sticker-collage-container">
+      {/* Background Star Spam */}
+      {BACKGROUND_STARS.map((star, idx) => (
+        <img
+          key={idx}
+          src={star.src}
+          alt={`Background Star ${idx}`}
+          className="sticker"
+          style={{
+            top: star.top,
+            left: star.left,
+            right: star.right,
+            width: star.size,
+            height: star.size,
+            transform: `rotate(${star.rotate})`,
+            opacity: 0.85,
+            zIndex: 1, // Stay safely behind foreground collages
+            pointerEvents: 'none'
+          }}
+        />
+      ))}
+
       {/* Neon Ribbon Background Text */}
       <div className="sticker sticker-ribbon">
         ST-VN SYSTEMS V2.0
