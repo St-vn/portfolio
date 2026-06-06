@@ -89,12 +89,56 @@ const StickerCollage: React.FC = () => {
         />
       </div>
 
+      {/* Pochita placed relative to the halftone with high z-index */}
+      <div className="sticker sticker-pochita">
+        <img
+          src="assets/images/pochita.svg"
+          alt="Pochita Sticker"
+          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+        />
+      </div>
+
+      {/* Sticker 8: Jagged Cutout - Model Lifestyle */}
+      <div className="sticker sticker-jagged-container sticker-j1" style={{ '--hover-rotate': '-2deg' } as React.CSSProperties}>
+        <div className="sticker-jagged-inner" style={{ clipPath: 'url(#jagged-clip-1)' }}>
+          <img
+            src="assets/images/ascii-art-no-inversion.png"
+            alt="Jagged Cutout"
+            style={{ clipPath: 'url(#jagged-clip-1)', mixBlendMode: 'screen' }}
+          />
+        </div>
+      </div>
+
+      {/* Sticker 9: Jagged Cutout - Model Headshot */}
+      <div className="sticker sticker-jagged-container sticker-j2" style={{ '--hover-rotate': '2deg' } as React.CSSProperties}>
+        <div className="sticker-jagged-inner" style={{ clipPath: 'url(#jagged-clip-2)' }}>
+          <img
+            src="assets/images/frutiger-aero-background.png"
+            alt="Headshot Jagged Cutout"
+            style={{ clipPath: 'url(#jagged-clip-2)', objectPosition: '95% 0%' }}
+          />
+        </div>
+      </div>
+
+      {/* Sticker 10: Pixel Rounded Cutout */}
+      <div className="sticker sticker-pixel-rounded-container sticker-pr1" style={{ '--hover-rotate': '3deg' } as React.CSSProperties}>
+        <div className="sticker-pixel-rounded-inner" style={{ clipPath: 'url(#pixel-rounded-clip)' }}>
+          <img
+            src="assets/images/other-selfie.png"
+            alt="Steven Headshot Pixel Rounded"
+          // style={{ transform: 'rotate(25deg) scale(1.15)' }}
+          />
+        </div>
+      </div>
+
+
+
       {/* Decorative Sparkles & Tech Badges */}
       <div className="sticker sticker-badge-1">
         <img src="https://alexh.github.io/vintage-icons/icons/expansion_board_1.png" alt="Circuit Board" style={{ width: '200%', height: '200%', objectFit: 'contain' }} />
       </div>
-      <div className="sticker sticker-badge-2">✨</div>
-      <div className="sticker sticker-badge-3">🌟</div>
+      {/* <div className="sticker sticker-badge-2">✨</div>
+      <div className="sticker sticker-badge-3">🌟</div> */}
       <div className="sticker sticker-badge-4">
         <img src="assets/wallpaper_icons/antigravity.svg" alt="Rocket" style={{ width: '200%', height: '200%', objectFit: 'contain' }} />
       </div>
@@ -210,7 +254,7 @@ const StickerCollage: React.FC = () => {
       </div>
 
       {/* Script2 DEV spelling */}
-      <div className="sticker" style={{ position: 'absolute', bottom: '15%', left: '26%', transform: 'rotate(5deg)', zIndex: 3, display: 'flex', gap: '2px' }}>
+      <div className="sticker" style={{ position: 'absolute', bottom: '15%', left: '23%', transform: 'rotate(5deg)', zIndex: 1, display: 'flex', gap: '2px' }}>
         <img className="sticker-tech" src="letter/script2_4.ico" alt="D" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
         <img className="sticker-tech" src="letter/script2_5.ico" alt="E" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
         <img className="sticker-tech" src="letter/script2_22.ico" alt="V" style={{ width: '32px', height: '32px', objectFit: 'contain', opacity: 1 }} />
@@ -253,16 +297,16 @@ const StickerCollage: React.FC = () => {
         <img src="assets/images/empty_cd_case.png" alt="CD Case" className="cd-case-img" />
 
         {/* 1. Barcode sticker on the top left corner */}
-        <img 
-          src="assets/images/stickers/barcode_sticker.svg" 
-          alt="Barcode" 
+        <img
+          src="assets/images/stickers/barcode_sticker.svg"
+          alt="Barcode"
           className="sticker cd-sticker cd-barcode"
         />
 
         {/* 2. Starburst sticker on the bottom right corner of the barcode sticker */}
-        <img 
-          src="assets/images/stickers/starburst_sticker.svg" 
-          alt="Starburst" 
+        <img
+          src="assets/images/stickers/starburst_sticker.svg"
+          alt="Starburst"
           className="sticker cd-sticker cd-hype"
         />
 
@@ -289,9 +333,26 @@ const StickerCollage: React.FC = () => {
         <img src="assets/wallpaper_icons/csharp.svg" alt="C#" className="sticker cd-sticker cd-tech cd-csharp" />
         <img src="assets/wallpaper_icons/supabase.svg" alt="Supabase" className="sticker cd-sticker cd-tech cd-supabase" />
       </div>
+
+      {/* SVG Clip Paths for Jagged/Pixelated Cutouts */}
+      <svg width="0" height="0" style={{ position: 'absolute', pointerEvents: 'none' }}>
+        <defs>
+          <clipPath id="jagged-clip-1" clipPathUnits="objectBoundingBox">
+            <path d="M 0.1 0.08 L 0.12 0.08 L 0.12 0.04 L 0.15 0.04 L 0.15 0.02 L 0.18 0.02 L 0.18 0.0 L 0.22 0.0 L 0.22 0.02 L 0.25 0.02 L 0.25 0.04 L 0.28 0.04 L 0.28 0.08 L 0.32 0.08 L 0.32 0.05 L 0.35 0.05 L 0.35 0.01 L 0.4 0.01 L 0.4 0.03 L 0.44 0.03 L 0.44 0.06 L 0.48 0.06 L 0.48 0.08 L 0.52 0.08 L 0.52 0.05 L 0.56 0.05 L 0.56 0.0 L 0.6 0.0 L 0.6 0.02 L 0.64 0.02 L 0.64 0.04 L 0.68 0.04 L 0.68 0.08 L 0.72 0.08 L 0.72 0.05 L 0.76 0.05 L 0.76 0.01 L 0.8 0.01 L 0.8 0.03 L 0.84 0.03 L 0.84 0.06 L 0.88 0.06 L 0.88 0.08 L 0.92 0.08 L 0.92 0.12 L 0.95 0.12 L 0.95 0.18 L 0.98 0.18 L 0.98 0.24 L 0.95 0.24 L 0.95 0.3 L 0.92 0.3 L 0.92 0.34 L 0.96 0.34 L 0.96 0.4 L 0.93 0.4 L 0.93 0.46 L 0.99 0.46 L 0.99 0.52 L 0.95 0.52 L 0.95 0.58 L 0.92 0.58 L 0.92 0.64 L 0.97 0.64 L 0.97 0.7 L 0.93 0.7 L 0.93 0.76 L 0.99 0.76 L 0.99 0.82 L 0.95 0.82 L 0.95 0.88 L 0.92 0.88 L 0.92 0.92 L 0.88 0.92 L 0.88 0.96 L 0.84 0.96 L 0.84 0.98 L 0.8 0.98 L 0.8 1.0 L 0.76 1.0 L 0.76 0.98 L 0.72 0.98 L 0.72 0.95 L 0.68 0.95 L 0.68 0.92 L 0.64 0.92 L 0.64 0.95 L 0.6 0.95 L 0.6 0.98 L 0.56 0.98 L 0.56 1.0 L 0.52 1.0 L 0.52 0.97 L 0.48 0.97 L 0.48 0.94 L 0.44 0.94 L 0.44 0.92 L 0.4 0.92 L 0.4 0.96 L 0.36 0.96 L 0.36 0.99 L 0.3 0.99 L 0.3 0.96 L 0.26 0.96 L 0.26 0.92 L 0.22 0.92 L 0.22 0.95 L 0.18 0.95 L 0.18 0.98 L 0.14 0.98 L 0.14 0.95 L 0.1 0.95 L 0.1 0.92 L 0.08 0.92 L 0.08 0.88 L 0.05 0.88 L 0.05 0.82 L 0.02 0.82 L 0.02 0.76 L 0.05 0.76 L 0.05 0.7 L 0.08 0.7 L 0.08 0.66 L 0.04 0.66 L 0.04 0.6 L 0.01 0.6 L 0.01 0.54 L 0.05 0.54 L 0.05 0.48 L 0.08 0.48 L 0.08 0.42 L 0.03 0.42 L 0.03 0.36 L 0.01 0.36 L 0.01 0.3 L 0.04 0.3 L 0.04 0.24 L 0.07 0.24 L 0.07 0.18 L 0.02 0.18 L 0.02 0.12 L 0.05 0.12 L 0.05 0.08 L 0.08 0.08 L 0.08 0.05 Z" />
+          </clipPath>
+          <clipPath id="jagged-clip-2" clipPathUnits="objectBoundingBox">
+            <path d="M 0.08 0.08 L 0.14 0.08 L 0.14 0.02 L 0.2 0.02 L 0.2 0.05 L 0.26 0.05 L 0.26 0.0 L 0.32 0.0 L 0.32 0.04 L 0.38 0.04 L 0.38 0.07 L 0.44 0.07 L 0.44 0.01 L 0.5 0.01 L 0.5 0.04 L 0.6 0.04 L 0.6 0.0 L 0.66 0.0 L 0.66 0.05 L 0.72 0.05 L 0.72 0.02 L 0.78 0.02 L 0.78 0.08 L 0.84 0.08 L 0.84 0.04 L 0.9 0.04 L 0.9 0.08 L 0.94 0.08 L 0.94 0.14 L 0.97 0.14 L 0.97 0.2 L 0.99 0.2 L 0.99 0.26 L 0.93 0.26 L 0.93 0.32 L 0.98 0.32 L 0.98 0.38 L 0.94 0.38 L 0.94 0.44 L 0.99 0.44 L 0.99 0.5 L 0.93 0.5 L 0.93 0.56 L 0.98 0.56 L 0.98 0.62 L 0.95 0.62 L 0.95 0.68 L 0.99 0.68 L 0.99 0.74 L 0.93 0.74 L 0.93 0.8 L 0.97 0.8 L 0.97 0.86 L 0.92 0.86 L 0.92 0.92 L 0.86 0.92 L 0.86 0.97 L 0.8 0.97 L 0.8 0.94 L 0.74 0.94 L 0.74 0.99 L 0.68 0.99 L 0.68 0.95 L 0.62 0.95 L 0.62 0.98 L 0.56 0.98 L 0.56 0.93 L 0.5 0.93 L 0.5 0.96 L 0.44 0.96 L 0.44 1.0 L 0.38 1.0 L 0.38 0.95 L 0.32 0.95 L 0.32 0.98 L 0.26 0.98 L 0.26 0.92 L 0.2 0.92 L 0.2 0.96 L 0.14 0.96 L 0.14 0.92 L 0.08 0.92 L 0.08 0.86 L 0.04 0.86 L 0.04 0.8 L 0.01 0.8 L 0.01 0.74 L 0.05 0.74 L 0.05 0.68 L 0.02 0.68 L 0.02 0.62 L 0.05 0.62 L 0.05 0.56 L 0.08 0.56 L 0.08 0.5 L 0.03 0.5 L 0.03 0.44 L 0.06 0.44 L 0.06 0.38 L 0.01 0.38 L 0.01 0.32 L 0.04 0.32 L 0.04 0.26 L 0.08 0.26 L 0.08 0.2 L 0.03 0.2 L 0.03 0.14 L 0.06 0.14 L 0.06 0.08 Z" />
+          </clipPath>
+          <clipPath id="pixel-rounded-clip" clipPathUnits="objectBoundingBox">
+            <path d="M 0.18 0 L 0.82 0 L 0.86 0 L 0.86 0.03 L 0.90 0.03 L 0.90 0.06 L 0.94 0.06 L 0.94 0.10 L 0.97 0.10 L 0.97 0.14 L 1 0.14 L 1 0.18 L 1 0.82 L 1 0.86 L 0.97 0.86 L 0.97 0.90 L 0.94 0.90 L 0.94 0.94 L 0.90 0.94 L 0.90 0.97 L 0.86 0.97 L 0.86 1 L 0.82 1 L 0.18 1 L 0.14 1 L 0.14 0.97 L 0.10 0.97 L 0.10 0.94 L 0.06 0.94 L 0.06 0.90 L 0.03 0.90 L 0.03 0.86 L 0 0.86 L 0 0.82 L 0 0.18 L 0 0.14 L 0.03 0.14 L 0.03 0.10 L 0.06 0.10 L 0.06 0.06 L 0.10 0.06 L 0.10 0.03 L 0.14 0.03 L 0.14 0 Z" />
+          </clipPath>
+
+        </defs>
+      </svg>
     </div>
   );
 };
+
 
 export const App: React.FC = () => {
   const [booting, setBooting] = useState(true);
@@ -524,7 +585,7 @@ export const App: React.FC = () => {
           {/* Marquee Ticker along bottom of grid area */}
           <div style={{ marginTop: '8px' }}>
             <marquee scrollamount="3">
-              🖥️ STEVEN CHHAY PORTFOLIO ─── EXPERIENCE IN FLUID MECHANICS, FULL-STACK SOFTWARE ENGINEERING & GAME DEVELOPMENT ─── WELCOME TO THE PHONING CONSOLE!
+              🖥️ STEVEN CHHAY PORTFOLIO - EXPERIENCE IN FLUID MECHANICS, FULL-STACK SOFTWARE ENGINEERING & GAME DEVELOPMENT - WELCOME TO THE CONSOLE!
             </marquee>
           </div>
         </div>
