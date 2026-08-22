@@ -94,9 +94,9 @@ const StickerCollage: React.FC = () => {
       ))}
 
       {/* Neon Ribbon Background Text */}
-      <div className="sticker sticker-ribbon">
+      {/* <div className="sticker sticker-ribbon">
         ST-VN SYSTEMS V2.0
-      </div>
+      </div> */}
 
       {/* Sticker 1: Headshot Polaroid */}
       <div className="sticker sticker-polaroid sticker-p1">
@@ -109,13 +109,13 @@ const StickerCollage: React.FC = () => {
       </div>
 
       {/* Sticker 3: Keychain Tag */}
-      <div className="sticker sticker-blue-tag sticker-keytag">
+      {/* <div className="sticker sticker-blue-tag sticker-keytag">
         <span>🔑</span>
         <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
           <span style={{ fontWeight: 'bold' }}>STEVEN CHHAY</span>
-          <span style={{ fontSize: '8px', opacity: 0.8 }}>PORTFOLIO</span>
+          <span style={{ fontSize: '10px', opacity: 0.8 }}>PORTFOLIO</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Sticker 4: DDA Icon / Tech Sticker */}
       <div className="sticker sticker-dda">
@@ -145,13 +145,13 @@ const StickerCollage: React.FC = () => {
       </div>
 
       {/* Sticker 7: Halftone Picture Sticker */}
-      <div className="sticker sticker-halftone">
+      {/* <div className="sticker sticker-halftone">
         <img
           src="assets/images/stickers/halftone.png"
           alt="Halftone Graphic"
           style={{ width: '100%', height: '100%', objectFit: 'contain' }}
         />
-      </div>
+      </div> */}
 
       {/* Pochita placed relative to the halftone with high z-index */}
       <div className="sticker sticker-pochita">
@@ -624,9 +624,9 @@ export const App: React.FC = () => {
           <div style={{
             fontFamily: 'var(--font-system)',
             fontSize: '12px',
-            color: 'var(--accent-green)',
+            color: 'var(--accent-cyan)',
             textAlign: 'center',
-            borderBottom: '1px solid rgba(0, 255, 102, 0.2)',
+            borderBottom: '1px solid var(--border-mid-dark)',
             paddingBottom: '4px',
             marginBottom: '4px'
           }}>
@@ -679,7 +679,7 @@ export const App: React.FC = () => {
             {/* Overlay Footer */}
             <div className="mobile-window-footer">
               <span>STATUS: {openWindowData.telemetry}</span>
-              <span style={{ color: 'var(--accent-green)' }}>ACTIVE_CHANNEL</span>
+              <span style={{ color: 'var(--accent-cyan)' }}>ACTIVE_CHANNEL</span>
             </div>
           </div>
         )}
@@ -796,7 +796,7 @@ export const App: React.FC = () => {
             >
               <div style={{
                 fontFamily: 'var(--font-system)',
-                fontSize: '11px',
+                fontSize: '13px',
                 color: 'var(--text-secondary)',
                 padding: '4px 8px',
                 borderBottom: '1px solid var(--border-light)',
@@ -826,8 +826,8 @@ export const App: React.FC = () => {
                     gap: '8px'
                   }}
                   onMouseEnter={(e) => {
-                    (e.target as HTMLElement).style.backgroundColor = '#1e293b';
-                    (e.target as HTMLElement).style.color = 'var(--accent-green)';
+                    (e.target as HTMLElement).style.backgroundColor = 'var(--border-mid-light)';
+                    (e.target as HTMLElement).style.color = 'var(--accent-cyan)';
                   }}
                   onMouseLeave={(e) => {
                     (e.target as HTMLElement).style.backgroundColor = 'transparent';
@@ -886,7 +886,7 @@ export const App: React.FC = () => {
             fontSize: '13px',
             fontFamily: 'var(--font-system)',
             backgroundColor: 'var(--bg-inset)',
-            color: 'var(--accent-green)'
+            color: 'var(--accent-cyan)'
           }}
         >
           <span>📶 ONLINE</span>

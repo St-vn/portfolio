@@ -32,7 +32,7 @@ export const Skills: React.FC = () => {
       title: 'DEVELOPER TOOLS & ENGINES',
       skills: [
         { name: 'Unity Engine', level: 95 },
-        { name: 'Roblox Studio / API', level: 99 },
+        { name: 'Roblox Studio', level: 99 },
         { name: 'VSCode', level: 95 },
         { name: 'VSCommunity', level: 90 },
         { name: 'Fusion360', level: 80 },
@@ -56,42 +56,29 @@ export const Skills: React.FC = () => {
         { name: 'GitHub Copilot', level: 90 }
       ]
     },
-    {
-      title: 'LIBRARIES',
-      skills: [
-        { name: 'NumPy', level: 80 },
-        { name: 'Matplotlib', level: 80 },
-        { name: 'Mammoth', level: 80 },
-        { name: 'PDF Parse', level: 80 },
-        { name: 'PyTrend', level: 60 },
-        { name: 'KaTeX', level: 75 },
-      ]
-    }
   ];
 
   return (
-    <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '16px', overflowY: 'auto', height: '100%', color: 'var(--text-primary)' }}>
-      <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', fontSize: '15px', fontWeight: 600 }}>
-        [ SKILLS.CAB // CORE MATRIX ]
-      </h3>
+    <div className="panel-content">
+      <h3 className="section-header">[ SKILLS.CAB // CORE MATRIX ]</h3>
       {categories.map((cat, i) => (
-        <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <div style={{ fontSize: '12px', fontWeight: 'bold', color: 'var(--accent-green)', letterSpacing: '1px' }}>
-            {cat.title}
+        <div key={i} className="item-card">
+          <div className="item-header">
+            <span className="item-title">{cat.title}</span>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
             {cat.skills.map((skill, j) => (
-              <div key={j} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '13px' }}>
-                <span style={{ width: '220px', fontFamily: 'monospace' }}>{skill.name}</span>
-                <div style={{ flex: 1, height: '8px', border: '1px solid var(--border-light)', backgroundColor: '#0f1115', margin: '0 12px', overflow: 'hidden', position: 'relative' }}>
+              <div key={j} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '15px' }}>
+                <span style={{ width: '220px' }}>{skill.name}</span>
+                <div style={{ flex: 1, height: '8px', border: '1px solid var(--border-light)', backgroundColor: 'var(--bg-window)', margin: '0 12px', overflow: 'hidden', position: 'relative' }}>
                   <div style={{
                     width: `${skill.level}%`,
                     height: '100%',
-                    backgroundColor: 'var(--accent-green)',
-                    boxShadow: '0 0 4px var(--accent-green)'
+                    backgroundColor: 'var(--accent-cyan)',
+                    boxShadow: '0 0 4px var(--accent-cyan)'
                   }} />
                 </div>
-                <span style={{ width: '40px', textAlign: 'right', fontSize: '11px', color: 'var(--text-secondary)' }}>{skill.level}%</span>
+                <span style={{ width: '40px', textAlign: 'right', fontSize: '13px', color: 'var(--text-secondary)' }}>{skill.level}%</span>
               </div>
             ))}
           </div>

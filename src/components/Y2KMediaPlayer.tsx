@@ -132,7 +132,7 @@ export const Y2KMediaPlayer: React.FC<Y2KMediaPlayerProps> = ({ src, youtubeId, 
       }}
     >
       {/* Title bar of the player */}
-      <div style={{ backgroundColor: '#1e293b', color: '#fff', padding: '2px 6px', display: 'flex', justifyContent: 'space-between', fontSize: '12px', fontWeight: 'bold', marginBottom: '4px' }}>
+      <div style={{ backgroundColor: 'var(--bg-window)', color: 'var(--text-primary)', padding: '2px 6px', display: 'flex', justifyContent: 'space-between', fontSize: '12px', fontWeight: 'bold', marginBottom: '4px', borderBottom: '1px solid var(--border-dark)' }}>
         <span>{title}</span>
         <span style={{ cursor: 'pointer' }} onClick={handleStop}>X</span>
       </div>
@@ -183,11 +183,11 @@ export const Y2KMediaPlayer: React.FC<Y2KMediaPlayerProps> = ({ src, youtubeId, 
           ref={seekBarRef}
           onClick={handleSeek}
           className="bevel-in"
-          style={{ height: '14px', backgroundColor: '#121417', position: 'relative', overflow: 'hidden', display: 'flex', padding: '1px', cursor: 'pointer' }}
+          style={{ height: '14px', backgroundColor: 'var(--bg-window)', position: 'relative', overflow: 'hidden', display: 'flex', padding: '1px', cursor: 'pointer' }}
         >
-          <div style={{ width: `${progressPercent}%`, height: '100%', background: 'var(--accent-green)', display: 'flex', gap: '2px' }}>
+          <div style={{ width: `${progressPercent}%`, height: '100%', background: 'var(--accent-cyan)', display: 'flex', gap: '2px' }}>
             {Array.from({ length: 40 }).map((_, i) => (
-              <div key={i} style={{ width: '3px', height: '100%', backgroundColor: '#121417' }} />
+              <div key={i} style={{ width: '3px', height: '100%', backgroundColor: 'var(--bg-window)' }} />
             ))}
           </div>
         </div>
@@ -214,7 +214,7 @@ export const Y2KMediaPlayer: React.FC<Y2KMediaPlayerProps> = ({ src, youtubeId, 
               {isFullscreen ? '[⛶]' : '[⛶]'}
             </button>
           </div>
-          <div style={{ fontSize: '12px', color: 'var(--accent-green)', fontFamily: 'var(--font-system)', letterSpacing: '1px' }}>
+          <div style={{ fontSize: '12px', color: 'var(--accent-cyan)', fontFamily: 'var(--font-system)', letterSpacing: '1px' }}>
             {isPlaying ? '▶ PLAYING' : '⏸ PAUSED'}
           </div>
         </div>

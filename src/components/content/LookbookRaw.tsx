@@ -16,7 +16,7 @@ export const LookbookRaw: React.FC = () => {
       flexDirection: 'column',
       backgroundColor: '#0a0b0d',
       color: '#fff',
-      fontFamily: "'VT323', monospace",
+      fontFamily: 'var(--font-system)',
       position: 'relative',
       overflow: 'hidden'
     }}>
@@ -28,10 +28,10 @@ export const LookbookRaw: React.FC = () => {
         padding: '4px 8px',
         borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
         fontSize: '16px',
-        color: '#00ff66'
+        color: 'var(--accent-cyan)'
       }}>
         <span>● REC</span>
-        <span style={{ color: '#ff9900' }}>[SD_CARD_OK]</span>
+        <span style={{ color: 'var(--accent-amber)' }}>[SD_CARD_OK]</span>
         <span>BATT: 🔋|||</span>
       </div>
 
@@ -75,7 +75,7 @@ export const LookbookRaw: React.FC = () => {
           transform: 'translate(-50%, -50%)',
           width: '40px',
           height: '40px',
-          border: '1px solid #00ff66',
+          border: '1px solid var(--accent-cyan)',
           borderRadius: '50%',
           opacity: 0.3,
           pointerEvents: 'none'
@@ -85,7 +85,7 @@ export const LookbookRaw: React.FC = () => {
         {photos.map((photo, index) => (
           <div key={index} style={{
             border: '2px solid var(--border-light)',
-            backgroundColor: '#15171a',
+            backgroundColor: '#111111',
             padding: '4px',
             position: 'relative',
             display: 'flex',
@@ -107,7 +107,7 @@ export const LookbookRaw: React.FC = () => {
               justifyContent: 'space-between',
               fontSize: '14px',
               padding: '2px',
-              color: '#94a3b8'
+              color: 'var(--text-secondary)'
             }}>
               <span>{photo.label}</span>
               <span>1600x1200</span>
@@ -131,12 +131,12 @@ export const LookbookRaw: React.FC = () => {
           <button 
             onClick={() => setZoom(prev => prev === '1.0x' ? '2.0x' : prev === '2.0x' ? '4.0x' : '1.0x')}
             style={{
-              background: '#252930',
-              border: '1px solid #525966',
-              color: '#00ff66',
+              background: '#222222',
+              border: '1px solid #555555',
+              color: 'var(--accent-cyan)',
               padding: '2px 8px',
               cursor: 'pointer',
-              fontFamily: "'VT323', monospace"
+              fontFamily: 'var(--font-system)'
             }}
           >
             ZOOM: {zoom}

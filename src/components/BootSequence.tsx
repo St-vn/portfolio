@@ -51,8 +51,8 @@ export const BootSequence: React.FC<BootSequenceProps> = ({ onComplete }) => {
   return (
     <div style={{
       backgroundColor: '#000',
-      color: '#00ff66',
-      fontFamily: "'VT323', monospace",
+      color: 'var(--accent-cyan)',
+      fontFamily: 'var(--font-system)',
       width: '100vw',
       height: '100vh',
       padding: '40px',
@@ -77,13 +77,13 @@ export const BootSequence: React.FC<BootSequenceProps> = ({ onComplete }) => {
         <div style={{
           width: '100%',
           height: '24px',
-          border: '2px solid #00ff66',
+          border: '2px solid var(--accent-cyan)',
           padding: '2px'
         }}>
           <div style={{
             height: '100%',
             width: `${progress}%`,
-            backgroundColor: '#00ff66',
+            backgroundColor: 'var(--accent-cyan)',
             transition: 'width 0.1s linear'
           }} />
         </div>

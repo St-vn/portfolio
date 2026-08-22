@@ -57,7 +57,7 @@ export const WindowFrame: React.FC<WindowFrameProps> = ({
         <div
           className={`window-title-bar ${isActive ? 'active' : 'inactive'}`}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', fontWeight: 600, fontFamily: 'var(--font-system)', letterSpacing: '0.5px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '15px', fontWeight: 600, fontFamily: 'var(--font-system)', letterSpacing: '0.5px' }}>
             <img src={icon} alt="" style={{ width: '16px', height: '16px', objectFit: 'contain' }} />
             <span>{title}</span>
           </div>
@@ -74,9 +74,9 @@ export const WindowFrame: React.FC<WindowFrameProps> = ({
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '10px',
+                fontSize: '12px',
                 fontWeight: 'bold',
-                fontFamily: 'monospace'
+                fontFamily: 'var(--font-system)'
               }}
             >
               _
@@ -90,9 +90,9 @@ export const WindowFrame: React.FC<WindowFrameProps> = ({
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '10px',
+                fontSize: '12px',
                 fontWeight: 'bold',
-                fontFamily: 'monospace'
+                fontFamily: 'var(--font-system)'
               }}
             >
               ?
@@ -107,9 +107,9 @@ export const WindowFrame: React.FC<WindowFrameProps> = ({
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '10px',
+                fontSize: '12px',
                 fontWeight: 'bold',
-                fontFamily: 'monospace'
+                fontFamily: 'var(--font-system)'
               }}
             >
               X
@@ -139,14 +139,14 @@ export const WindowFrame: React.FC<WindowFrameProps> = ({
             display: 'flex',
             alignItems: 'center',
             padding: '0 8px',
-            fontSize: '11px',
+            fontSize: '13px',
             color: 'var(--text-secondary)',
             fontFamily: 'var(--font-system)',
             justifyContent: 'space-between'
           }}
         >
           <span>STATUS: {telemetry}</span>
-          <span style={{ color: isActive ? 'var(--accent-green)' : 'var(--text-secondary)' }}>
+          <span style={{ color: isActive ? 'var(--accent-cyan)' : 'var(--text-secondary)' }}>
             {isActive ? 'ACTIVE_CHANNEL_FOCUSED' : 'BG_STANDBY'}
           </span>
         </div>

@@ -34,8 +34,8 @@ export const DesktopIcon: React.FC<DesktopIconProps> = ({ label, icon, isSelecte
         justifyContent: 'center',
         gap: '8px',
         padding: '12px 6px',
-        border: isSelected ? '1px dashed var(--accent-green)' : '1px solid transparent',
-        backgroundColor: isSelected ? 'rgba(0, 255, 102, 0.05)' : 'transparent',
+        border: isSelected ? '1px dashed var(--accent-cyan)' : '1px solid transparent',
+        backgroundColor: isSelected ? 'rgba(0, 221, 255, 0.05)' : 'transparent',
         transition: 'background-color 0.1s',
         boxSizing: 'border-box'
       }}>
@@ -45,19 +45,19 @@ export const DesktopIcon: React.FC<DesktopIconProps> = ({ label, icon, isSelecte
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          filter: isSelected ? 'drop-shadow(0px 0px 6px var(--accent-green))' : 'none'
+          filter: isSelected ? 'drop-shadow(0px 0px 6px var(--accent-cyan))' : 'none'
         }}>
           <img src={icon} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
         </div>
         <span style={{
-          fontSize: '13px',
-          color: isSelected ? 'var(--accent-green)' : 'var(--text-primary)',
+          fontSize: '15px',
+          color: isSelected ? 'var(--accent-cyan)' : '#ffffff',
           textAlign: 'center',
           wordBreak: 'normal',
           overflowWrap: 'break-word',
           fontFamily: 'var(--font-system)',
           letterSpacing: '0.5px',
-          textShadow: '1px 1px 2px #000',
+          textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
           lineHeight: '1.2'
         }}>
           {label}

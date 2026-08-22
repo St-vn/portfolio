@@ -26,28 +26,24 @@ export const Resume: React.FC = () => {
   ];
 
   return (
-    <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '16px', overflowY: 'auto', height: '100%', color: 'var(--text-primary)' }}>
-      <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', fontSize: '15px', fontWeight: 600 }}>
-        [ RESUME_2026.DOC // TARGET DIRECTORY ]
-      </h3>
-      
-      <p style={{ fontSize: '13px', lineHeight: '1.5' }}>
+    <div className="panel-content">
+      <h3 className="section-header">[ RESUME_2026.DOC // TARGET DIRECTORY ]</h3>
+
+      <p className="item-body">
         Select a localized technical track variant to download. All payloads compiled from first-principles LaTeX source nodes.
       </p>
 
-      {/* Dual Column Vintage File System Menu */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '12px', marginTop: '4px' }}>
         {tracks.map((track, idx) => (
-          <div 
-            key={idx} 
-            className="item-card"
-          >
+          <div key={idx} className="item-card">
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '6px' }}>
-                <span style={{ fontSize: '20px' }}>{track.icon}</span>
-                <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>{track.title}</span>
+              <div className="item-header">
+                <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ fontSize: '20px' }}>{track.icon}</span>
+                  <span className="item-title">{track.title}</span>
+                </span>
               </div>
-              <p style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.4', margin: 0 }}>
+              <p className="item-secondary" style={{ fontSize: '14px', lineHeight: '1.4', margin: 0 }}>
                 {track.desc}
               </p>
             </div>
@@ -57,16 +53,13 @@ export const Resume: React.FC = () => {
                 href={track.enPath}
                 download
                 className="button-retro"
-                style={{ 
-                  flex: 1, 
-                  textDecoration: 'none', 
-                  fontSize: '11px', 
-                  padding: '4px 2px', 
+                style={{
+                  flex: 1,
+                  textDecoration: 'none',
+                  fontSize: '13px',
+                  padding: '4px 2px',
                   textAlign: 'center',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '4px'
+                  justifyContent: 'center'
                 }}
               >
                 [ PDF: 🇬🇧 EN ]
@@ -75,16 +68,13 @@ export const Resume: React.FC = () => {
                 href={track.frPath}
                 download
                 className="button-retro"
-                style={{ 
-                  flex: 1, 
-                  textDecoration: 'none', 
-                  fontSize: '11px', 
-                  padding: '4px 2px', 
+                style={{
+                  flex: 1,
+                  textDecoration: 'none',
+                  fontSize: '13px',
+                  padding: '4px 2px',
                   textAlign: 'center',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '4px'
+                  justifyContent: 'center'
                 }}
               >
                 [ PDF: 🇫🇷 FR ]
@@ -95,8 +85,8 @@ export const Resume: React.FC = () => {
       </div>
 
       <div style={{ marginTop: '12px', borderTop: '1px solid var(--border-light)', paddingTop: '12px' }}>
-        <h4 style={{ fontSize: '13px', color: 'var(--accent-green)', marginBottom: '8px' }}>[ COMPILATION LOGS ]</h4>
-        <ul style={{ fontSize: '12px', paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: '6px', lineHeight: '1.4', color: 'var(--text-secondary)' }}>
+        <h4 style={{ fontSize: '15px', color: 'var(--accent-cyan)', marginBottom: '8px' }}>[ COMPILATION LOGS ]</h4>
+        <ul className="item-list">
           <li>All targets merged and batch compiled dynamically via <code style={{ color: 'var(--accent-amber)' }}>compile_cv.py</code>.</li>
           <li>Education metrics synchronized with Concordian B.Eng curriculum modules.</li>
           <li>System compliance verified across 6 isolated build environments.</li>

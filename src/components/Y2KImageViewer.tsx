@@ -46,7 +46,7 @@ export const Y2KImageViewer: React.FC<Y2KImageViewerProps> = ({
         <div 
           className="bevel-in y2k-media-inner-viewport" 
           style={{ 
-            backgroundColor: '#1a1c20', 
+            backgroundColor: 'var(--bg-inset)', 
             margin: '4px', 
             overflow: 'hidden', 
             display: 'flex', 
@@ -108,13 +108,13 @@ export const Y2KImageViewer: React.FC<Y2KImageViewerProps> = ({
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Title bar */}
-            <div style={{ backgroundColor: '#1e293b', color: '#fff', padding: '4px 8px', display: 'flex', justifyContent: 'space-between', fontSize: '14px', fontWeight: 'bold', marginBottom: '6px' }}>
+            <div style={{ backgroundColor: 'var(--bg-window)', color: 'var(--text-primary)', padding: '4px 8px', display: 'flex', justifyContent: 'space-between', fontSize: '14px', fontWeight: 'bold', marginBottom: '6px', borderBottom: '1px solid var(--border-dark)' }}>
               <span>{alt} - FULLSCREEN_VIEW</span>
               <span style={{ cursor: 'pointer', color: 'var(--accent-amber)' }} onClick={() => setIsFullscreen(false)}>[CLOSE X]</span>
             </div>
             
             {/* Recessed Frame */}
-            <div className="bevel-in" style={{ backgroundColor: '#121417', overflow: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div className="bevel-in" style={{ backgroundColor: '#000000', overflow: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <img 
                 src={src} 
                 alt={alt} 

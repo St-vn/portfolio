@@ -24,52 +24,35 @@ export const Engineering: React.FC = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-      {/* Target CV Integration Utility Bar */}
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '6px 12px',
-        backgroundColor: 'var(--bg-window)',
-        borderBottom: '2px solid var(--border-dark)',
-        gap: '10px',
-        flexWrap: 'wrap'
-      }}>
-        <span style={{ fontSize: '12px', color: 'var(--text-secondary)', fontFamily: 'var(--font-system)' }}>
-          CV_TARGET: ENGINEERING
-        </span>
+      <div className="cv-bar">
+        <span className="tech-label">CV_TARGET: ENGINEERING</span>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-          <a href="assets/resumes/hardware_en.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
+          <a href="assets/resumes/hardware_en.pdf" download className="button-retro" style={{ fontSize: '13px', padding: '2px 8px', textDecoration: 'none' }}>
             [ Download CV: 🇬🇧 EN ]
           </a>
-          <a href="assets/resumes/hardware_fr.pdf" download className="button-retro" style={{ fontSize: '11px', padding: '2px 8px', textDecoration: 'none' }}>
+          <a href="assets/resumes/hardware_fr.pdf" download className="button-retro" style={{ fontSize: '13px', padding: '2px 8px', textDecoration: 'none' }}>
             [ Télécharger CV: 🇫🇷 FR ]
           </a>
         </div>
       </div>
 
-      {/* Content Area */}
-      <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '20px', overflowY: 'auto', flex: 1 }}>
-        {/* Introduction */}
+      <div className="panel-content" style={{ flex: 1 }}>
         <div>
-          <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', marginBottom: '8px', fontSize: '15px', fontWeight: 600 }}>
-            [ ENGINEERING SYSTEM MATRIX ]
-          </h3>
-          <p style={{ fontSize: '13px', lineHeight: '1.6', color: 'var(--text-primary)' }}>
+          <h3 className="section-header">[ ENGINEERING SYSTEM MATRIX ]</h3>
+          <p className="item-body">
             System diagnostics verify full-spectrum compliance across CAD hardware structures, fluid dynamics mathematical models, and electromagnetic turbine configurations.
           </p>
         </div>
 
-        {/* CFD Simulation */}
         <div className="item-card">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
-            <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>CFD Simulation</span>
-            <span style={{ fontSize: '12px', color: 'var(--accent-green)', fontFamily: 'var(--font-system)' }}>2026</span>
+          <div className="item-header">
+            <span className="item-title">CFD Simulation</span>
+            <span className="item-date">2026</span>
           </div>
-          <p style={{ fontSize: '13px', lineHeight: '1.5', color: 'var(--text-primary)', marginBottom: '8px', margin: 0 }}>
+          <p className="item-body" style={{ marginBottom: '8px' }}>
             Programmed an active, real-time ``Computational Fluid Dynamics'' inside game engine limitations to visualize particle trajectory.
           </p>
-          <ul style={{ paddingLeft: '16px', fontSize: '12px', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '12px', margin: 0 }}>
+          <ul className="item-list" style={{ marginBottom: '12px' }}>
             <li>Particle trajectories driven by boids-inspired cohesion/separation algorithms and pressure vectors.</li>
             <li>Real-time velocity/pressure gradients modeled using Bernoulli's fluid dynamic variables.</li>
             <li>Visual validation mapped directly onto custom geometry.</li>
@@ -77,14 +60,13 @@ export const Engineering: React.FC = () => {
           <Y2KMediaCarousel media={cfdMedia} />
         </div>
 
-        {/* Wind Turbine Project */}
         <div className="item-card">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
-            <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>CEGEP Integrative Wind Turbine</span>
-            <span style={{ fontSize: '12px', color: 'var(--accent-green)', fontFamily: 'var(--font-system)' }}>2026</span>
+          <div className="item-header">
+            <span className="item-title">CEGEP Integrative Wind Turbine</span>
+            <span className="item-date">2026</span>
           </div>
-          <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '6px' }}>Collège Lionel-Groulx // Fusion360 CAD</div>
-          <ul style={{ paddingLeft: '16px', fontSize: '12px', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '12px', margin: 0 }}>
+          <div className="item-secondary" style={{ marginBottom: '6px' }}>Collège Lionel-Groulx // Fusion360 CAD</div>
+          <ul className="item-list" style={{ marginBottom: '12px' }}>
             <li>Designed a high-efficiency vertical axis H-Rotor turbine profile using parametric CAD modeling.</li>
             <li>Configured brushed DC motors to act as generator nodes capturing kinetic voltage payloads.</li>
             <li>Applied electromagnetic theory (Faraday's Law, cogging torque, and Kirchhoff's loop rules).</li>
@@ -93,17 +75,16 @@ export const Engineering: React.FC = () => {
           <Y2KMediaCarousel media={turbineMedia} />
         </div>
 
-        {/* Polytechnique Montréal Contest */}
         <div className="item-card">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '8px' }}>
-            <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>Polytechnique Montréal "Déplace de l'air"</span>
-            <span style={{ fontSize: '12px', color: 'var(--accent-green)', fontFamily: 'var(--font-system)' }}>2026</span>
+          <div className="item-header">
+            <span className="item-title">Polytechnique Montréal "Déplace de l'air"</span>
+            <span className="item-date">2026</span>
           </div>
-          <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '6px' }}>Polytechnique Montreal // Aerodynamics Lead</div>
-          <p style={{ fontSize: '13px', lineHeight: '1.5', color: 'var(--text-primary)', marginBottom: '6px', margin: 0 }}>
+          <div className="item-secondary" style={{ marginBottom: '6px' }}>Polytechnique Montreal // Aerodynamics Lead</div>
+          <p className="item-body" style={{ marginBottom: '6px' }}>
             Led a team of three in wind-tunnel prototyping, airfoil testing, and alternator AC circuits.
           </p>
-          <ul style={{ paddingLeft: '16px', fontSize: '12px', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '4px', margin: 0, marginBottom: '12px' }}>
+          <ul className="item-list" style={{ marginBottom: '12px' }}>
             <li>Conducted analysis of blade lift/drag coefficients on custom NACA profiles.</li>
             <li>Assembled an axial flux alternator incorporating custom lamination layouts and coil loops.</li>
             <li>Managed budget limits, size constraints, and design trade-offs under competition guidelines.</li>

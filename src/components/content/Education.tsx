@@ -21,50 +21,36 @@ export const Education: React.FC = () => {
   ];
 
   return (
-    <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '16px', overflowY: 'auto', height: '100%', color: 'var(--text-primary)' }}>
-      <h3 style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '4px', fontSize: '15px', fontWeight: 600 }}>
-        [ EDUCATION.DLL // RECORD_DB ]
-      </h3>
+    <div className="panel-content">
+      <h3 className="section-header">[ EDUCATION.DLL // RECORD_DB ]</h3>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        {/* University */}
         <div className="item-card">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '6px' }}>
-            <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>Concordia University</span>
-            <span style={{ fontSize: '12px', color: 'var(--accent-green)', fontFamily: 'var(--font-system)' }}>2026 - 2030</span>
+          <div className="item-header">
+            <span className="item-title">Concordia University</span>
+            <span className="item-date">2026 - 2030</span>
           </div>
-          <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginTop: '2px' }}>
-            Bachelor of Engineering (B.Eng)
-          </div>
-          <div style={{ fontSize: '12px', color: 'var(--text-primary)', marginTop: '2px', fontWeight: 500 }}>
-            Major: Computer Engineering
-          </div>
-          <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '8px', borderTop: '1px dashed rgba(255,255,255,0.1)', paddingTop: '6px' }}>
-            Focus: Digital systems design, computer organization, programming methodology, data structures & algorithms, circuit analysis, operating systems, and real-time systems.
-          </div>
+          <div className="item-secondary">Bachelor of Computer Science (BCompSc)</div>
         </div>
 
-        {/* College */}
         <div className="item-card">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px dashed var(--border-light)', paddingBottom: '6px', marginBottom: '6px' }}>
-            <span style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--accent-amber)' }}>Collège Lionel-Groulx</span>
-            <span style={{ fontSize: '12px', color: 'var(--accent-green)', fontFamily: 'var(--font-system)' }}>2023 - 2026</span>
+          <div className="item-header">
+            <span className="item-title">Collège Lionel-Groulx</span>
+            <span className="item-date">2023 - 2026</span>
           </div>
-          <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginTop: '2px' }}>
-            Diploma of College Studies (DEC)
-          </div>
-          <div style={{ fontSize: '12px', color: 'var(--text-primary)', marginTop: '2px', fontWeight: 500 }}>
+          <div className="item-secondary">Diploma of College Studies (DEC)</div>
+          <div style={{ fontSize: '14px', color: 'var(--text-primary)', marginTop: '2px', fontWeight: 500 }}>
             Program: Pure and Applied Sciences
           </div>
 
-          <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '8px', borderTop: '1px dashed rgba(255,255,255,0.1)', paddingTop: '6px' }}>
-            <div style={{ fontWeight: 600, color: 'var(--accent-amber)', marginBottom: '8px', fontSize: '11px', letterSpacing: '0.5px' }}>
+          <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '8px', borderTop: '1px dashed var(--border-light)', paddingTop: '6px' }}>
+            <div className="item-title" style={{ fontSize: '13px', marginBottom: '8px', letterSpacing: '0.5px' }}>
               [ COMPLETED SCIENCE & MATHEMATICS CURRICULUM ]
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', gap: '4px 8px', fontSize: '11px', fontFamily: 'monospace' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', gap: '4px 8px', fontSize: '13px' }}>
               {scienceCourses.map((course, idx) => (
                 <React.Fragment key={idx}>
-                  <span style={{ color: 'var(--accent-green)' }}>{course.code}</span>
+                  <span style={{ color: 'var(--accent-cyan)' }}>{course.code}</span>
                   <span style={{ color: 'var(--text-primary)' }}>{course.name}</span>
                 </React.Fragment>
               ))}
