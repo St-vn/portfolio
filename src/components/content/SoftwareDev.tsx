@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import { Y2KMediaCarousel } from '../Y2KMediaCarousel';
 
 export const SoftwareDev: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'experience' | 'projects'>('projects');
+  // const [activeTab, setActiveTab] = useState<'experience' | 'projects'>('projects');
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
@@ -34,7 +34,7 @@ export const SoftwareDev: React.FC = () => {
       </div> */}
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '16px', backgroundColor: 'var(--bg-inset)' }}>
-        {activeTab === 'experience' ? (
+        {/* {activeTab === 'experience' ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div className="item-card">
               <div className="item-header">
@@ -54,7 +54,7 @@ export const SoftwareDev: React.FC = () => {
               </div>
             </div>
           </div>
-        ) : (
+        ) : */} (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
 
               <div className="item-card">
