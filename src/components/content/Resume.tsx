@@ -9,20 +9,20 @@ export const Resume: React.FC = () => {
       frPath: 'assets/resumes/software_fr.pdf',
       icon: '💻'
     },
-    {
-      title: 'Game Development',
-      desc: 'Gameplay scripting, multiplayer netcode, kinematics & physics.',
-      enPath: 'assets/resumes/gamedev_en.pdf',
-      frPath: 'assets/resumes/gamedev_fr.pdf',
-      icon: '🎮'
-    },
-    {
-      title: 'Engineering & Physics',
-      desc: 'Computational fluid dynamics, alternators & vertical wind turbines.',
-      enPath: 'assets/resumes/hardware_en.pdf',
-      frPath: 'assets/resumes/hardware_fr.pdf',
-      icon: '⚙️'
-    }
+    // {
+    //   title: 'Game Development',
+    //   desc: 'Gameplay scripting, multiplayer netcode, kinematics & physics.',
+    //   enPath: 'assets/resumes/gamedev_en.pdf',
+    //   frPath: 'assets/resumes/gamedev_fr.pdf',
+    //   icon: '🎮'
+    // },
+    // {
+    //   title: 'Engineering & Physics',
+    //   desc: 'Computational fluid dynamics, alternators & vertical wind turbines.',
+    //   enPath: 'assets/resumes/hardware_en.pdf',
+    //   frPath: 'assets/resumes/hardware_fr.pdf',
+    //   icon: '⚙️'
+    // }
   ];
 
   return (
@@ -30,7 +30,7 @@ export const Resume: React.FC = () => {
       <h3 className="section-header">[ RESUME_2026.DOC // TARGET DIRECTORY ]</h3>
 
       <p className="item-body">
-        Select a localized technical track variant to download. All payloads compiled from first-principles LaTeX source nodes.
+        View my work in PDF format!
       </p>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '12px', marginTop: '4px' }}>
@@ -64,7 +64,7 @@ export const Resume: React.FC = () => {
               >
                 [ PDF: 🇬🇧 EN ]
               </a>
-              <a
+              {/* <a
                 href={track.frPath}
                 download
                 className="button-retro"
@@ -78,20 +78,20 @@ export const Resume: React.FC = () => {
                 }}
               >
                 [ PDF: 🇫🇷 FR ]
-              </a>
+              </a> */}
             </div>
           </div>
         ))}
       </div>
 
-      <div style={{ marginTop: '12px', borderTop: '1px solid var(--border-light)', paddingTop: '12px' }}>
+      {/* <div style={{ marginTop: '12px', borderTop: '1px solid var(--border-light)', paddingTop: '12px' }}>
         <h4 style={{ fontSize: '15px', color: 'var(--accent-cyan)', marginBottom: '8px' }}>[ COMPILATION LOGS ]</h4>
         <ul className="item-list">
           <li>All targets merged and batch compiled dynamically via <code style={{ color: 'var(--accent-amber)' }}>compile_cv.py</code>.</li>
           <li>Education metrics synchronized with Concordian B.Eng curriculum modules.</li>
           <li>System compliance verified across 6 isolated build environments.</li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

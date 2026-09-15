@@ -28,7 +28,7 @@ export const Education: React.FC = () => {
         <div className="item-card">
           <div className="item-header">
             <span className="item-title">Concordia University</span>
-            <span className="item-date">2026 - 2030</span>
+            <span className="item-date">2026 - 2029</span>
           </div>
           <div className="item-secondary">Bachelor of Computer Science (BCompSc)</div>
         </div>

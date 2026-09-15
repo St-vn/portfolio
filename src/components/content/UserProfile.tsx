@@ -23,9 +23,9 @@ export const UserProfile: React.FC = () => {
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 500, fontSize: '16px' }}>
               <strong>Concordia University</strong>
-              <span className="item-date">2026 - 2030</span>
+              <span className="item-date">2026 - 2029</span>
             </div>
-            <div className="item-secondary">Bachelor of Engineering in Computer Engineering</div>
+            <div className="item-secondary">Bachelor of Computer Science</div>
           </div>
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 500, fontSize: '16px' }}>

@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Y2KMediaCarousel } from '../Y2KMediaCarousel';
 
 export const SoftwareDev: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'experience' | 'projects'>('experience');
+  const [activeTab, setActiveTab] = useState<'experience' | 'projects'>('projects');
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-      <div className="cv-bar">
+      {/* <div className="cv-bar">
         <span className="tech-label">CV_TARGET: SOFTWARE_ENG</span>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
           <a href="assets/resumes/software_en.pdf" download className="button-retro" style={{ fontSize: '13px', padding: '2px 8px', textDecoration: 'none' }}>
@@ -16,9 +16,9 @@ export const SoftwareDev: React.FC = () => {
             [ Télécharger CV: 🇫🇷 FR ]
           </a>
         </div>
-      </div>
+      </div> */}
 
-      <div className="tab-bar">
+      {/* <div className="tab-bar">
         <button
           onClick={() => setActiveTab('experience')}
           className={`tab-button ${activeTab === 'experience' ? 'active' : ''}`}
@@ -31,7 +31,7 @@ export const SoftwareDev: React.FC = () => {
         >
           📂 repositories.json {activeTab === 'projects' && '●'}
         </button>
-      </div>
+      </div> */}
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '16px', backgroundColor: 'var(--bg-inset)' }}>
         {activeTab === 'experience' ? (
@@ -56,14 +56,62 @@ export const SoftwareDev: React.FC = () => {
           </div>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+
+              <div className="item-card">
+                <div className="item-header">
+                  <span className="item-title">Agent Harness (aede)</span>
+                  </div>
+                <p className="item-body" style={{ marginBottom: '8px' }}>
+                  Harness CLI with a web interface enabling agentic workflows.
+                </p>
+                <ul className="item-list" style={{ marginBottom: '12px' }}>
+                  <li>Engineered a 14,700+ line Python agent harness supporting 10 distinct tools and 6+ model providers</li>
+                  <li>Hardened execution using Docker sandboxing, prompt injection filtering and secret redaction</li>
+                  <li>Extended agent capabilities via ACP agent orchestration, MCP server integrations, skills and plugins</li>
+                  <li>Identified and remediated 11+ security vulnerabilities using STRIDE threat modeling</li>
+                  <li>Maintained 155+ tests including 19 security tests validating remediations</li>
+                  <li>Optimized LLM costs via context compaction with hybrid FTS5 and embeddings memory retrieval</li>
+                </ul>
+
+                {/* <div style={{ marginBottom: '10px', maxWidth: '280px' }}>
+                  <Y2KMediaCarousel
+                    media={[
+                      { type: 'image', src: 'assets/wallpaper_icons/vibefm.png', alt: 'vibe-fm logo', fileFormat: 'PNG', dimensions: '512 x 512', aspectRatio: '1/1' },
+                      { type: 'image', src: 'assets/images/software/vibefm_presentation_2.jpg', alt: 'vibe-fm presentation slide', fileFormat: 'JPEG', dimensions: '1920 x 1080', aspectRatio: '16/10' },
+                      { type: 'video', src: 'assets/images/software/vibefm_swipe_demo.mov', title: 'vibe-fm swipe matchmaking demo', aspectRatio: '9/16' },
+                      { type: 'image', src: 'assets/images/software/vibefm_capture.png', alt: 'vibe-fm capture screen', fileFormat: 'PNG', dimensions: '1290 x 2796', aspectRatio: '9/16' },
+                      { type: 'image', src: 'assets/images/software/vibefm_kanye.png', alt: 'vibe-fm Match Kanye', fileFormat: 'PNG', dimensions: '1290 x 2796', aspectRatio: '9/16' },
+                      { type: 'image', src: 'assets/images/software/vibefm_supernatural.png', alt: 'vibe-fm Match Supernatural', fileFormat: 'PNG', dimensions: '1290 x 2796', aspectRatio: '9/16' },
+                      { type: 'image', src: 'assets/images/software/vibefm_trending.png', alt: 'vibe-fm trending profiles', fileFormat: 'PNG', dimensions: '1290 x 2796', aspectRatio: '9/16' }
+                    ]}
+                  />
+                </div> */}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+                  {/* <span className="tech-label">TECH: React Native, Expo SDK 54, Zustand, Reanimated/Moti, Gemini Flash, Python, Shazam API</span> */}
+                  <div style={{ display: 'flex', gap: '10px', whiteSpace: 'nowrap', flexShrink: 0 }}>
+                    {/* <a href="https://st-vn.github.io/vibefm-ai" target="_blank" rel="noreferrer" className="source-link">Website &rarr;</a> */}
+                    <a href="https://github.com/St-vn/aede" target="_blank" rel="noreferrer" className="source-link">Source &rarr;</a>
+                  </div>
+                </div>
+              </div>
+
+
             <div className="item-card">
               <div className="item-header">
                 <span className="item-title">vibe-fm (HackTheMountain Hackathon)</span>
-                <span className="status-badge">SOLO_BUILD</span>
+                {/* <span className="status-badge">SOLO_BUILD</span> */}
               </div>
               <p className="item-body" style={{ marginBottom: '8px' }}>
                 Designed and developed a real-time Music Information Retrieval (MIR) mobile application. Captures low-latency PCM audio stream, extracts acoustic vectors (BPM, energy, valence) via Shazam & FreqBlog, and performs LLM-synthesized semantic profiling alongside vector similarity matchmaking (Cosine Similarity) for compatible profiles. Resolves iOS hardware taptic-recording locks asynchronously.
               </p>
+                <ul className="item-list" style={{ marginBottom: '12px' }}>
+                  <li>Designed and pitched the mobile application solo</li>
+                  <li>Integrated the Shazam REST API via RapidAPI for real-time audio identification</li>
+                  <li>Used Expo native sub-libraries for audio recording and haptic vibrations</li>
+                  <li>Conducted analysis of track audio using FreqBlog (BPM, energy, danceability, mood, etc.)</li>
+                  <li>Developed matchmaking based on users' profile using cosine similarity</li>
+                  <li>Searched charting tracks and their metadata via Kworb and iTunes Search API</li>
+                </ul>
               <div style={{ marginBottom: '10px', maxWidth: '280px' }}>
                 <Y2KMediaCarousel
                   media={[
@@ -86,21 +134,19 @@ export const SoftwareDev: React.FC = () => {
               </div>
             </div>
 
-            <div className="item-card">
+            {/* <div className="item-card">
               <div className="item-header">
                 <span className="item-title">levlrai</span>
-                <span className="status-badge">ACTIVE_DEPLOY</span>
               </div>
               <p className="item-body">
                 Architected an AI-powered study platform featuring Mammoth/PDF-Parse course parsing, secure Supabase Postgres DB, Google OAuth, Upstash Redis rate-limiting, and Stripe subscription logic.
               </p>
               <div className="tech-label" style={{ marginTop: '8px' }}>TECH: TypeScript, Next.js, Supabase, Stripe, Redis, Vitest, Tailwind</div>
-            </div>
+            </div> */}
 
             <div className="item-card">
               <div className="item-header">
                 <span className="item-title">Market MCP Server (AI Hackfest Hackathon)</span>
-                <span className="status-badge">GITHUB_REPO</span>
               </div>
               <p className="item-body" style={{ marginBottom: '8px' }}>
                 Created a Market Intelligence MCP server for AI agents to query live data from Roblox ecosystem wikis, Rolimons, and Cloud APIs.
@@ -132,7 +178,6 @@ export const SoftwareDev: React.FC = () => {
             <div className="item-card">
               <div className="item-header">
                 <span className="item-title">J*b Scout (Testsprite Hackathon)</span>
-                <span className="status-badge">VERCEL_DEMO</span>
               </div>
               <p className="item-body" style={{ marginBottom: '8px' }}>
                 Led a three-person development team to create an AI job match tool utilizing Gemini resume parsing, SerpAPI job fetching, and automated cover letter generation.

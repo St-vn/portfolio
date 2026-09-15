@@ -8,7 +8,7 @@ export const Profile: React.FC = () => {
           <span className="item-title">[ SYSTEM PROFILE: STEVEN CHHAY ]</span>
         </div>
         <p className="item-body">
-          I approach engineering problems using first principles. I'm a game developer with 9 years of experience, studying Computer Science and an aspiring founder.
+          I approach engineering problems using first principles. I'm a game developer with 9 years of experience, studying Computer Science and an aspiring tech founder.
         </p>
       </div>
 
@@ -20,7 +20,7 @@ export const Profile: React.FC = () => {
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 500, fontSize: '16px' }}>
               <strong>Concordia University</strong>
-              <span className="item-date">2026 - 2030</span>
+              <span className="item-date">2026 - 2029</span>
             </div>
             <div className="item-secondary">Bachelor of Computer Science</div>
           </div>
@@ -34,7 +34,7 @@ export const Profile: React.FC = () => {
         </div>
       </div>
 
-      <div className="item-card">
+      {/* <div className="item-card">
         <div className="item-header">
           <span className="item-title">[ LANGUAGES ]</span>
         </div>
@@ -42,9 +42,9 @@ export const Profile: React.FC = () => {
           <span className="tag-pill">ENGLISH</span>
           <span className="tag-pill">FRENCH</span>
         </div>
-      </div>
+      </div> */}
 
-      <div className="item-card">
+      {/* <div className="item-card">
         <div className="item-header">
           <span className="item-title">[ SPECIALIST FIELD MATRIX ]</span>
         </div>
@@ -61,7 +61,7 @@ export const Profile: React.FC = () => {
           <span className="tag-pill">WORKFLOW AUTOMATION</span>
           <span className="tag-pill">SYSTEMS DEVELOPMENT</span>
         </div>
-      </div>
+      </div> */}
 
       <div className="item-card">
         <div className="item-header">
@@ -100,34 +100,34 @@ export const Profile: React.FC = () => {
           <span className="item-title">[ DEVELOPER TOOLS & ENGINES ]</span>
         </div>
         <div className="tag-container">
-          <span className="tag-pill">Unity Engine</span>
-          <span className="tag-pill">Roblox Studio / API</span>
           <span className="tag-pill">VSCode</span>
           <span className="tag-pill">VSCommunity</span>
-          <span className="tag-pill">Fusion360</span>
-          <span className="tag-pill">Blender</span>
           <span className="tag-pill">Git / GitHub</span>
           <span className="tag-pill">Supabase</span>
           <span className="tag-pill">Redis</span>
           <span className="tag-pill">Vite</span>
           <span className="tag-pill">Vercel</span>
+          <span className="tag-pill">Fly.io</span>
           <span className="tag-pill">Railway</span>
+          <span className="tag-pill">Docker</span>
+          <span className="tag-pill">Unity Engine</span>
+          <span className="tag-pill">Roblox Studio</span>
         </div>
       </div>
 
-      <div className="item-card">
-        <div className="item-header">
-          <span className="item-title">[ AI UTILITIES ]</span>
-        </div>
-        <div className="tag-container">
-          <span className="tag-pill">Claude Code</span>
-          <span className="tag-pill">Antigravity</span>
-          <span className="tag-pill">ChatGPT</span>
-          <span className="tag-pill">Gemini</span>
-          <span className="tag-pill">Cursor</span>
-          <span className="tag-pill">GitHub Copilot</span>
-        </div>
-      </div>
+        {/* <div className="item-card">
+          <div className="item-header">
+            <span className="item-title">[ AI UTILITIES ]</span>
+          </div>
+          <div className="tag-container">
+            <span className="tag-pill">Claude Code</span>
+            <span className="tag-pill">Antigravity</span>
+            <span className="tag-pill">ChatGPT</span>
+            <span className="tag-pill">Gemini</span>
+            <span className="tag-pill">Cursor</span>
+            <span className="tag-pill">GitHub Copilot</span>
+          </div>
+        </div> */}
     </div>
   );
 };

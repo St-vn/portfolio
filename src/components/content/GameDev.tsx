@@ -7,7 +7,7 @@ export const GameDev: React.FC = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-      <div className="cv-bar">
+      {/* <div className="cv-bar">
         <span className="tech-label">CV_TARGET: GAME_DEV</span>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
           <a href="assets/resumes/gamedev_en.pdf" download className="button-retro" style={{ fontSize: '13px', padding: '2px 8px', textDecoration: 'none' }}>
@@ -17,9 +17,9 @@ export const GameDev: React.FC = () => {
             [ Télécharger CV: 🇫🇷 FR ]
           </a>
         </div>
-      </div>
+      </div> */}
 
-      <div className="tab-bar">
+      {/* <div className="tab-bar">
         <button
           onClick={() => setActiveTab('production')}
           className={`tab-button ${activeTab === 'production' ? 'active' : ''}`}
@@ -32,11 +32,62 @@ export const GameDev: React.FC = () => {
         >
           ⚙️ networking_sys.log {activeTab === 'architecture' && '●'}
         </button>
-      </div>
+      </div> */}
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '16px', backgroundColor: 'var(--bg-inset)' }}>
         {activeTab === 'production' ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+
+            <div className="item-card">
+              <div className="item-header">
+                <span className="item-title">Full-Stack Game Development Freelancer</span>
+                <span className="item-date">2020–Present</span>
+              </div>
+              <p className="item-body" style={{ marginBottom: '6px' }}>
+                Five years of professional game development across Unity and Roblox.
+              </p>
+              <ul className="item-list" style={{ marginBottom: '12px' }}>
+                <li>Contributed to <b>5+ front-page</b> game studios on Roblox</li>
+                <li>Optimized multiplayer experiences using client-side prediction, server-side reconciliation and anti-cheat</li>
+                <li>Designed gameplay visuals with cutscenes, particles, anime-styled combats and UI/HUD systems</li>
+                <li>Developed shadow table based server-client state replication middleware for simplifying server-client state tracking</li>
+                <li>Engineered game mechanics using FABRIK, Swept OBB collision, A*/Dijkstra Pathfinding, etc.</li>
+              </ul>
+              <Y2KMediaCarousel
+                media={[
+                  { type: 'video', src: 'assets/videos/fbg_lancer_ult.mov', title: 'Some Anime Battlegrounds', aspectRatio: '16/9' },
+                  { type: 'youtube', youtubeId: 'S-thgACxqIw', title: 'Stellar Blast', aspectRatio: '16/9' },
+                  { type: 'video', src: 'assets/videos/sirskittles building.mp4', title: '2020 Fortnite Building System', aspectRatio: '16/9' },
+                  { type: 'video', src: 'assets/videos/block_game.mp4', title: 'Minecraft Rip-off', aspectRatio: '16/9' },
+                  { type: 'video', src: 'assets/videos/lancer_1.mp4', title: 'Some Anime Battlegrounds', aspectRatio: '16/9'},
+                  { type: 'video', src: 'assets/videos/lancer_2.mp4', title: 'Some Anime Battlegrounds', aspectRatio: '16/9' },
+                ]}
+              />
+            </div>
+
+            <div className="item-card">
+              <div className="item-header">
+                <span className="item-title">Game Owner, Main Programmer and Designer</span>
+                <span className="item-date">2020–Present</span>
+              </div>
+              <p className="item-body" style={{ marginBottom: '6px' }}>
+                Developed a "Steal a brainrot" type game, building and modeling also made by me.
+              </p>
+              <ul className="item-list" style={{ marginBottom: '12px' }}>
+                <li>Day 1 and Day 7 retention peaked at 10.12% and 4.18% respectively</li>
+                <li>Acquired 300K+ visits using targeted game thumbnails creatives</li>
+                <li>Grew and maintained the Roblox community to 3,800+ members</li>
+                <li>Achieved payer conversion rate between 50th and 90th percentile</li>
+              </ul>
+              <Y2KMediaCarousel
+                media={[
+                  { type: 'video', src: 'assets/videos/jbl_speaker.mp4', title: 'JBL Speaker', aspectRatio: '16/9' },
+                  { type: 'video', src: 'assets/videos/showcase.mp4', title: 'Showcase', aspectRatio: '16/9' },
+
+                ]}
+              />
+            </div>
+
             <div className="item-card">
               <div className="item-header">
                 <span className="item-title">Frontend Game Developer</span>
@@ -76,30 +127,9 @@ export const GameDev: React.FC = () => {
                 <Y2KImageViewer src="assets/images/boss studios logo.png" alt="Boss Studios" fileFormat="PNG" dimensions="400 x 400" />
               </div>
             </div>
-
-            <div className="item-card">
-              <div className="item-header">
-                <span className="item-title">Full-Stack Game Development Freelancer</span>
-                <span className="item-date">2020–Present</span>
-              </div>
-              <p className="item-body" style={{ marginBottom: '6px' }}>
-                Five years of professional game development across Unity and Roblox — building industry-grade systems with applied mathematics, physics simulation, and networking architecture.
-              </p>
-              <ul className="item-list" style={{ marginBottom: '12px' }}>
-                <li>Applied math and physics in projectile motion, FABRIK inversed kinematics, collision systems, wall running, building mechanics</li>
-                <li>Engineered multiplayer netcode with client-side prediction, server-side reconciliation, latency compensation, and anti-cheat systems</li>
-                <li>Implemented gameplay AI with A* and Dijkstra's algorithm implementations</li>
-                <li>Designed gameplay visuals with cutscenes, particle VFX, anime-style attack sequences, UI/HUD systems</li>
-              </ul>
-              <Y2KMediaCarousel
-                media={[
-                  { type: 'video', src: 'assets/videos/fbg_lancer_ult.mov', title: 'Anime themed Battlegrounds Test', aspectRatio: '16/9' },
-                  { type: 'youtube', youtubeId: 'S-thgACxqIw', title: 'Rocket space game : Stellar Blast', aspectRatio: '16/9' },
-                  { type: 'video', src: 'assets/videos/sirskittles building.mp4', title: '2020 Fortnite Building System', aspectRatio: '16/9' },
-                ]}
-              />
             </div>
-          </div>
+
+
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div className="item-card">

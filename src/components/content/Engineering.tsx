@@ -24,7 +24,7 @@ export const Engineering: React.FC = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-      <div className="cv-bar">
+      {/* <div className="cv-bar">
         <span className="tech-label">CV_TARGET: ENGINEERING</span>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
           <a href="assets/resumes/hardware_en.pdf" download className="button-retro" style={{ fontSize: '13px', padding: '2px 8px', textDecoration: 'none' }}>
@@ -34,13 +34,13 @@ export const Engineering: React.FC = () => {
             [ Télécharger CV: 🇫🇷 FR ]
           </a>
         </div>
-      </div>
+      </div> */}
 
       <div className="panel-content" style={{ flex: 1 }}>
         <div>
           <h3 className="section-header">[ ENGINEERING SYSTEM MATRIX ]</h3>
           <p className="item-body">
-            System diagnostics verify full-spectrum compliance across CAD hardware structures, fluid dynamics mathematical models, and electromagnetic turbine configurations.
+            CAD, CFD simulation and hardware work!
           </p>
         </div>
 

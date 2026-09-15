@@ -504,7 +504,7 @@ export const App: React.FC = () => {
       icon: 'https://alexh.github.io/vintage-icons/icons/joystick_3.png',
       isOpen: false,
       isActive: false,
-      telemetry: 'Roblox Data Pipeline: 3.4B+',
+      telemetry: 'Roblox Dev',
       width: '580px',
       height: '480px',
       initialPos: { x: 230, y: 160 },
