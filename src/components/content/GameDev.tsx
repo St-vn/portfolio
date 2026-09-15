@@ -3,7 +3,7 @@ import { Y2KImageViewer } from '../Y2KImageViewer';
 import { Y2KMediaCarousel } from '../Y2KMediaCarousel';
 
 export const GameDev: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'production' | 'architecture'>('production');
+  // const [activeTab, setActiveTab] = useState<'production' | 'architecture'>('production');
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
@@ -35,7 +35,7 @@ export const GameDev: React.FC = () => {
       </div> */}
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '16px', backgroundColor: 'var(--bg-inset)' }}>
-        {activeTab === 'production' ? (
+
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
 
             <div className="item-card">
@@ -128,38 +128,6 @@ export const GameDev: React.FC = () => {
               </div>
             </div>
             </div>
-
-
-        ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <div className="item-card">
-              <div className="item-header">
-                <span className="item-title">APPLIED PHYSICS & MATHEMATICS CORES</span>
-              </div>
-              <p className="item-body">
-                Leveraged linear algebra, 3D vectors, matrix transformations, and kinematics formulas to build custom engines for mechanics (wall-running, grappling hooks, client-side hit validation).
-              </p>
-            </div>
-
-            <div className="item-card">
-              <div className="item-header">
-                <span className="item-title">NETWORKING ARCHITECTURE</span>
-              </div>
-              <p className="item-body">
-                Implemented client-side prediction, server reconciliation logic, and anti-cheat systems to make high-ping gaming connections feel seamless.
-              </p>
-            </div>
-
-            <div className="item-card">
-              <div className="item-header">
-                <span className="item-title">AI & PATHFINDING LOGISTICS</span>
-              </div>
-              <p className="item-body">
-                Deployed A* (A-Star) search matrices, Dijkstra grids, and customized state machine AI behaviors for NPCs traversing complex 3D environments.
-              </p>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
