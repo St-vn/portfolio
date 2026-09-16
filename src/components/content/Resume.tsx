@@ -4,8 +4,8 @@ export const Resume: React.FC = () => {
   const tracks = [
     {
       title: 'Software Engineering',
-      desc: 'Full-stack development, cloud DBs, system design, and APIs.',
-      enPath: 'assets/resumes/software_en.pdf',
+      desc: 'Full-stack development, Game development, Security, DevOps, System design, and APIs.',
+      enPath: 'assets/resumes/software_en_260916.pdf',
       frPath: 'assets/resumes/software_fr.pdf',
       icon: '💻'
     },
@@ -39,7 +39,9 @@ export const Resume: React.FC = () => {
             <div>
               <div className="item-header">
                 <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span style={{ fontSize: '20px' }}>{track.icon}</span>
+                  {/* <span style={{ fontSize: '20px' }}>{track.icon}</span> */}
+                  {/* <img src={icon} alt="" style={{ width: '16px', height: '16px', objectFit: 'contain' }} /> */}
+                  <img src="https://win98icons.alexmeub.com/icons/png/console_prompt-0.png" style={{width: '19px', height: '19px', objectFit: 'contain'}}></img>
                   <span className="item-title">{track.title}</span>
                 </span>
               </div>
@@ -62,7 +64,7 @@ export const Resume: React.FC = () => {
                   justifyContent: 'center'
                 }}
               >
-                [ PDF: 🇬🇧 EN ]
+                [ Download PDF ]
               </a>
               {/* <a
                 href={track.frPath}
@@ -77,7 +79,7 @@ export const Resume: React.FC = () => {
                   justifyContent: 'center'
                 }}
               >
-                [ PDF: 🇫🇷 FR ]
+                [ PDF: FR ]
               </a> */}
             </div>
           </div>

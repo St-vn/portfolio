@@ -68,7 +68,7 @@ export const GameDev: React.FC = () => {
             <div className="item-card">
               <div className="item-header">
                 <span className="item-title">Game Owner, Main Programmer and Designer</span>
-                <span className="item-date">2020–Present</span>
+                <span className="item-date">2026</span>
               </div>
               <p className="item-body" style={{ marginBottom: '6px' }}>
                 Developed a "Steal a brainrot" type game, building and modeling also made by me.

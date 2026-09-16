@@ -102,7 +102,7 @@ export const SoftwareDev: React.FC = () => {
                 {/* <span className="status-badge">SOLO_BUILD</span> */}
               </div>
               <p className="item-body" style={{ marginBottom: '8px' }}>
-                Designed and developed a real-time Music Information Retrieval (MIR) mobile application. Captures low-latency PCM audio stream, extracts acoustic vectors (BPM, energy, valence) via Shazam & FreqBlog, and performs LLM-synthesized semantic profiling alongside vector similarity matchmaking (Cosine Similarity) for compatible profiles. Resolves iOS hardware taptic-recording locks asynchronously.
+                Designed and developed a real-time Music Information Retrieval (MIR) mobile application.
               </p>
                 <ul className="item-list" style={{ marginBottom: '12px' }}>
                   <li>Designed and pitched the mobile application solo</li>
